@@ -1323,7 +1323,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version f9f60c8f, updated Fri Sep 25 16:39:03 2020 -0700" name="generator">
   <link href="https://w3c-ccg.github.io/vc-ed-models/" rel="canonical">
-  <meta content="aac0cd8441898dff67b74bdf1f45b44f5a3f36af" name="document-revision">
+  <meta content="28ac640dc8134e2cba4bb7e2c0937a7a6a2546aa" name="document-revision">
 <style>/* darkmode */
 
             @media (prefers-color-scheme: dark) {
@@ -1872,7 +1872,7 @@ Parts of this work may be from another specification document.  If so, those par
        </ol>
       <li><a href="#possible-approaches-inspiration"><span class="secno">1.4</span> <span class="content">Possible approaches/inspiration</span></a>
       <li>
-       <a href="#working-example-1-course-program-certificate"><span class="secno">1.5</span> <span class="content">Working Example 1: Course/Program Certificate</span></a>
+       <a href="#example-1-course-program-certificate"><span class="secno">1.5</span> <span class="content">Example 1: Course/Program Certificate</span></a>
        <ol class="toc">
         <li><a href="#examples-from-the-wild"><span class="secno">1.5.1</span> <span class="content">Examples from the Wild</span></a>
         <li><a href="#extracted-fields"><span class="secno">1.5.2</span> <span class="content">Extracted Fields</span></a>
@@ -1883,18 +1883,18 @@ Parts of this work may be from another specification document.  If so, those par
          </ol>
         <li><a href="#approach-2-open-badge-as-verifiable-credentials"><span class="secno">1.5.4</span> <span class="content">Approach 2: Open Badge as Verifiable Credentials</span></a>
        </ol>
-      <li><a href="#working-example-2-diploma"><span class="secno">1.6</span> <span class="content">Working Example 2: Diploma</span></a>
+      <li><a href="#example-2-diploma"><span class="secno">1.6</span> <span class="content">Example 2: Diploma</span></a>
       <li>
-       <a href="#working-example-3-transcript"><span class="secno">1.7</span> <span class="content">Working Example 3: Transcript</span></a>
+       <a href="#example-3-transcript"><span class="secno">1.7</span> <span class="content">Example 3: Transcript</span></a>
        <ol class="toc">
         <li><a href="#options"><span class="secno">1.7.1</span> <span class="content">Options</span></a>
         <li><a href="#implementation-options"><span class="secno">1.7.2</span> <span class="content">Implementation Options</span></a>
        </ol>
-      <li><a href="#working-example-4-edci"><span class="secno">1.8</span> <span class="content">Working Example 4: EDCI</span></a>
-      <li><a href="#working-example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.9</span> <span class="content">Working Example 5: Open Skills Assertion of ceasn:Competency</span></a>
-      <li><a href="#working-example-6-emrex"><span class="secno">1.10</span> <span class="content">Working Example 6: EMREX</span></a>
-      <li><a href="#working-example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.11</span> <span class="content">Working Example 7: Using a credential definition that exists in Credential Engine</span></a>
-      <li><a href="#working-example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.12</span> <span class="content">Working Example 8: Use of EducationalOccupationalCredential (schema.org)</span></a>
+      <li><a href="#example-4-edci"><span class="secno">1.8</span> <span class="content">Example 4: EDCI</span></a>
+      <li><a href="#example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.9</span> <span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span></a>
+      <li><a href="#example-6-emrex"><span class="secno">1.10</span> <span class="content">Example 6: EMREX</span></a>
+      <li><a href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.11</span> <span class="content">Example 7: Using a credential definition that exists in Credential Engine</span></a>
+      <li><a href="#example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.12</span> <span class="content">Example 8: Use of EducationalOccupationalCredential (schema.org)</span></a>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
@@ -1936,7 +1936,7 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>This assumes use of linked data (e.g. RDF/JSON-LD)</p>
     <li data-md>
-     <p>Specifically, we assume critical data fields (e.g. see working example 1) must use structured, machine readable content, but additional presentations may be included (e.g. machine-readable plus PDF for human readable/backcompat)</p>
+     <p>Specifically, we assume critical data fields (e.g. see Example 1) must use structured, machine readable content, but additional presentations may be included (e.g. machine-readable plus PDF for human readable/backcompat)</p>
     <li data-md>
      <p>Support display integrity for scenarios where a human is in the loop performing additional verification.</p>
     <li data-md>
@@ -1992,7 +1992,7 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>[https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification](https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification)</p>
    </ul>
-   <h3 class="heading settled" data-level="1.5" id="working-example-1-course-program-certificate"><span class="secno">1.5. </span><span class="content">Working Example 1: Course/Program Certificate</span><a class="self-link" href="#working-example-1-course-program-certificate"></a></h3>
+   <h3 class="heading settled" data-level="1.5" id="example-1-course-program-certificate"><span class="secno">1.5. </span><span class="content">Example 1: Course/Program Certificate</span><a class="self-link" href="#example-1-course-program-certificate"></a></h3>
    <h4 class="heading settled" data-level="1.5.1" id="examples-from-the-wild"><span class="secno">1.5.1. </span><span class="content">Examples from the Wild</span><a class="self-link" href="#examples-from-the-wild"></a></h4>
    <table>
     <tbody>
@@ -2129,19 +2129,19 @@ Parts of this work may be from another specification document.  If so, those par
 <c- p>}</c->
 </pre>
    <p>A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)</p>
-   <h3 class="heading settled" data-level="1.6" id="working-example-2-diploma"><span class="secno">1.6. </span><span class="content">Working Example 2: Diploma</span><a class="self-link" href="#working-example-2-diploma"></a></h3>
+   <h3 class="heading settled" data-level="1.6" id="example-2-diploma"><span class="secno">1.6. </span><span class="content">Example 2: Diploma</span><a class="self-link" href="#example-2-diploma"></a></h3>
    <p>Comments/Questions:</p>
    <ul>
     <li data-md>
-     <p>Diplomas may be expressed with the same approaches as shown in Working Example 1, because Open Badges is already used to issue diplomas.</p>
+     <p>Diplomas may be expressed with the same approaches as shown in Example 1, because Open Badges is already used to issue diplomas.</p>
     <li data-md>
      <p>Are there any other target formats we should include? E.g. via Europass efforts?</p>
     <li data-md>
      <p>Any additional alignment frameworks we should include?</p>
    </ul>
-   <h3 class="heading settled" data-level="1.7" id="working-example-3-transcript"><span class="secno">1.7. </span><span class="content">Working Example 3: Transcript</span><a class="self-link" href="#working-example-3-transcript"></a></h3>
+   <h3 class="heading settled" data-level="1.7" id="example-3-transcript"><span class="secno">1.7. </span><span class="content">Example 3: Transcript</span><a class="self-link" href="#example-3-transcript"></a></h3>
    <h4 class="heading settled" data-level="1.7.1" id="options"><span class="secno">1.7.1. </span><span class="content">Options</span><a class="self-link" href="#options"></a></h4>
-   <p>VCWhich standard would we like to start with?</p>
+   <p>Which standard would we like to start with?</p>
    <table>
     <tbody>
      <tr>
@@ -2183,7 +2183,7 @@ Parts of this work may be from another specification document.  If so, those par
        </ul>
      </ul>
    </ul>
-   <h3 class="heading settled" data-level="1.8" id="working-example-4-edci"><span class="secno">1.8. </span><span class="content">Working Example 4: EDCI</span><a class="self-link" href="#working-example-4-edci"></a></h3>
+   <h3 class="heading settled" data-level="1.8" id="example-4-edci"><span class="secno">1.8. </span><span class="content">Example 4: EDCI</span><a class="self-link" href="#example-4-edci"></a></h3>
    <p>Related links/examples:</p>
    <ul>
     <li data-md>
@@ -2196,11 +2196,11 @@ Parts of this work may be from another specification document.  If so, those par
    <p>Comments/Questions:</p>
    <ul>
     <li data-md>
-     <p>This will have the same problem as in Working Example 3: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
+     <p>This will have the same problem as in Example 3: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
     <li data-md>
      <p>An [Europass EDCI in JSON-LD example](https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555) (related to Level 6 EQF)</p>
    </ul>
-   <h3 class="heading settled" data-level="1.9" id="working-example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.9. </span><span class="content">Working Example 5: Open Skills Assertion of ceasn:Competency</span><a class="self-link" href="#working-example-5-open-skills-assertion-of-ceasncompetency"></a></h3>
+   <h3 class="heading settled" data-level="1.9" id="example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.9. </span><span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span><a class="self-link" href="#example-5-open-skills-assertion-of-ceasncompetency"></a></h3>
    <p>In this example, an issuer who is not necessarily the same as the definer of the competency asserts achievement of a competency or learning goal directly. This could enable direct match-up against a requirement on a job profile or learning pathway. Self-assertion of competency is also supported. There is no "BadgeClass"/"DefinedAchievement" intermediary class that must be defined in order to set out a specific learning opportunity, criteria, or authorized assessing body in order to make this claim.</p>
    <p>**Notes**:</p>
    <ul>
@@ -2234,7 +2234,7 @@ Parts of this work may be from another specification document.  If so, those par
   <c- p>}</c->
 <c- p>}</c->
 </pre>
-   <h3 class="heading settled" data-level="1.10" id="working-example-6-emrex"><span class="secno">1.10. </span><span class="content">Working Example 6: EMREX</span><a class="self-link" href="#working-example-6-emrex"></a></h3>
+   <h3 class="heading settled" data-level="1.10" id="example-6-emrex"><span class="secno">1.10. </span><span class="content">Example 6: EMREX</span><a class="self-link" href="#example-6-emrex"></a></h3>
    <p>EMREX is a network for exchanging assessments/results of education at any level.</p>
    <p>The owner of the result (student or former student) gets access to trusted sources of these data (diploma registries, student information systems,...) and can share data with a third party. This third party could be an employer as part of a recruitment process, a university when applying for admission or others.</p>
    <p>The technical set up of EMREX is described here:</p>
@@ -2243,9 +2243,9 @@ Parts of this work may be from another specification document.  If so, those par
    <p>Comments/Questions:</p>
    <ul>
     <li data-md>
-     <p>This will have the same problem as in Working Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
+     <p>This will have the same problem as in Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
    </ul>
-   <h3 class="heading settled" data-level="1.11" id="working-example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.11. </span><span class="content">Working Example 7: Using a credential definition that exists in Credential Engine</span><a class="self-link" href="#working-example-7-using-a-credential-definition-that-exists-in-credential-engine"></a></h3>
+   <h3 class="heading settled" data-level="1.11" id="example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.11. </span><span class="content">Example 7: Using a credential definition that exists in Credential Engine</span><a class="self-link" href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"></a></h3>
 <pre class="include-code highlight" path="samples/credentialEngine.json"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
@@ -2272,7 +2272,7 @@ Parts of this work may be from another specification document.  If so, those par
   <c- p>}</c->
 <c- p>}</c->
 </pre>
-   <h3 class="heading settled" data-level="1.12" id="working-example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.12. </span><span class="content">Working Example 8: Use of EducationalOccupationalCredential (schema.org)</span><a class="self-link" href="#working-example-8-use-of-educationaloccupationalcredential-schemaorg"></a></h3>
+   <h3 class="heading settled" data-level="1.12" id="example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.12. </span><span class="content">Example 8: Use of EducationalOccupationalCredential (schema.org)</span><a class="self-link" href="#example-8-use-of-educationaloccupationalcredential-schemaorg"></a></h3>
    <p>About this example:</p>
    <ul>
     <li data-md>
