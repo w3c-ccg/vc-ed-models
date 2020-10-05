@@ -79,18 +79,12 @@ Lastly, this will attempt to address design challenges related to standards rely
   <tr>
    <td>
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image1.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/micromasters_certificate.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/upenn_certificate.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
   </tr>
@@ -189,14 +183,12 @@ EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in t
 
 Notes:
 
-*   The issuer asserts that a learner (identified with a DID) "holds" or "hasAchieved" a particular defined achievement (here, an Open Badges BadgeClass)
-*   The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.
+* The issuer asserts that a learner (identified with a DID) "holds" or "hasAchieved" a particular defined achievement (here, an Open Badges BadgeClass)
+* The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.
 
 **In github**: [https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openBadgeAsVc.json](https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openBadgeAsVc.json)
 
-
 A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)
-
 
 ## Working Example 2: Diploma
 
@@ -301,10 +293,7 @@ EMREX is using a XML-format called ELMO, which is based on standard data models 
 
 Comments/Questions:
 
-
-
 *   This will have the same problem as in Working Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.
-
 
 ## Working Example 7: Using a credential definition that exists in Credential Engine
 
