@@ -1323,7 +1323,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version f9f60c8f, updated Fri Sep 25 16:39:03 2020 -0700" name="generator">
   <link href="https://w3c-ccg.github.io/vc-ed-models/" rel="canonical">
-  <meta content="19e244a3f791f36495c6269694aa459fde892f0c" name="document-revision">
+  <meta content="aac0cd8441898dff67b74bdf1f45b44f5a3f36af" name="document-revision">
 <style>/* darkmode */
 
             @media (prefers-color-scheme: dark) {
@@ -1591,6 +1591,65 @@ a.self-link::before            { content: "¶"; }
 .heading > a.self-link::before { content: "§"; }
 dfn > a.self-link::before      { content: "#"; }
 </style>
+<style>/* style-syntax-highlighting */
+
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+
+.highlight:not(.idl) { background: #fdf6e3; }
+c-[a] { color: #990055 } /* Keyword.Declaration */
+c-[b] { color: #990055 } /* Keyword.Type */
+c-[c] { color: #708090 } /* Comment */
+c-[d] { color: #708090 } /* Comment.Multiline */
+c-[e] { color: #0077aa } /* Name.Attribute */
+c-[f] { color: #669900 } /* Name.Tag */
+c-[g] { color: #222222 } /* Name.Variable */
+c-[k] { color: #990055 } /* Keyword */
+c-[l] { color: #000000 } /* Literal */
+c-[m] { color: #000000 } /* Literal.Number */
+c-[n] { color: #0077aa } /* Name */
+c-[o] { color: #999999 } /* Operator */
+c-[p] { color: #999999 } /* Punctuation */
+c-[s] { color: #a67f59 } /* Literal.String */
+c-[t] { color: #a67f59 } /* Literal.String.Single */
+c-[u] { color: #a67f59 } /* Literal.String.Double */
+c-[cp] { color: #708090 } /* Comment.Preproc */
+c-[c1] { color: #708090 } /* Comment.Single */
+c-[cs] { color: #708090 } /* Comment.Special */
+c-[kc] { color: #990055 } /* Keyword.Constant */
+c-[kn] { color: #990055 } /* Keyword.Namespace */
+c-[kp] { color: #990055 } /* Keyword.Pseudo */
+c-[kr] { color: #990055 } /* Keyword.Reserved */
+c-[ld] { color: #000000 } /* Literal.Date */
+c-[nc] { color: #0077aa } /* Name.Class */
+c-[no] { color: #0077aa } /* Name.Constant */
+c-[nd] { color: #0077aa } /* Name.Decorator */
+c-[ni] { color: #0077aa } /* Name.Entity */
+c-[ne] { color: #0077aa } /* Name.Exception */
+c-[nf] { color: #0077aa } /* Name.Function */
+c-[nl] { color: #0077aa } /* Name.Label */
+c-[nn] { color: #0077aa } /* Name.Namespace */
+c-[py] { color: #0077aa } /* Name.Property */
+c-[ow] { color: #999999 } /* Operator.Word */
+c-[mb] { color: #000000 } /* Literal.Number.Bin */
+c-[mf] { color: #000000 } /* Literal.Number.Float */
+c-[mh] { color: #000000 } /* Literal.Number.Hex */
+c-[mi] { color: #000000 } /* Literal.Number.Integer */
+c-[mo] { color: #000000 } /* Literal.Number.Oct */
+c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
+c-[sc] { color: #a67f59 } /* Literal.String.Char */
+c-[sd] { color: #a67f59 } /* Literal.String.Doc */
+c-[se] { color: #a67f59 } /* Literal.String.Escape */
+c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
+c-[si] { color: #a67f59 } /* Literal.String.Interpol */
+c-[sx] { color: #a67f59 } /* Literal.String.Other */
+c-[sr] { color: #a67f59 } /* Literal.String.Regex */
+c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
+c-[vc] { color: #0077aa } /* Name.Variable.Class */
+c-[vg] { color: #0077aa } /* Name.Variable.Global */
+c-[vi] { color: #0077aa } /* Name.Variable.Instance */
+c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
+</style>
 <style>/* style-darkmode */
 
 @media (prefers-color-scheme: dark) {
@@ -1703,6 +1762,69 @@ dfn > a.self-link::before      { content: "#"; }
         --selflink-bg: silver;
         --selflink-hover-text: white;
     }
+}
+
+@media (prefers-color-scheme: dark) {
+    .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
+
+    c-[a] { color: #d33682 } /* Keyword.Declaration */
+    c-[b] { color: #d33682 } /* Keyword.Type */
+    c-[c] { color: #2aa198 } /* Comment */
+    c-[d] { color: #2aa198 } /* Comment.Multiline */
+    c-[e] { color: #268bd2 } /* Name.Attribute */
+    c-[f] { color: #b58900 } /* Name.Tag */
+    c-[g] { color: #cb4b16 } /* Name.Variable */
+    c-[k] { color: #d33682 } /* Keyword */
+    c-[l] { color: #657b83 } /* Literal */
+    c-[m] { color: #657b83 } /* Literal.Number */
+    c-[n] { color: #268bd2 } /* Name */
+    c-[o] { color: #657b83 } /* Operator */
+    c-[p] { color: #657b83 } /* Punctuation */
+    c-[s] { color: #6c71c4 } /* Literal.String */
+    c-[t] { color: #6c71c4 } /* Literal.String.Single */
+    c-[u] { color: #6c71c4 } /* Literal.String.Double */
+    c-[ch] { color: #2aa198 } /* Comment.Hashbang */
+    c-[cp] { color: #2aa198 } /* Comment.Preproc */
+    c-[cpf] { color: #2aa198 } /* Comment.PreprocFile */
+    c-[c1] { color: #2aa198 } /* Comment.Single */
+    c-[cs] { color: #2aa198 } /* Comment.Special */
+    c-[kc] { color: #d33682 } /* Keyword.Constant */
+    c-[kn] { color: #d33682 } /* Keyword.Namespace */
+    c-[kp] { color: #d33682 } /* Keyword.Pseudo */
+    c-[kr] { color: #d33682 } /* Keyword.Reserved */
+    c-[ld] { color: #657b83 } /* Literal.Date */
+    c-[nc] { color: #268bd2 } /* Name.Class */
+    c-[no] { color: #268bd2 } /* Name.Constant */
+    c-[nd] { color: #268bd2 } /* Name.Decorator */
+    c-[ni] { color: #268bd2 } /* Name.Entity */
+    c-[ne] { color: #268bd2 } /* Name.Exception */
+    c-[nf] { color: #268bd2 } /* Name.Function */
+    c-[nl] { color: #268bd2 } /* Name.Label */
+    c-[nn] { color: #268bd2 } /* Name.Namespace */
+    c-[py] { color: #268bd2 } /* Name.Property */
+    c-[ow] { color: #657b83 } /* Operator.Word */
+    c-[mb] { color: #657b83 } /* Literal.Number.Bin */
+    c-[mf] { color: #657b83 } /* Literal.Number.Float */
+    c-[mh] { color: #657b83 } /* Literal.Number.Hex */
+    c-[mi] { color: #657b83 } /* Literal.Number.Integer */
+    c-[mo] { color: #657b83 } /* Literal.Number.Oct */
+    c-[sa] { color: #6c71c4 } /* Literal.String.Affix */
+    c-[sb] { color: #6c71c4 } /* Literal.String.Backtick */
+    c-[sc] { color: #6c71c4 } /* Literal.String.Char */
+    c-[dl] { color: #6c71c4 } /* Literal.String.Delimiter */
+    c-[sd] { color: #6c71c4 } /* Literal.String.Doc */
+    c-[se] { color: #6c71c4 } /* Literal.String.Escape */
+    c-[sh] { color: #6c71c4 } /* Literal.String.Heredoc */
+    c-[si] { color: #6c71c4 } /* Literal.String.Interpol */
+    c-[sx] { color: #6c71c4 } /* Literal.String.Other */
+    c-[sr] { color: #6c71c4 } /* Literal.String.Regex */
+    c-[ss] { color: #6c71c4 } /* Literal.String.Symbol */
+    c-[fm] { color: #268bd2 } /* Name.Function.Magic */
+    c-[vc] { color: #cb4b16 } /* Name.Variable.Class */
+    c-[vg] { color: #cb4b16 } /* Name.Variable.Global */
+    c-[vi] { color: #cb4b16 } /* Name.Variable.Instance */
+    c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
+    c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
 }
 </style>
  <body class="h-entry">
@@ -1923,7 +2045,52 @@ Parts of this work may be from another specification document.  If so, those par
    <h4 class="heading settled" data-level="1.5.3" id="approaches"><span class="secno">1.5.3. </span><span class="content">Approaches</span><a class="self-link" href="#approaches"></a></h4>
    <h5 class="heading settled" data-level="1.5.3.1" id="approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"><span class="secno">1.5.3.1. </span><span class="content">Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions</span><a class="self-link" href="#approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"></a></h5>
    <p>EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in the payload. Using the OpenBadges serialization for the JSON-LD and with links to a credential defined in credentialengineregistry.org and competencies from the casenetwork.imsglobal.org.</p>
-   <p>**In github**: [https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openBadgeAsLer.json](https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openBadgeAsLer.json)</p>
+<pre class="include-code highlight" path="samples/openBadgeAsLer.json"><c- p>{</c->
+  <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
+    <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c->
+  <c- p>],</c->
+  <c- f>"id"</c-><c- p>:</c-> <c- u>"did:example:ebfeb1f712ebc6f1c276e12ec21"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"VerifiableCredential"</c-><c- p>,</c->
+    <c- u>"LearnerRecordWrapper"</c->
+  <c- p>],</c->
+  <c- f>"issuerId"</c-><c- p>:</c-> <c- u>"did:example:ebfeb1f712ebc6f1c276e12ec22"</c-><c- p>,</c->
+  <c- f>"date"</c-><c- p>:</c-> <c- u>"2010-01-01T19:73:24Z"</c-><c- p>,</c->
+  <c- f>"name"</c-><c- p>:</c-> <c- u>"MicroMasters Certificate"</c-><c- p>,</c->
+  <c- f>"description"</c-><c- p>:</c-> <c- u>"This record authenticates that EdX MITx has conferred the MicroMasters Certificate to Matthew Tracker."</c-><c- p>,</c->
+  <c- f>"learnerRecord"</c-><c- p>:</c-> <c- p>[</c->
+    <c- p>{</c->
+      <c- f>"POCid"</c-><c- p>:</c-> <c- u>"did:example:ebfeb1f712ebc6f1c276e12ec23"</c-><c- p>,</c->
+      <c- f>"payload"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"type"</c-><c- p>:</c-> <c- u>"AlumniJsonLd-3.0"</c-><c- p>,</c->
+        <c- f>"format"</c-><c- p>:</c-> <c- u>"application/ld+json"</c-><c- p>,</c->
+        <c- f>"data"</c-><c- p>:</c-> <c- p>{</c->
+          <c- f>"type"</c-><c- p>:</c-> <c- u>"Assertion"</c-><c- p>,</c->
+          <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.org/matthew-tracker-supply-chain-management-badge.json"</c-><c- p>,</c->
+          <c- f>"recipient"</c-><c- p>:</c-> <c- p>{</c->
+            <c- f>"type"</c-><c- p>:</c-> <c- u>"email"</c-><c- p>,</c->
+            <c- f>"hashed"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
+            <c- f>"salt"</c-><c- p>:</c-> <c- u>"deadsea"</c-><c- p>,</c->
+            <c- f>"identity"</c-><c- p>:</c-> <c- u>"sha256$c7ef86405ba71b85acd8e2e95166c4b111448089f2e1599f42fe1bba46e865c5"</c->
+          <c- p>},</c->
+          <c- f>"evidence"</c-><c- p>:</c-> <c- u>"https://example.org/matthew-tracker-supply-chain-management-work.html"</c-><c- p>,</c->
+          <c- f>"issuedOn"</c-><c- p>:</c-> <c- u>"2016-12-31T23:59:59Z"</c-><c- p>,</c->
+          <c- f>"expires"</c-><c- p>:</c-> <c- u>"2017-06-30T23:59:59Z"</c-><c- p>,</c->
+          <c- f>"badge"</c-><c- p>:</c-> <c- u>"https://raw.githubusercontent.com/w3c-ccg/vc-ed/gh-pages/samples/definitions/supplyChainManagementCertificate.json"</c->
+        <c- p>}</c->
+      <c- p>}</c->
+    <c- p>},</c->
+    <c- p>{</c->
+      <c- f>"POCid"</c-><c- p>:</c-> <c- u>"did:example:ebfeb1f712ebc6f1c276e12ec23"</c-><c- p>,</c->
+      <c- f>"payload"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"format"</c-><c- p>:</c-> <c- u>"application/pdf"</c-><c- p>,</c->
+        <c- f>"data"</c-><c- p>:</c-> <c- u>"H4sICMr5oF4CA2Zha2VfY2VydC5wZGYA7L0H3CxJWS6uIEgQAQmCi[...]"</c->
+      <c- p>}</c->
+    <c- p>}</c->
+  <c- p>]</c->
+<c- p>}</c->
+</pre>
    <h4 class="heading settled" data-level="1.5.4" id="approach-2-open-badge-as-verifiable-credentials"><span class="secno">1.5.4. </span><span class="content">Approach 2: Open Badge as Verifiable Credentials</span><a class="self-link" href="#approach-2-open-badge-as-verifiable-credentials"></a></h4>
    <p>Notes:</p>
    <ul>
@@ -1932,7 +2099,35 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.</p>
    </ul>
-   <p>**In github**: [https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openBadgeAsVc.json](https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openBadgeAsVc.json)</p>
+<pre class="include-code highlight" path="samples/openBadgeAsVc.json"><c- p>{</c->
+  <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
+    <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c->
+  <c- p>],</c->
+  <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.com/assertions/1001"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"VerifiableCredential"</c-><c- p>,</c->
+    <c- u>"Assertion"</c->
+  <c- p>],</c->
+  <c- f>"issuer"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"id"</c-><c- p>:</c-> <c- u>"did:web:edx.com"</c->
+  <c- p>},</c->
+  <c- f>"issuanceDate"</c-><c- p>:</c-> <c- u>"2020-03-10T04:24:12.164Z"</c-><c- p>,</c->
+  <c- f>"credentialSubject"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"id"</c-><c- p>:</c-> <c- u>"did:web:matthew’s_did"</c-><c- p>,</c->
+    <c- f>"hasAchieved"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.com/badgeclasses/123"</c-><c- p>,</c->
+      <c- f>"type"</c-><c- p>:</c-> <c- u>"BadgeClass"</c-><c- p>,</c->
+      <c- f>"name"</c-><c- p>:</c-> <c- u>"EdX MITx Supply Chain Management MicroMasters Badge"</c-><c- p>,</c->
+      <c- f>"image"</c-><c- p>:</c-> <c- u>"data:image/png;base64,..."</c-><c- p>,</c->
+      <c- f>"description"</c-><c- p>:</c-> <c- u>"Awarded on completion of EdX MITx Supply Chain Management MicroMasters program"</c-><c- p>,</c->
+      <c- f>"criteria"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"narrative"</c-><c- p>:</c-> <c- u>"To earn this badge, the student must complete all coursework and assessment criteria for the EdX MITx Supply Chain Management MicroMasters Program"</c->
+      <c- p>}</c->
+    <c- p>}</c->
+  <c- p>}</c->
+<c- p>}</c->
+</pre>
    <p>A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)</p>
    <h3 class="heading settled" data-level="1.6" id="working-example-2-diploma"><span class="secno">1.6. </span><span class="content">Working Example 2: Diploma</span><a class="self-link" href="#working-example-2-diploma"></a></h3>
    <p>Comments/Questions:</p>
@@ -2014,7 +2209,31 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>ceasn:Competency is defined here: [https://credreg.net/ctdlasn/terms#Competency](https://credreg.net/ctdlasn/terms#Competency)</p>
    </ul>
-   <p>**In github**: [https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openSkillsAssertion.json](https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/openSkillsAssertion.json)</p>
+<pre class="include-code highlight" path="samples/openSkillsAssertion.json"><c- p>{</c->
+  <c- f>"@context"</c-><c- p>:[</c->
+    <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
+    <c- u>"https://credreg.net/ctdlasn/schema/context/json"</c-><c- p>,</c->
+    <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c->
+  <c- p>],</c->
+  <c- f>"id"</c-><c- p>:</c-><c- u>"https://example.com/assertions/1001"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:[</c->
+    <c- u>"VerifiableCredential"</c-><c- p>,</c->
+    <c- u>"Assertion"</c->
+  <c- p>],</c->
+  <c- f>"issuer"</c-><c- p>:{</c->
+    <c- f>"id"</c-><c- p>:</c-><c- u>"did:web:the_issuer_did"</c->
+  <c- p>},</c->
+  <c- f>"issuanceDate"</c-><c- p>:</c-><c- u>"2020-03-10T04:24:12.164Z"</c-><c- p>,</c->
+  <c- f>"credentialSubject"</c-><c- p>:{</c->
+    <c- f>"id"</c-><c- p>:</c-><c- u>"https://example.com/profiles/bob"</c-><c- p>,</c->
+    <c- f>"hasAchieved"</c-><c- p>:{</c->
+    <c- f>"id"</c-><c- p>:</c-><c- u>"https://credentialengineregistry.org/resources/ce-5d4e4f72-9e96-4ab4-a1d1-d82d518d8eb4"</c-><c- p>,</c->
+      <c- f>"type"</c-><c- p>:</c-><c- u>"ceasn:Competency"</c-><c- p>,</c->
+      <c- f>"competencyText"</c-><c- p>:</c-><c- u>"Demonstrate critical and creative thinking."</c->
+    <c- p>}</c->
+  <c- p>}</c->
+<c- p>}</c->
+</pre>
    <h3 class="heading settled" data-level="1.10" id="working-example-6-emrex"><span class="secno">1.10. </span><span class="content">Working Example 6: EMREX</span><a class="self-link" href="#working-example-6-emrex"></a></h3>
    <p>EMREX is a network for exchanging assessments/results of education at any level.</p>
    <p>The owner of the result (student or former student) gets access to trusted sources of these data (diploma registries, student information systems,...) and can share data with a third party. This third party could be an employer as part of a recruitment process, a university when applying for admission or others.</p>
@@ -2027,7 +2246,32 @@ Parts of this work may be from another specification document.  If so, those par
      <p>This will have the same problem as in Working Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
    </ul>
    <h3 class="heading settled" data-level="1.11" id="working-example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.11. </span><span class="content">Working Example 7: Using a credential definition that exists in Credential Engine</span><a class="self-link" href="#working-example-7-using-a-credential-definition-that-exists-in-credential-engine"></a></h3>
-   <p>**In github**: [https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/credentialEngine.json](https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/credentialEngine.json)</p>
+<pre class="include-code highlight" path="samples/credentialEngine.json"><c- p>{</c->
+  <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
+    <c- u>"https://credreg.net/ctdlasn/schema/context/json"</c-><c- p>,</c->
+    <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c->
+  <c- p>],</c->
+  <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.com/assertions/1001"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"VerifiableCredential"</c-><c- p>,</c->
+    <c- u>"Assertion"</c->
+  <c- p>],</c->
+  <c- f>"issuer"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"id"</c-><c- p>:</c-> <c- u>"did:web:the_issuer_did"</c->
+  <c- p>},</c->
+  <c- f>"issuanceDate"</c-><c- p>:</c-> <c- u>"2020-03-10T04:24:12.164Z"</c-><c- p>,</c->
+  <c- f>"credentialSubject"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.com/profiles/bob"</c-><c- p>,</c->
+    <c- f>"hasAchieved"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"id"</c-><c- p>:</c-> <c- u>"https://credentialengineregistry.org/resources/ce-e7be83f4-687b-4439-a0eb-7c594086438a"</c-><c- p>,</c->
+      <c- f>"type"</c-><c- p>:</c-> <c- u>"ceterms:Credential"</c-><c- p>,</c->
+      <c- f>"name"</c-><c- p>:</c-> <c- u>"B.A. in Natural Science and Mathematics"</c-><c- p>,</c->
+      <c- f>"description"</c-><c- p>:</c-> <c- u>"The Bachelor of Arts in Natural Science and Mathematics is designed for students who are interested in the flexibility and diversity of a liberal arts degree and the opportunity to pursue a more extensive study in natural science and mathematics. This flexible degree allows you a wide range of options, including the opportunity to develop one or more minors."</c->
+    <c- p>}</c->
+  <c- p>}</c->
+<c- p>}</c->
+</pre>
    <h3 class="heading settled" data-level="1.12" id="working-example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.12. </span><span class="content">Working Example 8: Use of EducationalOccupationalCredential (schema.org)</span><a class="self-link" href="#working-example-8-use-of-educationaloccupationalcredential-schemaorg"></a></h3>
    <p>About this example:</p>
    <ul>
@@ -2038,7 +2282,33 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>This takes advantage of other schema.org types, including mapping credentialSubject to Person</p>
    </ul>
-   <p>**In github**: [https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/educationalOccupationalCredential.json](https://github.com/w3c-ccg/vc-ed/blob/gh-pages/samples/educationalOccupationalCredential.json)</p>
+<pre class="include-code highlight" path="samples/educationalOccupationalCredential.json"><c- p>{</c->
+  <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
+    <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c->
+  <c- p>],</c->
+  <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.com/assertions/1001"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"VerifiableCredential"</c-><c- p>,</c->
+    <c- u>"Assertion"</c->
+  <c- p>],</c->
+  <c- f>"issuer"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"id"</c-><c- p>:</c-> <c- u>"did:web:the_issuer_did"</c->
+  <c- p>},</c->
+  <c- f>"issuanceDate"</c-><c- p>:</c-> <c- u>"2020-03-10T04:24:12.164Z"</c-><c- p>,</c->
+  <c- f>"credentialSubject"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"type"</c-><c- p>:</c-> <c- u>"Person"</c-><c- p>,</c->
+    <c- f>"id"</c-><c- p>:</c-> <c- u>"did:web:the_issuer_did"</c-><c- p>,</c->
+    <c- f>"name"</c-><c- p>:</c-> <c- u>"Sample Learner"</c-><c- p>,</c->
+    <c- f>"hasAchieved"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"id"</c-><c- p>:</c-> <c- u>"https://hnc-path-to-facilities-management-definition"</c-><c- p>,</c->
+      <c- f>"type"</c-><c- p>:</c-> <c- u>"EducationalOccupationalCredential"</c-><c- p>,</c->
+      <c- f>"name"</c-><c- p>:</c-> <c- u>"HNC Facilities Management"</c-><c- p>,</c->
+      <c- f>"description"</c-><c- p>:</c-> <c- u>"Higher National qualifications provide practical skills and theoretical knowledge that meet the needs of employers. The HNC in Facilities Management (SCQF level 7) develops knowledge and skills of the modern Facilities Management industry including both 'hard' and 'soft' services, and is aimed at those in supervisory and management roles or aspiring managers within the wider realm of Facilities Services."</c->
+    <c- p>}</c->
+  <c- p>}</c->
+<c- p>}</c->
+</pre>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
