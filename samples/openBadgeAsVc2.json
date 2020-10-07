@@ -1,0 +1,49 @@
+{
+  "@context": [
+	"https://www.w3.org/2018/credentials/v1",
+	"https://w3id.org/openbadges/v2"
+  ],
+  "id": "https://example.com/assertions/1001",
+  "type": [
+	"VerifiableCredential",
+	"Assertion"
+  ],
+ 
+  "cred:issuer": {
+	"id": "did:web:edx.com"
+  },
+ 
+  "issuanceDate": "2020-03-10T04:24:12.164Z",
+  "issuedOn": "2020-03-10T04:24:12.164Z",
+
+  "recipient": {
+	"type": "email",
+	"identity": "alice@example.com"
+  },
+  "credentialSubject": {
+	"id": "id:web:recipient.example.com",
+	"schema:hasAchieved": {
+  	"id": "https://example.com/badgeclasses/123",
+  	"type": "BadgeClass",
+  	"name": "Robotics Badge",
+  	"image": "data:image/png;base64,...",
+  	"description": "Awarded to people who have built a robot",
+  	"criteria": {
+    	"narrative": "Build a Robot and post a picture of it"
+  	},
+  	"issuer": "https://example.com/issuer"
+	}
+  },
+  "badge": "https://example.com/badgeclasses/123",
+ 
+  "proof": {
+	"type": "PROOF-Type",
+	"created": "DATE OF SIGNING",
+	"proofPurpose": "assertionMethod",
+	"verificationMethod": "ISSUER-SIGNING-KEY-DID-LINK",
+	"jws": "SIGNATURE"
+  },
+  "verification": {
+	"type": "hosted"
+  }
+}

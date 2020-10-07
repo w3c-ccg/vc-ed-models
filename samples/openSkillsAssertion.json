@@ -15,7 +15,7 @@
   "issuanceDate":"2020-03-10T04:24:12.164Z",
   "credentialSubject":{
     "id":"https://example.com/profiles/bob",
-    "hasAchieved":{
+    "schema:hasPerformed":{
     "id":"https://credentialengineregistry.org/resources/ce-5d4e4f72-9e96-4ab4-a1d1-d82d518d8eb4",
       "type":"ceasn:Competency",
       "competencyText":"Demonstrate critical and creative thinking."
