@@ -5,8 +5,14 @@ Level: 1
 Status: w3c/CG-DRAFT
 Group: w3c-ccg
 URL: https://w3c-ccg.github.io/vc-ed-models/
+
+Editor: Christopher Allen, http://www.lifewithalacrity.com/
+Editor: Kim Hamilton Duffy, https://github.com/kimdhamilton
+Editor: Ryan Grant
+Editor: Dan Pape, https://github.com/danpape
+
 Editor: Your Name, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
-Abstract: A short description of your spec, one or two sentences.
+Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
 </pre>
 
 
@@ -143,7 +149,6 @@ Abstract: A short description of your spec, one or two sentences.
 Note:
 [[NON-NORMATIVE]]
 [[!NORMATIVE]]
-
  -->
 
 Introduction {#intro}
@@ -315,11 +320,12 @@ highlight: json
 
 ### Approach 2: Open Badge as Verifiable Credentials
 
+ISSUE: <a href="https://github.com/w3c-ccg/vc-ed-models/issues/10">Issue #10</a>
+
 Notes:
 
 * The issuer asserts that a learner (identified with a DID) "holds" or "hasAchieved" a particular defined achievement (here, an Open Badges BadgeClass)
 * The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.
-
 
 <pre class=include-code>
 path: samples/openBadgeAsVc.json
@@ -327,6 +333,11 @@ highlight: json
 </pre>
 
 A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)
+
+<pre class=include-code>
+path: samples/openBadgeAsVc2.json
+highlight: json
+</pre>
 
 ## Example 2: Diploma
 
@@ -377,7 +388,6 @@ Which standard would we like to start with?
 </table>
 
 
-
 ### Implementation Options
 
 *   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER-XML]] 
@@ -405,8 +415,9 @@ Comments/Questions:
 
 In this example, an issuer who is not necessarily the same as the definer of the competency asserts achievement of a competency or learning goal directly. This could enable direct match-up against a requirement on a job profile or learning pathway. Self-assertion of competency is also supported. There is no "BadgeClass"/"DefinedAchievement" intermediary class that must be defined in order to set out a specific learning opportunity, criteria, or authorized assessing body in order to make this claim.
 
-**Notes**:
+Issue: <a href="https://github.com/w3c-ccg/vc-ed-models/issues/5">Issue #5</a>
 
+Note:
 *   The “ceasn:” prefix/namespace comes from here: [[CTDLASN]]
 *   ceasn:Competency is defined here: [[CTDLASN#Competency]]
 
