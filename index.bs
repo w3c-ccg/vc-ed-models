@@ -13,7 +13,7 @@ Editor: Your Name, Your Company http://example.com/your-company, your-email@exam
 Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
 </pre>
 
-
+ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue #11 - Check and update biblio</a>
 <pre class="biblio">
 {
     "LER-WRAPPER": {
