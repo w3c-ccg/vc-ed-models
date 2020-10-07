@@ -1323,7 +1323,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version f9f60c8f, updated Fri Sep 25 16:39:03 2020 -0700" name="generator">
   <link href="https://w3c-ccg.github.io/vc-ed-models/" rel="canonical">
-  <meta content="28ac640dc8134e2cba4bb7e2c0937a7a6a2546aa" name="document-revision">
+  <meta content="3bf40777f39fd81c793f457df6668150ca642043" name="document-revision">
 <style>/* darkmode */
 
             @media (prefers-color-scheme: dark) {
@@ -1831,7 +1831,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2020-10-05">5 October 2020</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2020-10-07">7 October 2020</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1845,7 +1845,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 5 October 2020,
+In addition, as of 7 October 2020,
 the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
@@ -1870,7 +1870,7 @@ Parts of this work may be from another specification document.  If so, those par
         <li><a href="#requirements"><span class="secno">1.3.1</span> <span class="content">Requirements</span></a>
         <li><a href="#out-of-scope"><span class="secno">1.3.2</span> <span class="content">Out of Scope</span></a>
        </ol>
-      <li><a href="#possible-approaches-inspiration"><span class="secno">1.4</span> <span class="content">Possible approaches/inspiration</span></a>
+      <li><a href="#related-work"><span class="secno">1.4</span> <span class="content">Related Work</span></a>
       <li>
        <a href="#example-1-course-program-certificate"><span class="secno">1.5</span> <span class="content">Example 1: Course/Program Certificate</span></a>
        <ol class="toc">
@@ -1901,12 +1901,12 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ol>
    </ol>
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#intro"></a></h2>
-   <p>Introduction here.</p>
    <h3 class="heading settled" data-level="1.1" id="goals"><span class="secno">1.1. </span><span class="content">Goals</span><a class="self-link" href="#goals"></a></h3>
    <ul>
     <li data-md>
@@ -1924,7 +1924,7 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>Educational data standards have rich domain-specific vocabularies, taxonomies, and ontologies, but may have additional assumptions that data has been exchanged between trusted authorities (directly from issuer/clearing house to relying party), and therefore are not clearly adaptable to minimized/selective disclosure schemes.</p>
    </ul>
-   <p>The [LER wrapper](https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss) effort has bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enables technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping at the content level via enriched linked data.</p>
+   <p>The <a data-link-type="biblio" href="#biblio-ler-wrapper">[LER-WRAPPER]</a> effort has bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enables technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping at the content level via enriched linked data.</p>
    <p>This effort attempts to bridge the VC ecosystem to the robust work already done in the educational data standards space, to enable reuse of the great work done by experts in the space. Our main goal is discoverability of educational data standards frameworks, and informing implementors of how to use these in VCs.</p>
    <p>Our work will help inform VC-EDU pilots, but will be forwarded as recommendations to relevant educational data standards bodies, representatives of which are active in this group. Educational data standards bodies rely on validation through real world use, which the umbrella of the W3C-CCG can provide.</p>
    <p>Lastly, this will attempt to address design challenges related to standards relying on the XML serialization format, which is not currently a supported serialization format in the VC data model, but is still needed for legal compliance for example in eIDAS legal signatures.</p>
@@ -1949,16 +1949,16 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work</p>
    </ul>
-   <h3 class="heading settled" data-level="1.4" id="possible-approaches-inspiration"><span class="secno">1.4. </span><span class="content">Possible approaches/inspiration</span><a class="self-link" href="#possible-approaches-inspiration"></a></h3>
+   <h3 class="heading settled" data-level="1.4" id="related-work"><span class="secno">1.4. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
    <ul>
     <li data-md>
-     <p>Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper: [https://github.com/w3c-ccg/vc-examples/issues/7#issue comment-602912697](https://github.com/w3c-ccg/vc-examples/issues/7#issuecomment-602912697)</p>
+     <p>Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper <a data-link-type="biblio" href="#biblio-obs-are-vcs">[OBS-ARE-VCS]</a></p>
     <li data-md>
      <p>LER wrapper</p>
     <li data-md>
-     <p>[LER wallet spec](https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss)</p>
+     <p><a data-link-type="biblio" href="#biblio-ler-wrapper">[LER-WRAPPER]</a></p>
     <li data-md>
-     <p>Pilots/examples will evolve on T3 LER Hub - [http://lerhub.org](http://lerhub.org/)</p>
+     <p>Pilots/examples will evolve on T3 LER Hub - <a data-link-type="biblio" href="#biblio-lerhub">[LERHUB]</a></p>
     <li data-md>
      <p>Schema.org terms/types?</p>
     <li data-md>
@@ -1967,30 +1967,28 @@ Parts of this work may be from another specification document.  If so, those par
      <p>ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.</p>
      <ul>
       <li data-md>
-       <p>[https://schema.org/EducationalOccupationalCredential](https://schema.org/EducationalOccupationalCredential)</p>
+       <p><a data-link-type="biblio" href="#biblio-eocred">[EOCRED]</a></p>
      </ul>
     <li data-md>
      <p>CEDS</p>
     <li data-md>
      <p>CTDL and Credential Engine **(note “credential” terminology issue**)</p>
     <li data-md>
-     <p>[https://credreg.net/](https://credreg.net/): RDF-based schema for describing credentials and skills</p>
+     <p><a data-link-type="biblio" href="#biblio-credreg">[CREDREG]</a>: RDF-based schema for describing credentials and skills</p>
      <ul>
       <li data-md>
-       <p>Examples of open badge and CLR references to CTDL: [https://credreg.net/quickstart/ilwrguide](https://credreg.net/quickstart/ilwrguide).</p>
+       <p>Examples of open badge and CLR references to CTDL: <a data-link-type="biblio" href="#biblio-credreg-ilwrguide">[CREDREG-ILWRGUIDE]</a>.</p>
       <li data-md>
-       <p>Credential Finder: [https://credentialfinder.org/](https://credentialfinder.org/)</p>
+       <p>Credential Finder: <a data-link-type="biblio" href="#biblio-credfinder">[CREDFINDER]</a></p>
      </ul>
     <li data-md>
      <p>Controlled vocabularies used in Europe published as linked open data:</p>
     <li data-md>
-     <p>[https://op.europa.eu/en/web/eu-vocabularies/europasstables](https://op.europa.eu/en/web/eu-vocabularies/europasstables)</p>
+     <p><a data-link-type="biblio" href="#biblio-europass-tables">[EUROPASS-TABLES]</a></p>
     <li data-md>
-     <p>[https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco)</p>
+     <p><a data-link-type="biblio" href="#biblio-esco">[ESCO]</a></p>
     <li data-md>
-     <p>Particularly useful is that ISCED-F (thematic areas of UNESCO’s international classification of education):</p>
-    <li data-md>
-     <p>[https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification](https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification)</p>
+     <p>Particularly useful is that <a data-link-type="biblio" href="#biblio-isced-f">[ISCED-F]</a> (thematic areas of UNESCO’s international classification of education):</p>
    </ul>
    <h3 class="heading settled" data-level="1.5" id="example-1-course-program-certificate"><span class="secno">1.5. </span><span class="content">Example 1: Course/Program Certificate</span><a class="self-link" href="#example-1-course-program-certificate"></a></h3>
    <h4 class="heading settled" data-level="1.5.1" id="examples-from-the-wild"><span class="secno">1.5.1. </span><span class="content">Examples from the Wild</span><a class="self-link" href="#examples-from-the-wild"></a></h4>
@@ -2163,7 +2161,7 @@ Parts of this work may be from another specification document.  If so, those par
    <h4 class="heading settled" data-level="1.7.2" id="implementation-options"><span class="secno">1.7.2. </span><span class="content">Implementation Options</span><a class="self-link" href="#implementation-options"></a></h4>
    <ul>
     <li data-md>
-     <p>LER Wrapper is an option; note that it includes XML as a string: [https://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62](https://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62)</p>
+     <p>LER Wrapper is an option; note that it includes XML as a string: <a data-link-type="biblio" href="#biblio-ler-wrapper-xml">[LER-WRAPPER-XML]</a></p>
     <li data-md>
      <p>Improving on XML-as-string would be a bit of work. I see 2 paths:</p>
      <ul>
@@ -2177,7 +2175,7 @@ Parts of this work may be from another specification document.  If so, those par
        <p>Map PESC to JSON-LD</p>
        <ul>
         <li data-md>
-         <p>Work has started in a PESC JSON-LD Task Force: [https://www.pesc.org/json-ld-task-force.html](https://www.pesc.org/json-ld-task-force.html)</p>
+         <p>Work has started in a PESC JSON-LD Task Force: <a data-link-type="biblio" href="#biblio-pesc-jsonld">[PESC-JSONLD]</a></p>
         <li data-md>
          <p>The VC-EDU community can help push this forward</p>
        </ul>
@@ -2187,27 +2185,27 @@ Parts of this work may be from another specification document.  If so, those par
    <p>Related links/examples:</p>
    <ul>
     <li data-md>
-     <p>XML example: [EDCI example](https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci_credential.xml) in [Europass github](https://github.com/european-commission-europass/Europass-Learning-Model)</p>
+     <p>XML example: <a data-link-type="biblio" href="#biblio-edci-cred-xml-sample">[EDCI-CRED-XML-SAMPLE]</a></p>
     <li data-md>
-     <p>JSON/LD (LER) example: See example E6 EUROPASS in the [T3 LER Wrapper document](https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss)</p>
+     <p>JSON/LD (LER) example: See example E6 EUROPASS in the [[LER-WRAPPER]</p>
     <li data-md>
-     <p>EBSI: [https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI)</p>
+     <p><a data-link-type="biblio" href="#biblio-ebsi">[EBSI]</a></p>
    </ul>
    <p>Comments/Questions:</p>
    <ul>
     <li data-md>
      <p>This will have the same problem as in Example 3: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
     <li data-md>
-     <p>An [Europass EDCI in JSON-LD example](https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555) (related to Level 6 EQF)</p>
+     <p>A Europass EDCI in JSON-LD example: <a data-link-type="biblio" href="#biblio-edci-cred-jsonld-sample">[EDCI-CRED-JSONLD-SAMPLE]</a> (related to Level 6 EQF)</p>
    </ul>
    <h3 class="heading settled" data-level="1.9" id="example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.9. </span><span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span><a class="self-link" href="#example-5-open-skills-assertion-of-ceasncompetency"></a></h3>
    <p>In this example, an issuer who is not necessarily the same as the definer of the competency asserts achievement of a competency or learning goal directly. This could enable direct match-up against a requirement on a job profile or learning pathway. Self-assertion of competency is also supported. There is no "BadgeClass"/"DefinedAchievement" intermediary class that must be defined in order to set out a specific learning opportunity, criteria, or authorized assessing body in order to make this claim.</p>
    <p>**Notes**:</p>
    <ul>
     <li data-md>
-     <p>The “ceasn:” prefix/namespace comes from here: [https://credreg.net/ctdlasn/terms](https://credreg.net/ctdlasn/terms)</p>
+     <p>The “ceasn:” prefix/namespace comes from here: <a data-link-type="biblio" href="#biblio-ctdlasn">[CTDLASN]</a></p>
     <li data-md>
-     <p>ceasn:Competency is defined here: [https://credreg.net/ctdlasn/terms#Competency](https://credreg.net/ctdlasn/terms#Competency)</p>
+     <p>ceasn:Competency is defined here: <a href="https://credreg.net/ctdlasn/term#Competency">CTDL ASN §Competency</a></p>
    </ul>
 <pre class="include-code highlight" path="samples/openSkillsAssertion.json"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:[</c->
@@ -2238,7 +2236,7 @@ Parts of this work may be from another specification document.  If so, those par
    <p>EMREX is a network for exchanging assessments/results of education at any level.</p>
    <p>The owner of the result (student or former student) gets access to trusted sources of these data (diploma registries, student information systems,...) and can share data with a third party. This third party could be an employer as part of a recruitment process, a university when applying for admission or others.</p>
    <p>The technical set up of EMREX is described here:</p>
-   <p>[https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf](https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf)</p>
+   <p><a data-link-type="biblio" href="#biblio-emrex-guide">[EMREX-GUIDE]</a></p>
    <p>EMREX is using a XML-format called ELMO, which is based on standard data models for Learning opportunities. The basis for the data exchange is structured data representing the results the result owner wants to share, but ELMO can also hold additional documents like a signed pdf of a Diploma.</p>
    <p>Comments/Questions:</p>
    <ul>
@@ -2276,7 +2274,7 @@ Parts of this work may be from another specification document.  If so, those par
    <p>About this example:</p>
    <ul>
     <li data-md>
-     <p>Uses [https://schema.org/EducationalOccupationalCredential](https://schema.org/EducationalOccupationalCredential)</p>
+     <p>Uses <a data-link-type="biblio" href="#biblio-eocred">[EOCRED]</a></p>
     <li data-md>
      <p>Note that it’s using “hasAchieved” instead of “hasCredential”, the latter of which already exists in schema.org. We are considering adding “hasAchieved”, as described above</p>
     <li data-md>
@@ -2461,4 +2459,41 @@ Parts of this work may be from another specification document.  If so, those par
   <dl>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
+  </dl>
+  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <dl>
+   <dt id="biblio-credfinder">[CREDFINDER]
+   <dd>alice; bob. <a href="https://credentialfinder.org/">Credential Finder</a>. TBD. URL: <a href="https://credentialfinder.org/">https://credentialfinder.org/</a>
+   <dt id="biblio-credreg">[CREDREG]
+   <dd>alice; bob. <a href="https://credreg.net/">Credential Engine Registry</a>. TBD. URL: <a href="https://credreg.net/">https://credreg.net/</a>
+   <dt id="biblio-credreg-ilwrguide">[CREDREG-ILWRGUIDE]
+   <dd>alice; bob. <a href="https://credreg.net/quickstart/ilwrguide">Interoperable Learner Worker Record Guide</a>. TBD. URL: <a href="https://credreg.net/quickstart/ilwrguide">https://credreg.net/quickstart/ilwrguide</a>
+   <dt id="biblio-ctdlasn">[CTDLASN]
+   <dd>alice; bob. <a href="https://credreg.net/ctdlasn/term">CTDL ASN</a>. TBD. URL: <a href="https://credreg.net/ctdlasn/term">https://credreg.net/ctdlasn/term</a>
+   <dt id="biblio-ebsi">[EBSI]
+   <dd>alice; bob. <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI">EBSI</a>. TBD. URL: <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI">https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI</a>
+   <dt id="biblio-edci-cred-jsonld-sample">[EDCI-CRED-JSONLD-SAMPLE]
+   <dd>alice; bob. <a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555">EDCI Credential JSON-LD Sample</a>. TBD. URL: <a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555">https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555</a>
+   <dt id="biblio-edci-cred-xml-sample">[EDCI-CRED-XML-SAMPLE]
+   <dd>alice; bob. <a href="https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci_credential.xml">EDCI Credential XML Sample</a>. TBD. URL: <a href="https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci_credential.xml">https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci_credential.xml</a>
+   <dt id="biblio-emrex-guide">[EMREX-GUIDE]
+   <dd>alice; bob. <a href="https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf">Technical Guide to EMREX</a>. TBD. URL: <a href="https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf">https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf</a>
+   <dt id="biblio-eocred">[EOCRED]
+   <dd>alice; bob. <a href="https://schema.org/EducationalOccupationalCredential">EducationalOccupationalCredential</a>. TBD. URL: <a href="https://schema.org/EducationalOccupationalCredential">https://schema.org/EducationalOccupationalCredential</a>
+   <dt id="biblio-esco">[ESCO]
+   <dd>alice; bob. <a href="https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco">ESCO</a>. TBD. URL: <a href="https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco">https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco</a>
+   <dt id="biblio-europass-tables">[EUROPASS-TABLES]
+   <dd>alice; bob. <a href="https://op.europa.eu/en/web/eu-vocabularies/europasstables">Europass Tables</a>. TBD. URL: <a href="https://op.europa.eu/en/web/eu-vocabularies/europasstables">https://op.europa.eu/en/web/eu-vocabularies/europasstables</a>
+   <dt id="biblio-isced-f">[ISCED-F]
+   <dd>alice; bob. <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">ISCED-F</a>. TBD. URL: <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification</a>
+   <dt id="biblio-ler-wrapper">[LER-WRAPPER]
+   <dd>Jim Goodell. <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">LER Wrapper Spec</a>. TBD. URL: <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss</a>
+   <dt id="biblio-ler-wrapper-xml">[LER-WRAPPER-XML]
+   <dd>alice; bob. <a href="hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62">LER Wrapper XML Sample -- TODO</a>. TBD. URL: <a href="hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62">hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62</a>
+   <dt id="biblio-lerhub">[LERHUB]
+   <dd>alice; bob. <a href="http://lerhub.org">LER Hub</a>. TBD. URL: <a href="http://lerhub.org">http://lerhub.org</a>
+   <dt id="biblio-obs-are-vcs">[OBS-ARE-VCS]
+   <dd>alice; bob. <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">Open Badges are Verifiable Credentials</a>. TBD. URL: <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf</a>
+   <dt id="biblio-pesc-jsonld">[PESC-JSONLD]
+   <dd>alice; bob. <a href="https://www.pesc.org/json-ld-task-force.html">PESC JSON-LD Task Force</a>. TBD. URL: <a href="https://www.pesc.org/json-ld-task-force.html">https://www.pesc.org/json-ld-task-force.html</a>
   </dl>
