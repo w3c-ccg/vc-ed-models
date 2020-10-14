@@ -1198,7 +1198,7 @@ Possible extra rowspan handling
 	ul.index ul,
 	ul.index dl { font-size: smaller; }
 	@media not print {
-		ul.index li span {
+		ul.index li span:not(.dfn-paneled) {
 			white-space: nowrap;
 			color: transparent; }
 		ul.index li a:hover + span,
@@ -1321,8 +1321,8 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version f9f60c8f, updated Fri Sep 25 16:39:03 2020 -0700" name="generator">
-  <meta content="8cbe684f7b194eed73153291e050eabf75bb288a" name="document-revision">
+  <meta content="Bikeshed version 89ebb6ab, updated Fri Oct 9 15:32:07 2020 -0700" name="generator">
+  <meta content="8ae99b840b9ae10ca59742e1ec92605b85e70729" name="document-revision">
 <style>/* darkmode */
 
             @media (prefers-color-scheme: dark) {
@@ -1830,7 +1830,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2020-10-07">7 October 2020</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2020-10-14">14 October 2020</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -1846,7 +1846,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 7 October 2020,
+In addition, as of 14 October 2020,
 the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
@@ -2097,7 +2097,7 @@ Parts of this work may be from another specification document.  If so, those par
    <p>Notes:</p>
    <ul>
     <li data-md>
-     <p>The issuer asserts that a learner (identified with a DID) "holds" or "hasAchieved" a particular defined achievement (here, an Open Badges BadgeClass)</p>
+     <p>The issuer asserts that a learner (identified with a DID) "holds" or "hasCredential" a particular defined achievement (here, an Open Badges BadgeClass)</p>
     <li data-md>
      <p>The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.</p>
    </ul>
@@ -2118,7 +2118,7 @@ Parts of this work may be from another specification document.  If so, those par
   <c- f>"issuanceDate"</c-><c- p>:</c-> <c- u>"2020-03-10T04:24:12.164Z"</c-><c- p>,</c->
   <c- f>"credentialSubject"</c-><c- p>:</c-> <c- p>{</c->
     <c- f>"id"</c-><c- p>:</c-> <c- u>"did:web:matthew's_did"</c-><c- p>,</c->
-    <c- f>"hasAchieved"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"schema:hasCredential"</c-><c- p>:</c-> <c- p>{</c->
       <c- f>"id"</c-><c- p>:</c-> <c- u>"https://example.com/badgeclasses/123"</c-><c- p>,</c->
       <c- f>"type"</c-><c- p>:</c-> <c- u>"BadgeClass"</c-><c- p>,</c->
       <c- f>"name"</c-><c- p>:</c-> <c- u>"EdX MITx Supply Chain Management MicroMasters Badge"</c-><c- p>,</c->
@@ -2126,10 +2126,12 @@ Parts of this work may be from another specification document.  If so, those par
       <c- f>"description"</c-><c- p>:</c-> <c- u>"Awarded on completion of EdX MITx Supply Chain Management MicroMasters program"</c-><c- p>,</c->
       <c- f>"criteria"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"narrative"</c-><c- p>:</c-> <c- u>"To earn this badge, the student must complete all coursework and assessment criteria for the EdX MITx Supply Chain Management MicroMasters Program"</c->
-      <c- p>}</c->
+      <c- p>},</c->
+      <c- f>"issuer"</c-><c- p>:</c-> <c- u>"did:web:edx.com"</c->
     <c- p>}</c->
   <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    <p>A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)</p>
 <pre class="include-code highlight" path="samples/openBadgeAsVc2.json"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
@@ -2328,7 +2330,7 @@ Parts of this work may be from another specification document.  If so, those par
     <li data-md>
      <p>Uses <a data-link-type="biblio" href="#biblio-eocred">[EOCRED]</a></p>
     <li data-md>
-     <p>Note that it’s using “hasAchieved” instead of “hasCredential”, the latter of which already exists in schema.org. We are considering adding “hasAchieved”, as described above</p>
+     <p>This uses the schema.org term hasCredential as the claim type.</p>
     <li data-md>
      <p>This takes advantage of other schema.org types, including mapping credentialSubject to Person</p>
    </ul>
