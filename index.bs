@@ -166,7 +166,7 @@ Many Verifiable Credentials pilots in the education space are having to invent t
 
 The [[LER-WRAPPER]] effort has bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enables technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping at the content level via enriched linked data.
 
-This effort attempts to bridge the VC ecosystem to the robust work already done in the educational data standards space, to enable reuse of the great work done by experts in the space. Our main goal is discoverability of educational data standards frameworks, and informing implementors of how to use these in VCs. 
+This effort attempts to bridge the VC ecosystem to the robust work already done in the educational data standards space, to enable reuse of the great work done by experts in the space. Our main goal is discoverability of educational data standards frameworks, and informing implementors of how to use these in VCs.
 
 Our work will help inform VC-EDU pilots, but will be forwarded as recommendations to relevant educational data standards bodies, representatives of which are active in this group. Educational data standards bodies rely on validation through real world use, which the umbrella of the W3C-CCG can provide.
 
@@ -179,7 +179,7 @@ Lastly, this will attempt to address design challenges related to standards rely
 * We are targeting the Verifiable Credential data model
 * This assumes use of linked data (e.g. RDF/JSON-LD)
 * Specifically, we assume critical data fields (e.g. see Example 1) must use structured, machine readable content, but additional presentations may be included (e.g. machine-readable plus PDF for human readable/backcompat)
-* Support display integrity for scenarios where a human is in the loop performing additional verification. 
+* Support display integrity for scenarios where a human is in the loop performing additional verification.
 * International-aware: do not restrict to US edu data standards
 
 ### Out of Scope
@@ -199,8 +199,8 @@ Lastly, this will attempt to address design challenges related to standards rely
     * [[EOCRED]]
 * CEDS
 * CTDL and Credential Engine **(note “credential” terminology issue**)
-  * [[CREDREG]]: RDF-based schema for describing credentials and skills 
-    * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].  
+  * [[CREDREG]]: RDF-based schema for describing credentials and skills
+    * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
     * Credential Finder: [[CREDFINDER]]
 * Controlled vocabularies used in Europe published as linked open data:
   * [[EUROPASS-TABLES]]
@@ -322,7 +322,7 @@ ISSUE: <a href="https://github.com/w3c-ccg/vc-ed-models/issues/10">Issue #10</a>
 
 Notes:
 
-* The issuer asserts that a learner (identified with a DID) "holds" or "hasAchieved" a particular defined achievement (here, an Open Badges BadgeClass)
+* The issuer asserts that a learner (identified with a DID) "holds" or "hasCredential" a particular defined achievement (here, an Open Badges BadgeClass)
 * The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.
 
 <pre class=include-code>
@@ -339,10 +339,10 @@ highlight: json
 
 ## Example 2: Diploma
 
-Comments/Questions: 
+Comments/Questions:
 
 *   Diplomas may be expressed with the same approaches as shown in Example 1, because Open Badges is already used to issue diplomas.
-*   Are there any other target formats we should include? E.g. via Europass efforts? 
+*   Are there any other target formats we should include? E.g. via Europass efforts?
 *   Any additional alignment frameworks we should include?
 
 
@@ -388,7 +388,7 @@ Which standard would we like to start with?
 
 ### Implementation Options
 
-*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER-XML]] 
+*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER-XML]]
 *   Improving on XML-as-string would be a bit of work. I see 2 paths:
     *   Push to support XML as VC format
         *   This would be helpful in the near-term, and would benefit other XML-based standards
@@ -426,7 +426,7 @@ highlight: json
 
 ## Example 6: EMREX
 
-EMREX is a network for exchanging assessments/results of education at any level. 
+EMREX is a network for exchanging assessments/results of education at any level.
 
 The owner of the result (student or former student) gets access to trusted sources of these data (diploma registries, student information systems,...) and can share data with a third party. This third party could be an employer as part of a recruitment process, a university when applying for admission or others.
 
@@ -452,13 +452,10 @@ highlight: json
 About this example:
 
 *   Uses [[EOCRED]]
-*   Note that it’s using “hasAchieved” instead of “hasCredential”, the latter of which already exists in schema.org. We are considering adding “hasAchieved”, as described above
+*   This uses the schema.org term hasCredential as the claim type.
 *   This takes advantage of other schema.org types, including mapping credentialSubject to Person
 
 <pre class=include-code>
 path: samples/educationalOccupationalCredential.json
 highlight: json
 </pre>
-
-
-
