@@ -1,9 +1,8 @@
-# This is a basic workflow to help you get started with Actions
+# Invokes the spec-prod action to generate html from bikeshed in main branch and publish to gh-pages branch
+# Separately publishes to gh-pages any changes made to static directories (samples, images, contexts) in main branch
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
 on:
   push:
     branches: [ main ]
@@ -20,3 +19,45 @@ jobs:
           GH_PAGES_BRANCH: gh-pages
           VALIDATE_LINKS: false
           VALIDATE_MARKUP: false
+  static:
+    name: Copy Static Files
+    runs-on: ubuntu-20.04
+    needs: main
+    steps:
+        - name: Checkout out main branch
+          uses: actions/checkout@v2
+        - name: Checkout gh-pages branch
+          uses: actions/checkout@v2
+          with: 
+            ref: 'gh-pages'
+            path: 'gh-pages'
+        - name: Set environment vars from main branch commit
+          run: |
+            echo 'ORIGINAL_COMMIT<<EOF' >> $GITHUB_ENV
+            git log -1 --pretty=format:'%B' $GITHUB_SHA >> $GITHUB_ENV
+            echo 'EOF' >> $GITHUB_ENV
+            echo "AUTHOR_NAME=$(git show -s --format='%an' $GITHUB_SHA)" >> $GITHUB_ENV
+            echo "AUTHOR_EMAIL=$(git show -s --format='%ae' $GITHUB_SHA)" >> $GITHUB_ENV
+        - name: Copy static directories to gh-pages
+          run: |
+            cp -r samples gh-pages/.
+            cp -r images gh-pages/.
+            cp -r contexts gh-pages/.
+        - name: Commit and push any changes
+          run: |
+            cat > /tmp/commit.txt <<-EOCF
+            chore(rebuild): $ORIGINAL_COMMIT
+
+            SHA: $GITHUB_SHA
+            Reason: $GITHUB_EVENT_NAME by $GITHUB_ACTOR
+
+            Co-authored-by: github-actions[bot]
+            EOCF
+            if [[ `git status --porcelain` ]]; then
+                git add --verbose .
+                git config user.name $AUTHOR_NAME
+                git config user.email $AUTHOR_EMAIL
+                git commit --file /tmp/commit.txt
+                git push origin gh-pages
+            fi
+          working-directory: gh-pages
