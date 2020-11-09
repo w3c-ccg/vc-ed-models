@@ -186,6 +186,29 @@ Lastly, this will attempt to address design challenges related to standards rely
 - Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
 - VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
+## Concepts Requiring Definition in an Educational Context
+
+Note: To avoid confusion with how these concepts are represented by different standards/schema, we currently use placeholders for each concept.
+
+* Concept 1: describes an activity a person has undertaken. Examples of this might include performed Beethoven's 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer
+* Concept 2: describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
+* Concept 3: describes an outcome of a (formal) assessment process. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate
+* Concept 4: describes a person's participation/membership in an educational activity. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, 
+
+### Relation between Concepts
+All of these concepts can be related to one another. Thus Concept 3 can include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
+
+### Approach to Definition
+Each of these concepts can be defined using the following concepts:
+* definition: this is a link to a URI describing the concept and to the target framework of the concept
+* instance: this describes data about the person's individual performance of that concept
+
+<pre class=include-code>
+path: samples/ConceptExample.json
+highlight: json
+</pre>
+
+
 
 ## Related Work
 
