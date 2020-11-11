@@ -6,8 +6,6 @@ name: CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 jobs:
   main:
     name: Build, Validate and Deploy
@@ -33,8 +31,10 @@ jobs:
             path: 'gh-pages'
         - name: Set environment vars from main branch commit
           run: |
+            echo "::debug::the github sha"
+            echo "::debug::$GITHUB_SHA"
             echo 'ORIGINAL_COMMIT<<EOF' >> $GITHUB_ENV
-            git log -1 --pretty=format:'%B' $GITHUB_SHA >> $GITHUB_ENV
+            git log --format=%B -n1 $GITHUB_SHA >> $GITHUB_ENV
             echo 'EOF' >> $GITHUB_ENV
             echo "AUTHOR_NAME=$(git show -s --format='%an' $GITHUB_SHA)" >> $GITHUB_ENV
             echo "AUTHOR_EMAIL=$(git show -s --format='%ae' $GITHUB_SHA)" >> $GITHUB_ENV
@@ -55,6 +55,12 @@ jobs:
             EOCF
             if [[ `git status --porcelain` ]]; then
                 git add --verbose .
+                echo "::debug::the author name"
+                echo "::debug::$AUTHOR_NAME"
+                echo "::debug::the author email"
+                echo "::debug::$AUTHOR_EMAIL"
+                git config user.name $AUTHOR_NAME
+                git config user.email $AUTHOR_EMAIL
                 git commit --file /tmp/commit.txt
                 git push origin gh-pages
             fi
