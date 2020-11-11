@@ -55,8 +55,6 @@ jobs:
             EOCF
             if [[ `git status --porcelain` ]]; then
                 git add --verbose .
-                git config user.name $AUTHOR_NAME
-                git config user.email $AUTHOR_EMAIL
                 git commit --file /tmp/commit.txt
                 git push origin gh-pages
             fi
