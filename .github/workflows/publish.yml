@@ -59,8 +59,8 @@ jobs:
                 echo "::debug::$AUTHOR_NAME"
                 echo "::debug::the author email"
                 echo "::debug::$AUTHOR_EMAIL"
-                git config user.name $AUTHOR_NAME
-                git config user.email $AUTHOR_EMAIL
+                git config user.name "$AUTHOR_NAME"
+                git config user.email "$AUTHOR_EMAIL"
                 git commit --file /tmp/commit.txt
                 git push origin gh-pages
             fi
