@@ -6,10 +6,9 @@ Status: w3c/CG-DRAFT
 Group: w3c-ccg
 URL: https://w3c-ccg.github.io/vc-ed-models/
 
-Editor: Anthony Camilleri, Everis https://www.everis.com/, anthony@camilleri.com, http://www.linkedin.com/in/anthonyfcamilleri
+Editor: Anthony Camilleri, Knowledge Innovation Centre https://knowledgeinnovation.eu/, anthony@knowledgeinnovation.eu, http://www.linkedin.com/in/anthonyfcamilleri
 Editor: Kim Hamilton Duffy, Massachusetts Institute of Technology https://openlearning.mit.edu/, kimdhamilton@gmail.com, https://www.okimsrazor.com/
 Editor: Nate Otto, Concentric Sky https://concentricsky.com/, notto@concentricsky.com, http://ottonomy.net/blog/
-
 
 Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
 </pre>
