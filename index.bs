@@ -203,9 +203,24 @@ Each of these concepts can be defined using the following concepts:
 * definition: this is a link to a URI describing the concept and to the target framework of the concept
 * instance: this describes data about the person's individual performance of that concept
 
-<pre class=include-code>
-path: samples/ConceptExample.json
-highlight: json
+In pseudocode, this is structured as:
+<pre>
+credentialSubject:
+  // properties specific to the learner, e.g.:
+  - learner's did 
+  - name
+
+  // property representing relationship of subject to "concept" (skill/credential/...)
+  - hasConcept: 
+    // properties specific to concept "definition", e.g
+    - framework / identifier / uri (may be encoded in "type" and "id")
+    - name
+    - description
+
+    instance: 
+      // properties specific to concept "instance" e.g.:
+      - dateperformed
+      - grade
 </pre>
 
 
