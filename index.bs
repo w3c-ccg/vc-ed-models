@@ -192,11 +192,14 @@ Note: To avoid confusion with how these concepts are represented by different st
 
 * Concept 1 (activity): describes an activity a person has undertaken. Examples of this might include performed Beethoven's 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer
 * Concept 2 (skill): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
-* Concept 3 (diploma): describes an outcome of a (formal) assessment process. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate
+* Concept 3 (diploma): describes an outcome of a (formal) assessment process. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate. Concept 3 contains sub-concepts of:
+** Concept 3.1 (Assessment)
+** Concept 3.2 (Grade)
 * Concept 4 (enrolment): describes a person's current enrolment in an educational organisation or participation/membership in an educational activity. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc. 
 
 ### Relation between Concepts
-All of these concepts can be related to one another. Thus Concept 3 can include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
+* Cross-Linking: All of these concepts can be related to one another. Thus Concept 3 can include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
+* Child-Concepts: All Concepts can have infinite levels of child concepts. Thus for example a Grade Point Average of 4, can be described in more detail with sub-grades of 3 and 5. A skill of Vietnamese can be made up of skills of Writing Vietnamese, Reading Vietnamese, Speaking Vietnamese and Understanding Vietnamese.
 
 ### Approach to Definition
 Each of these concepts can be defined using the following concepts:
