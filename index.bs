@@ -245,6 +245,10 @@ credentialSubject:
   * [[ESCO]]
   *   Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education):
 
+
+Appendix {#appendix}
+====================
+
 ## Example 1: Course/Program Certificate
 ### Examples from the Wild
 
