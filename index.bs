@@ -243,7 +243,11 @@ credentialSubject:
 * Controlled vocabularies used in Europe published as linked open data:
   * [[EUROPASS-TABLES]]
   * [[ESCO]]
-  *   Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education):
+  *   Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
+
+
+Appendix {#appendix}
+====================
 
 ## Example 1: Course/Program Certificate
 ### Examples from the Wild
