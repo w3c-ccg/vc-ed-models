@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version c5172e83, updated Fri Nov 20 15:35:20 2020 -0800" name="generator">
-  <meta content="e18a8ac1e524e29636c73b37bae06035373a55a2" name="document-revision">
+  <meta content="e5fd2252601ae05d085c06ed46a85de7c3174969" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -517,7 +517,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2020-11-23">23 November 2020</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-01-29">29 January 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -531,7 +531,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     </dl>
    </div>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2020 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2021 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -564,30 +564,34 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#approach-to-definition"><span class="secno">1.4.2</span> <span class="content">Approach to Definition</span></a>
        </ol>
       <li><a href="#related-work"><span class="secno">1.5</span> <span class="content">Related Work</span></a>
+     </ol>
+    <li>
+     <a href="#appendix"><span class="secno">2</span> <span class="content">Appendix</span></a>
+     <ol class="toc">
       <li>
-       <a href="#example-1-course-program-certificate"><span class="secno">1.6</span> <span class="content">Example 1: Course/Program Certificate</span></a>
+       <a href="#example-1-course-program-certificate"><span class="secno">2.1</span> <span class="content">Example 1: Course/Program Certificate</span></a>
        <ol class="toc">
-        <li><a href="#examples-from-the-wild"><span class="secno">1.6.1</span> <span class="content">Examples from the Wild</span></a>
-        <li><a href="#extracted-fields"><span class="secno">1.6.2</span> <span class="content">Extracted Fields</span></a>
+        <li><a href="#examples-from-the-wild"><span class="secno">2.1.1</span> <span class="content">Examples from the Wild</span></a>
+        <li><a href="#extracted-fields"><span class="secno">2.1.2</span> <span class="content">Extracted Fields</span></a>
         <li>
-         <a href="#approaches"><span class="secno">1.6.3</span> <span class="content">Approaches</span></a>
+         <a href="#approaches"><span class="secno">2.1.3</span> <span class="content">Approaches</span></a>
          <ol class="toc">
-          <li><a href="#approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"><span class="secno">1.6.3.1</span> <span class="content">Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions</span></a>
+          <li><a href="#approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"><span class="secno">2.1.3.1</span> <span class="content">Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions</span></a>
          </ol>
-        <li><a href="#approach-2-open-badge-as-verifiable-credentials"><span class="secno">1.6.4</span> <span class="content">Approach 2: Open Badge as Verifiable Credentials</span></a>
+        <li><a href="#approach-2-open-badge-as-verifiable-credentials"><span class="secno">2.1.4</span> <span class="content">Approach 2: Open Badge as Verifiable Credentials</span></a>
        </ol>
-      <li><a href="#example-2-diploma"><span class="secno">1.7</span> <span class="content">Example 2: Diploma</span></a>
+      <li><a href="#example-2-diploma"><span class="secno">2.2</span> <span class="content">Example 2: Diploma</span></a>
       <li>
-       <a href="#example-3-transcript"><span class="secno">1.8</span> <span class="content">Example 3: Transcript</span></a>
+       <a href="#example-3-transcript"><span class="secno">2.3</span> <span class="content">Example 3: Transcript</span></a>
        <ol class="toc">
-        <li><a href="#options"><span class="secno">1.8.1</span> <span class="content">Options</span></a>
-        <li><a href="#implementation-options"><span class="secno">1.8.2</span> <span class="content">Implementation Options</span></a>
+        <li><a href="#options"><span class="secno">2.3.1</span> <span class="content">Options</span></a>
+        <li><a href="#implementation-options"><span class="secno">2.3.2</span> <span class="content">Implementation Options</span></a>
        </ol>
-      <li><a href="#example-4-edci"><span class="secno">1.9</span> <span class="content">Example 4: EDCI</span></a>
-      <li><a href="#example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.10</span> <span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span></a>
-      <li><a href="#example-6-emrex"><span class="secno">1.11</span> <span class="content">Example 6: EMREX</span></a>
-      <li><a href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.12</span> <span class="content">Example 7: Using a credential definition that exists in Credential Engine</span></a>
-      <li><a href="#example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.13</span> <span class="content">Example 8: Use of EducationalOccupationalCredential (schema.org)</span></a>
+      <li><a href="#example-4-edci"><span class="secno">2.4</span> <span class="content">Example 4: EDCI</span></a>
+      <li><a href="#example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">2.5</span> <span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span></a>
+      <li><a href="#example-6-emrex"><span class="secno">2.6</span> <span class="content">Example 6: EMREX</span></a>
+      <li><a href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">2.7</span> <span class="content">Example 7: Using a credential definition that exists in Credential Engine</span></a>
+      <li><a href="#example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">2.8</span> <span class="content">Example 8: Use of EducationalOccupationalCredential (schema.org)</span></a>
      </ol>
     <li>
      <a href="#w3c-conformance"><span class="secno"></span> <span class="content">Conformance</span></a>
@@ -728,10 +732,11 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p><a data-link-type="biblio" href="#biblio-esco">[ESCO]</a></p>
     <li data-md>
-     <p>Particularly useful is that <a data-link-type="biblio" href="#biblio-isced-f">[ISCED-F]</a> (thematic areas of UNESCO’s international classification of education):</p>
+     <p>Particularly useful is that <a data-link-type="biblio" href="#biblio-isced-f">[ISCED-F]</a> (thematic areas of UNESCO’s international classification of education)</p>
    </ul>
-   <h3 class="heading settled" data-level="1.6" id="example-1-course-program-certificate"><span class="secno">1.6. </span><span class="content">Example 1: Course/Program Certificate</span><a class="self-link" href="#example-1-course-program-certificate"></a></h3>
-   <h4 class="heading settled" data-level="1.6.1" id="examples-from-the-wild"><span class="secno">1.6.1. </span><span class="content">Examples from the Wild</span><a class="self-link" href="#examples-from-the-wild"></a></h4>
+   <h2 class="heading settled" data-level="2" id="appendix"><span class="secno">2. </span><span class="content">Appendix</span><a class="self-link" href="#appendix"></a></h2>
+   <h3 class="heading settled" data-level="2.1" id="example-1-course-program-certificate"><span class="secno">2.1. </span><span class="content">Example 1: Course/Program Certificate</span><a class="self-link" href="#example-1-course-program-certificate"></a></h3>
+   <h4 class="heading settled" data-level="2.1.1" id="examples-from-the-wild"><span class="secno">2.1.1. </span><span class="content">Examples from the Wild</span><a class="self-link" href="#examples-from-the-wild"></a></h4>
    <table>
     <tbody>
      <tr>
@@ -740,7 +745,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <td>
        <p><img alt="alt_text" src="images/upenn_certificate.png" title="image_tooltip" width></p>
    </table>
-   <h4 class="heading settled" data-level="1.6.2" id="extracted-fields"><span class="secno">1.6.2. </span><span class="content">Extracted Fields</span><a class="self-link" href="#extracted-fields"></a></h4>
+   <h4 class="heading settled" data-level="2.1.2" id="extracted-fields"><span class="secno">2.1.2. </span><span class="content">Extracted Fields</span><a class="self-link" href="#extracted-fields"></a></h4>
    <table>
     <tbody>
      <tr>
@@ -780,8 +785,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <td>&lt;signatories>??? 
       <td>
    </table>
-   <h4 class="heading settled" data-level="1.6.3" id="approaches"><span class="secno">1.6.3. </span><span class="content">Approaches</span><a class="self-link" href="#approaches"></a></h4>
-   <h5 class="heading settled" data-level="1.6.3.1" id="approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"><span class="secno">1.6.3.1. </span><span class="content">Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions</span><a class="self-link" href="#approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"></a></h5>
+   <h4 class="heading settled" data-level="2.1.3" id="approaches"><span class="secno">2.1.3. </span><span class="content">Approaches</span><a class="self-link" href="#approaches"></a></h4>
+   <h5 class="heading settled" data-level="2.1.3.1" id="approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"><span class="secno">2.1.3.1. </span><span class="content">Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions</span><a class="self-link" href="#approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"></a></h5>
    <p>EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in the payload. Using the OpenBadges serialization for the JSON-LD and with links to a credential defined in credentialengineregistry.org and competencies from the casenetwork.imsglobal.org.</p>
 <pre class="include-code highlight" path="samples/openBadgeAsLer.json"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
@@ -829,7 +834,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <c- p>}</c->
   <c- p>]</c->
 <c- p>}</c-></pre>
-   <h4 class="heading settled" data-level="1.6.4" id="approach-2-open-badge-as-verifiable-credentials"><span class="secno">1.6.4. </span><span class="content">Approach 2: Open Badge as Verifiable Credentials</span><a class="self-link" href="#approach-2-open-badge-as-verifiable-credentials"></a></h4>
+   <h4 class="heading settled" data-level="2.1.4" id="approach-2-open-badge-as-verifiable-credentials"><span class="secno">2.1.4. </span><span class="content">Approach 2: Open Badge as Verifiable Credentials</span><a class="self-link" href="#approach-2-open-badge-as-verifiable-credentials"></a></h4>
    <p class="issue" id="issue-76f4970e"><a class="self-link" href="#issue-76f4970e"></a> <a href="https://github.com/w3c-ccg/vc-ed-models/issues/10">Issue #10</a></p>
    <p>Notes:</p>
    <ul>
@@ -919,7 +924,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 	<c- f>"type"</c-><c- p>:</c-> <c- u>"hosted"</c->
   <c- p>}</c->
 <c- p>}</c-></pre>
-   <h3 class="heading settled" data-level="1.7" id="example-2-diploma"><span class="secno">1.7. </span><span class="content">Example 2: Diploma</span><a class="self-link" href="#example-2-diploma"></a></h3>
+   <h3 class="heading settled" data-level="2.2" id="example-2-diploma"><span class="secno">2.2. </span><span class="content">Example 2: Diploma</span><a class="self-link" href="#example-2-diploma"></a></h3>
    <p>Comments/Questions:</p>
    <ul>
     <li data-md>
@@ -929,8 +934,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>Any additional alignment frameworks we should include?</p>
    </ul>
-   <h3 class="heading settled" data-level="1.8" id="example-3-transcript"><span class="secno">1.8. </span><span class="content">Example 3: Transcript</span><a class="self-link" href="#example-3-transcript"></a></h3>
-   <h4 class="heading settled" data-level="1.8.1" id="options"><span class="secno">1.8.1. </span><span class="content">Options</span><a class="self-link" href="#options"></a></h4>
+   <h3 class="heading settled" data-level="2.3" id="example-3-transcript"><span class="secno">2.3. </span><span class="content">Example 3: Transcript</span><a class="self-link" href="#example-3-transcript"></a></h3>
+   <h4 class="heading settled" data-level="2.3.1" id="options"><span class="secno">2.3.1. </span><span class="content">Options</span><a class="self-link" href="#options"></a></h4>
    <p>Which standard would we like to start with?</p>
    <table>
     <tbody>
@@ -950,7 +955,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <td><a href="https://github.com/emrex-eu/elmo-schemas/releases">ELMO</a> 
       <td>Europe 
    </table>
-   <h4 class="heading settled" data-level="1.8.2" id="implementation-options"><span class="secno">1.8.2. </span><span class="content">Implementation Options</span><a class="self-link" href="#implementation-options"></a></h4>
+   <h4 class="heading settled" data-level="2.3.2" id="implementation-options"><span class="secno">2.3.2. </span><span class="content">Implementation Options</span><a class="self-link" href="#implementation-options"></a></h4>
    <ul>
     <li data-md>
      <p>LER Wrapper is an option; note that it includes XML as a string: <a data-link-type="biblio" href="#biblio-ler-wrapper-xml">[LER-WRAPPER-XML]</a></p>
@@ -973,7 +978,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        </ul>
      </ul>
    </ul>
-   <h3 class="heading settled" data-level="1.9" id="example-4-edci"><span class="secno">1.9. </span><span class="content">Example 4: EDCI</span><a class="self-link" href="#example-4-edci"></a></h3>
+   <h3 class="heading settled" data-level="2.4" id="example-4-edci"><span class="secno">2.4. </span><span class="content">Example 4: EDCI</span><a class="self-link" href="#example-4-edci"></a></h3>
    <p>Related links/examples:</p>
    <ul>
     <li data-md>
@@ -990,7 +995,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>A Europass EDCI in JSON-LD example: <a data-link-type="biblio" href="#biblio-edci-cred-jsonld-sample">[EDCI-CRED-JSONLD-SAMPLE]</a> (related to Level 6 EQF)</p>
    </ul>
-   <h3 class="heading settled" data-level="1.10" id="example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">1.10. </span><span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span><a class="self-link" href="#example-5-open-skills-assertion-of-ceasncompetency"></a></h3>
+   <h3 class="heading settled" data-level="2.5" id="example-5-open-skills-assertion-of-ceasncompetency"><span class="secno">2.5. </span><span class="content">Example 5: Open Skills Assertion of ceasn:Competency</span><a class="self-link" href="#example-5-open-skills-assertion-of-ceasncompetency"></a></h3>
    <p>In this example, an issuer who is not necessarily the same as the definer of the competency asserts achievement of a competency or learning goal directly. This could enable direct match-up against a requirement on a job profile or learning pathway. Self-assertion of competency is also supported. There is no "BadgeClass"/"DefinedAchievement" intermediary class that must be defined in order to set out a specific learning opportunity, criteria, or authorized assessing body in order to make this claim.</p>
    <p class="issue" id="issue-38dbb234"><a class="self-link" href="#issue-38dbb234"></a> <a href="https://github.com/w3c-ccg/vc-ed-models/issues/5">Issue #5</a></p>
    <p class="note" role="note"><span>Note:</span></p>
@@ -1025,7 +1030,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <c- p>}</c->
 <c- p>}</c->
 </pre>
-   <h3 class="heading settled" data-level="1.11" id="example-6-emrex"><span class="secno">1.11. </span><span class="content">Example 6: EMREX</span><a class="self-link" href="#example-6-emrex"></a></h3>
+   <h3 class="heading settled" data-level="2.6" id="example-6-emrex"><span class="secno">2.6. </span><span class="content">Example 6: EMREX</span><a class="self-link" href="#example-6-emrex"></a></h3>
    <p>EMREX is a network for exchanging assessments/results of education at any level.</p>
    <p>The owner of the result (student or former student) gets access to trusted sources of these data (diploma registries, student information systems,...) and can share data with a third party. This third party could be an employer as part of a recruitment process, a university when applying for admission or others.</p>
    <p>The technical set up of EMREX is described here:</p>
@@ -1036,7 +1041,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>This will have the same problem as in Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
    </ul>
-   <h3 class="heading settled" data-level="1.12" id="example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">1.12. </span><span class="content">Example 7: Using a credential definition that exists in Credential Engine</span><a class="self-link" href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"></a></h3>
+   <h3 class="heading settled" data-level="2.7" id="example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">2.7. </span><span class="content">Example 7: Using a credential definition that exists in Credential Engine</span><a class="self-link" href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"></a></h3>
 <pre class="include-code highlight" path="samples/credentialEngine.json"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
@@ -1062,7 +1067,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <c- p>}</c->
   <c- p>}</c->
 <c- p>}</c-></pre>
-   <h3 class="heading settled" data-level="1.13" id="example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">1.13. </span><span class="content">Example 8: Use of EducationalOccupationalCredential (schema.org)</span><a class="self-link" href="#example-8-use-of-educationaloccupationalcredential-schemaorg"></a></h3>
+   <h3 class="heading settled" data-level="2.8" id="example-8-use-of-educationaloccupationalcredential-schemaorg"><span class="secno">2.8. </span><span class="content">Example 8: Use of EducationalOccupationalCredential (schema.org)</span><a class="self-link" href="#example-8-use-of-educationaloccupationalcredential-schemaorg"></a></h3>
    <p>About this example:</p>
    <ul>
     <li data-md>
