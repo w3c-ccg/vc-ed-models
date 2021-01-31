@@ -186,14 +186,15 @@ Lastly, this will attempt to address design challenges related to standards rely
 - Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
 - VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
-## Concepts Requiring Definition in an Educational Context
+## Concepts Requiring Definition in an Educational/Workforce Context
 
 Note: To avoid confusion with how these concepts are represented by different standards/schema, we currently use placeholders for each concept. The names in brackets represent the current draft name for the concept.
 
 * Concept 1 (activity): describes an activity a person has undertaken. Examples of this might include performed Beethoven's 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer
-* Concept 2 (skill): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
-* Concept 3 (diploma): describes an outcome of a (formal) assessment process. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate
-* Concept 4 (enrolment): describes a person's current enrolment in an educational organisation or participation/membership in an educational activity. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc. 
+* Concept 2 (competence): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
+* Concept 3 (recognition type): describes an outcome, potentially of a formal assessment process, but may also include less formal recognition and self-assertion. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.
+* Concept 4 (involvment): describes a person's current enrollment in an educational organisation or participation/membership in an educational activity. This could also describe a person's employment. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World's Best Coffee Shop, Software ENgineer at Tech Company.
+
 
 ### Relation between Concepts
 All of these concepts can be related to one another. Thus Concept 3 can include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
@@ -206,7 +207,7 @@ Each of these concepts can be defined using the following concepts:
 In pseudocode, this is structured as:
 <pre>
 credentialSubject:
-  // properties specific to the learner, e.g.:
+  // properties specific to the individual learner, e.g.:
   - learner's did 
   - name
 
@@ -217,10 +218,13 @@ credentialSubject:
     - name
     - description
 
-    instance: 
-      // properties specific to concept "instance" e.g.:
+    assertion: 
+      // properties specific to concept "assertion" e.g.:
       - dateperformed
       - grade
+      - location
+      - evidence/documentation
+      - relation to another assertion
 </pre>
 
 
