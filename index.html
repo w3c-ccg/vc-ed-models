@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version c5172e83, updated Fri Nov 20 15:35:20 2020 -0800" name="generator">
-  <meta content="e5fd2252601ae05d085c06ed46a85de7c3174969" name="document-revision">
+  <meta content="49145499ad87fd5e1d2e21aa553bb668d5a24685" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -517,7 +517,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-01-29">29 January 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-02-04">4 February 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -558,7 +558,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#out-of-scope"><span class="secno">1.3.2</span> <span class="content">Out of Scope</span></a>
        </ol>
       <li>
-       <a href="#concepts-requiring-definition-in-an-educational-context"><span class="secno">1.4</span> <span class="content">Concepts Requiring Definition in an Educational Context</span></a>
+       <a href="#concepts-requiring-definition-in-an-educational-occupational-context"><span class="secno">1.4</span> <span class="content">Concepts Requiring Definition in an Educational/Occupational Context</span></a>
        <ol class="toc">
         <li><a href="#relation-between-concepts"><span class="secno">1.4.1</span> <span class="content">Relation between Concepts</span></a>
         <li><a href="#approach-to-definition"><span class="secno">1.4.2</span> <span class="content">Approach to Definition</span></a>
@@ -653,20 +653,24 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work</p>
    </ul>
-   <h3 class="heading settled" data-level="1.4" id="concepts-requiring-definition-in-an-educational-context"><span class="secno">1.4. </span><span class="content">Concepts Requiring Definition in an Educational Context</span><a class="self-link" href="#concepts-requiring-definition-in-an-educational-context"></a></h3>
+   <h3 class="heading settled" data-level="1.4" id="concepts-requiring-definition-in-an-educational-occupational-context"><span class="secno">1.4. </span><span class="content">Concepts Requiring Definition in an Educational/Occupational Context</span><a class="self-link" href="#concepts-requiring-definition-in-an-educational-occupational-context"></a></h3>
    <p class="note" role="note"><span>Note:</span> To avoid confusion with how these concepts are represented by different standards/schema, we currently use placeholders for each concept. The names in brackets represent the current draft name for the concept.</p>
    <ul>
     <li data-md>
      <p>Concept 1 (activity): describes an activity a person has undertaken. Examples of this might include performed Beethoven’s 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer</p>
     <li data-md>
-     <p>Concept 2 (skill): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices</p>
+     <p>Concept 2 (competency): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices</p>
     <li data-md>
-     <p>Concept 3 (diploma): describes an outcome of a (formal) assessment process. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate</p>
+     <p>Concept 3 (recognition type): describes an outcome, potentially of a formal assessment process, but may also include less formal recognition and self-assertion. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.</p>
     <li data-md>
-     <p>Concept 4 (enrolment): describes a person’s current enrolment in an educational organisation or participation/membership in an educational activity. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc.</p>
+     <p>Concept 4 (involvment): describes a person’s current enrollment in an educational organisation or participation/membership in an educational activity. This could also describe a person’s employment. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World’s Best Coffee Shop, Software ENgineer at Tech Company.</p>
+    <li data-md>
+     <p>Concept 5 (subject): decribes the person or entity that is the subject of the credentila. In the education/occupationalspace, this person is likley a student and/or employee. THis role is also called the receiver. Subject may be the holder of the credential but not necessaril, especially in cases where guyardianship is delegated.</p>
+    <li data-md>
+     <p>Concept 6 (issuer): describes the person or entity that is issuing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer. The issuer may also be a person. For example: a person such as a colleague may issue a recommendtion about another person in the form of a verifiable credentials.</p>
    </ul>
    <h4 class="heading settled" data-level="1.4.1" id="relation-between-concepts"><span class="secno">1.4.1. </span><span class="content">Relation between Concepts</span><a class="self-link" href="#relation-between-concepts"></a></h4>
-    All of these concepts can be related to one another. Thus Concept 3 can include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4. 
+    All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4. 
    <h4 class="heading settled" data-level="1.4.2" id="approach-to-definition"><span class="secno">1.4.2. </span><span class="content">Approach to Definition</span><a class="self-link" href="#approach-to-definition"></a></h4>
     Each of these concepts can be defined using the following concepts: 
    <ul>
@@ -677,7 +681,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    </ul>
    <p>In pseudocode, this is structured as:</p>
 <pre>credentialSubject:
-  // properties specific to the learner, e.g.:
+  // properties specific to the individual learner, e.g.:
   - learner’s did 
   - name
 
@@ -688,10 +692,13 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     - name
     - description
 
-    instance: 
-      // properties specific to concept "instance" e.g.:
+    assertion: 
+      // properties specific to concept "assertion" e.g.:
       - dateperformed
       - grade
+      - location
+      - evidence/documentation
+      - relation to another assertion
 </pre>
    <h3 class="heading settled" data-level="1.5" id="related-work"><span class="secno">1.5. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
    <ul>
