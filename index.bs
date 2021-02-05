@@ -31,6 +31,13 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "status": "TBD",
         "publisher": "schema.org"
     },
+    "CEDS-CONCEPTUAL": {
+        "authors": [ "Jim Goodell" ],
+        "href": "https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf",
+        "title": "CEDS Conceptual Model",
+        "status": "TBD",
+        "publisher": "CEDS"
+    },
     "CREDREG-ILWRGUIDE": {
         "authors": [ "alice", "bob" ],
         "href": "https://credreg.net/quickstart/ilwrguide",
@@ -198,38 +205,54 @@ Note: To avoid confusion with how these concepts are represented by different st
 * Concept 5 (subject): decribes the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. Subject may be the holder of the credential but not necessarily, especially in cases where guardianship is delegated. 
 * Concept 6 (issuer): describes the person or entity that is issuing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer. The issuer may also be a person. For example: a person such as a colleague may issue a recommendtion about another person in the form of a verifiable credentials.
 
-
 ### Relation between Concepts
 All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
 
-### Approach to Definition
-Each of these concepts can be defined using the following concepts:
-* definition: this is a link to a URI describing the concept and to the target framework of the concept
-* instance: this describes data about the person's individual performance of that concept
+## Refined Conceptual Goal to Interoperability
 
-In pseudocode, this is structured as:
-<pre>
-credentialSubject:
-  // properties specific to the individual learner, e.g.:
-  - learner's did 
-  - name
+Refining the goals of this document based on the above concepts, te goal of this document is:
+* To increase interoperability, propose recommended properties for relevant components in outer layers of VC, including:
+	* subject (concept 5)
+  * issuer (concept 6)
+	* TODO: any additions to outer assertion?
+* Provide connective tissue to specified credential system and vocabulary data standards by proposing subject relationship to the concepts:
+  * activity (concept 1)
+	* competency (concept 2)
+	* recognition type (concept 3)
+	* involvement (concept 4)
 
-  // property representing relationship of subject to "concept" (skill/credential/...)
-  - hasConcept: 
-    // properties specific to concept "definition", e.g
-    - framework / identifier / uri (may be encoded in "type" and "id")
-    - name
-    - description
+### Basis on CEDS Conceptual Model
 
-    assertion: 
-      // properties specific to concept "assertion" e.g.:
-      - dateperformed
-      - grade
-      - location
-      - evidence/documentation
-      - relation to another assertion
-</pre>
+Due to the considerable effort aligning [[CEDS-CONCEPTUAL]] with relevant standards, it is convenient to use the CEDS conceptual model as our basis.
 
+CEDS has 4 key concepts (super classes):
+* Person
+* Organization
+* Resource
+* Relationship
+
+CEDS calls out 2 additional concepts, which are types of relationships:
+* Role
+* Event
+
+### Application to the VC data model 
+
+VC Data Model has properties "issuer" and "credentialSubject".
+
+In our current VC-ED use cases:
+* issuer is either Person or Organization
+* credentialSubject is Person
+
+Note that these are not restrictions of the VC data model, rather a categorization of the VC-ED use cases. 
+
+Side Note: Outer VC data model is: Issuer (Person/Org) made assertion about (Event) subject (Person)
+
+<img src="images/vc_ed_model.png" width="" alt="alt_text" title="image_tooltip">
+
+* Concept 1 (activity):	PERSON ~did/performed~ ACTIVITY (EVENT)
+* Concept 2 (competency):	PERSON ~demonstrated~ COMPETENCY DEFINITION (RESOURCE)
+* Concept 3 (recognition type): PERSON ~has/earned~ CREDENTIAL DEFINITION (RESOURCE)
+* Concept 4 (involvement): PERSON ~has role~ INVOLVEMENT (ROLE:RELATIONSHIP)
 
 
 ## Related Work
