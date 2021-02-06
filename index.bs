@@ -247,7 +247,7 @@ Note that these are not restrictions of the VC data model, rather a categorizati
 
 Side Note: Outer VC data model is: Issuer (Person/Org) made assertion about (Event) subject (Person)
 
-<img src="images/vc_ed_model.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/vc_ed_model.png" width="400" alt="alt_text" title="image_tooltip">
 
 * Concept 1 (activity):	PERSON ~did/performed~ ACTIVITY (EVENT)
 * Concept 2 (competency):	PERSON ~demonstrated~ COMPETENCY DEFINITION (RESOURCE)
@@ -286,12 +286,12 @@ Appendix {#appendix}
   <tr>
    <td>
 
-<img src="images/micromasters_certificate.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/micromasters_certificate.png" width="100" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
 
-<img src="images/upenn_certificate.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/upenn_certificate.png" width="100" alt="alt_text" title="image_tooltip">
 
    </td>
   </tr>
