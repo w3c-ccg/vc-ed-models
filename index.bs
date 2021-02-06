@@ -208,7 +208,9 @@ Note: To avoid confusion with how these concepts are represented by different st
 ### Relation between Concepts
 All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
 
-## Aligning these Concepts with TBD (the ones called out in the charter...) Educational Data Standards
+## Aligning these Concepts with TBD Educational Data Standards
+
+(TBD == the ones called out in the charter...)
 
 To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
 *  In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
@@ -243,16 +245,24 @@ In our current VC-ED use cases:
 * issuer is either Person or Organization
 * credentialSubject is Person
 
-Note that these are not restrictions of the VC data model, rather a categorization of the VC-ED use cases. 
-
-Side Note: Outer VC data model is: Issuer (Person/Org) made assertion about (Event) subject (Person)
+Note that these are not restrictions of the VC data model, rather based on classification of the VC-ED use cases. 
 
 <img src="images/vc_ed_model.png" width="400" alt="alt_text" title="image_tooltip">
 
-* Concept 1 (activity):	PERSON ~did/performed~ ACTIVITY (EVENT)
-* Concept 2 (competency):	PERSON ~demonstrated~ COMPETENCY DEFINITION (RESOURCE)
-* Concept 3 (recognition type): PERSON ~has/earned~ CREDENTIAL DEFINITION (RESOURCE)
-* Concept 4 (involvement): PERSON ~has role~ INVOLVEMENT (ROLE:RELATIONSHIP)
+Side Note: The outer VC data model is: "Issuer" (Person/Org) "made assertion about" (Event) "subject" (Person)
+
+* Concept 1 (activity):	Person ~did/performed~ ACTIVITY (Event)
+* Concept 2 (competency):	Person ~demonstrated~ COMPETENCY DEFINITION (Resource)
+* Concept 3 (recognition type): Person ~has/earned~ CREDENTIAL DEFINITION (Resource)
+* Concept 4 (involvement): Person ~has role~ INVOLVEMENT (Role: Relationship)
+
+The remainder of this document will recommend:
+- Issuer type and recommended properties
+- Subject type and recommended properties
+- Verifiable Credential (outermost) recommended properties
+- Property (or conceptual property?) describing Person's relationship to Concepts 1-4 for use in a Verifiable Credential
+- Examples/realizations for TBD data standards
+   - Recommended properties at outermost level?
 
 ## Related Work
 
