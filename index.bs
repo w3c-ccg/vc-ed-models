@@ -191,8 +191,8 @@ Lastly, this will attempt to address design challenges related to standards rely
 * International-aware: do not restrict to US edu data standards
 
 ### Out of Scope
-- Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
-- VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
+* Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
+* VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
 ## Concepts Requiring Definition in an Educational/Occupational Context
 
@@ -212,14 +212,14 @@ All of these concepts can be related to one another. Thus Concept 3 can recogniz
 
 Refining the goals of this document based on the above concepts, te goal of this document is:
 * To increase interoperability, propose recommended properties for relevant components in outer layers of VC, including:
-	* subject (concept 5)
-  * issuer (concept 6)
-	* TODO: any additions to outer assertion?
+	  * subject (concept 5)
+    * issuer (concept 6)
+	  * TODO: any additions to outer assertion?
 * Provide connective tissue to specified credential system and vocabulary data standards by proposing subject relationship to the concepts:
-  * activity (concept 1)
-	* competency (concept 2)
-	* recognition type (concept 3)
-	* involvement (concept 4)
+    * activity (concept 1)
+	  * competency (concept 2)
+	  * recognition type (concept 3)
+	  * involvement (concept 4)
 
 ### Basis on CEDS Conceptual Model
 
@@ -259,21 +259,21 @@ Side Note: Outer VC data model is: Issuer (Person/Org) made assertion about (Eve
 
 * Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper [[OBS-ARE-VCS]]
 * LER wrapper
-  * [[LER-WRAPPER]]
-  *   Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
-  * Schema.org terms/types?
-  * schema:Person is an obvious one for learner
-  * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
+    * [[LER-WRAPPER]]
+    * Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
+    * Schema.org terms/types?
+    * schema:Person is an obvious one for learner
+    * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
     * [[EOCRED]]
 * CEDS
 * CTDL and Credential Engine **(note “credential” terminology issue**)
-  * [[CREDREG]]: RDF-based schema for describing credentials and skills
-    * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
-    * Credential Finder: [[CREDFINDER]]
+    * [[CREDREG]]: RDF-based schema for describing credentials and skills
+        * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
+        * Credential Finder: [[CREDFINDER]]
 * Controlled vocabularies used in Europe published as linked open data:
-  * [[EUROPASS-TABLES]]
-  * [[ESCO]]
-  *   Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
+    * [[EUROPASS-TABLES]]
+    * [[ESCO]]
+    * Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
 
 
 Appendix {#appendix}
