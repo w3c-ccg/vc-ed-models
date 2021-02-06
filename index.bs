@@ -208,14 +208,14 @@ Note: To avoid confusion with how these concepts are represented by different st
 ### Relation between Concepts
 All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
 
-## Refined Conceptual Goal to Interoperability
+## Aligning these Concepts with TBD (the ones called out in the charter...) Educational Data Standards
 
-Refining the goals of this document based on the above concepts, te goal of this document is:
-* To increase interoperability, propose recommended properties for relevant components in outer layers of VC, including:
+To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
+*  In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
 	  * subject (concept 5)
     * issuer (concept 6)
-	  * TODO: any additions to outer assertion?
-* Provide connective tissue to specified credential system and vocabulary data standards by proposing subject relationship to the concepts:
+	  * TODO: recommend other properties in the assertion?
+* In order to enable alignment with TBD educational data standards, recommend connective tissue at a conceptual level, along with realizations with TBD standards/vocabularies. This entails proposing subject relationship(s) to the following concepts:
     * activity (concept 1)
 	  * competency (concept 2)
 	  * recognition type (concept 3)
@@ -223,7 +223,7 @@ Refining the goals of this document based on the above concepts, te goal of this
 
 ### Basis on CEDS Conceptual Model
 
-Due to the considerable effort aligning [[CEDS-CONCEPTUAL]] with relevant standards, it is convenient to use the CEDS conceptual model as our basis.
+There has already been significant effort alignment [[CEDS-CONCEPTUAL]] with TBD standards, and therefore it is convenient to use the CEDS conceptual model as our basis.
 
 CEDS has 4 key concepts (super classes):
 * Person
@@ -253,7 +253,6 @@ Side Note: Outer VC data model is: Issuer (Person/Org) made assertion about (Eve
 * Concept 2 (competency):	PERSON ~demonstrated~ COMPETENCY DEFINITION (RESOURCE)
 * Concept 3 (recognition type): PERSON ~has/earned~ CREDENTIAL DEFINITION (RESOURCE)
 * Concept 4 (involvement): PERSON ~has role~ INVOLVEMENT (ROLE:RELATIONSHIP)
-
 
 ## Related Work
 
