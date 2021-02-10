@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version c5172e83, updated Fri Nov 20 15:35:20 2020 -0800" name="generator">
-  <meta content="f95c9367f1be8c6b88ad6e568df1fffbed9cfad3" name="document-revision">
+  <meta content="1336321f7141e01b1dc1ba6aa3facb98515d617f" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -725,82 +725,37 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
      <p>Event</p>
    </ul>
    <h4 class="heading settled" data-level="1.5.2" id="application-to-the-vc-data-model"><span class="secno">1.5.2. </span><span class="content">Application to the VC data model</span><a class="self-link" href="#application-to-the-vc-data-model"></a></h4>
-   <p>VC Data Model has properties </p>
-<pre>issuer</pre>
-    and 
-<pre>credentialSubject</pre>
-   .
-   <p></p>
+   <p>VC Data Model has properties <var>issuer</var> and <var>credentialSubject</var>.</p>
    <p>In our current VC-ED use cases:</p>
    <ul>
     <li data-md>
-<pre>issuer</pre>
-      is either 
-<pre>Person</pre>
-      or 
-<pre>Organization</pre>
+     <p><var>issuer</var> is either <var>Person</var> or <var>Organization</var></p>
     <li data-md>
-<pre>credentialSubject</pre>
-      is 
-<pre>Person</pre>
+     <p><var>credentialSubject</var> is <var>Person</var></p>
    </ul>
    <p>Note that these are not based on restrictions of the VC data model; they are based on a classification of the submitted VC-ED use cases.</p>
    <p><img alt="alt_text" src="images/vc_ed_model.png" title="image_tooltip" width="400"></p>
-   <p>Side Note: The outer VC data model is: Issuer (</p>
-<pre>Person</pre>
-   /
-<pre>Organization</pre>
-   ) made assertion about (
-<pre>Event</pre>
-   ) subject (
-<pre>Person</pre>
-   )
-   <p></p>
+   <p>Side Note: The outer VC data model is: Issuer (<var>Person</var>/<var>Organization</var>) made assertion about (<var>Event</var>) subject (<var>Person</var>)</p>
    <ul>
     <li data-md>
-     <p>Concept 1 (activity): </p>
-<pre>Person</pre>
-      participated, did, or performed 
-<pre>activity</pre>
-      (<a data-link-type="dfn">CEDS Event</a>)
-     <p></p>
+     <p>Concept 1 (activity): <var>Person</var> participated, did, or performed <var>activity</var> (<a data-link-type="dfn">CEDS Event</a>)</p>
     <li data-md>
-     <p>Concept 2 (competency): </p>
-<pre>Person</pre>
-      demonstrated 
-<pre>competency</pre>
-     , or competency definition (<a data-link-type="dfn">CEDS Resource</a>)
-     <p></p>
+     <p>Concept 2 (competency): <var>Person</var> demonstrated <var>competency</var>, or competency definition (<a data-link-type="dfn">CEDS Resource</a>)</p>
     <li data-md>
-     <p>Concept 3 (recognition type): </p>
-<pre>Person</pre>
-      earned, has 
-<pre>recognition type</pre>
-     , or credential definition (<a data-link-type="dfn">CEDS Resource</a>)
-     <p></p>
+     <p>Concept 3 (recognition type): <var>Person</var> earned, has <var>recognition type</var>, or credential definition (<a data-link-type="dfn">CEDS Resource</a>)</p>
     <li data-md>
-     <p>Concept 4 (involvement): </p>
-<pre>Person</pre>
-      has role 
-<pre>involvement</pre>
-      (<a data-link-type="dfn">CEDS Role</a>: <a data-link-type="dfn">CEDS Relationship</a>)
-     <p></p>
+     <p>Concept 4 (involvement): <var>Person</var> has role <var>involvement</var> (<a data-link-type="dfn">CEDS Role</a>: <a data-link-type="dfn">CEDS Relationship</a>)</p>
    </ul>
    <p>The remainder of this document will recommend:</p>
    <ul>
     <li data-md>
-<pre>Issuer</pre>
-      type and recommended properties 
+     <p><var>Issuer</var> type and recommended properties</p>
     <li data-md>
-<pre>Subject</pre>
-      type and recommended properties 
+     <p><var>Subject</var> type and recommended properties</p>
     <li data-md>
      <p><a data-link-type="dfn">Verifiable Credential</a> (outermost) recommended properties</p>
     <li data-md>
-     <p>Property (or conceptual property?) describing </p>
-<pre>Person</pre>
-     ’s relationship to concepts 1-4 for use in a <a data-link-type="dfn">Verifiable Credential</a>
-     <p></p>
+     <p>Property (or conceptual property?) describing <var>Person</var>’s relationship to concepts 1-4 for use in a <a data-link-type="dfn">Verifiable Credential</a></p>
     <li data-md>
      <p>Examples/realizations for <a data-link-type="dfn">target standards</a></p>
    </ul>
@@ -1073,7 +1028,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
    <h4 class="heading settled" data-level="2.3.2" id="implementation-options"><span class="secno">2.3.2. </span><span class="content">Implementation Options</span><a class="self-link" href="#implementation-options"></a></h4>
    <ul>
     <li data-md>
-     <p>LER Wrapper is an option; note that it includes XML as a string: <a data-link-type="biblio" href="#biblio-ler-wrapper-xml">[LER-WRAPPER-XML]</a></p>
+     <p>LER Wrapper is an option; note that it includes XML as a string: <a data-link-type="biblio" href="#biblio-ler-wrapper">[LER-WRAPPER]</a></p>
     <li data-md>
      <p>Improving on XML-as-string would be a bit of work. I see 2 paths:</p>
      <ul>
@@ -1297,8 +1252,6 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
    <dd>alice; bob. <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">ISCED-F</a>. TBD. URL: <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification</a>
    <dt id="biblio-ler-wrapper">[LER-WRAPPER]
    <dd>Jim Goodell. <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">LER Wrapper Spec</a>. TBD. URL: <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss</a>
-   <dt id="biblio-ler-wrapper-xml">[LER-WRAPPER-XML]
-   <dd>alice; bob. <a href="hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62">LER Wrapper XML Sample -- TODO</a>. TBD. URL: <a href="hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62">hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62</a>
    <dt id="biblio-lerhub">[LERHUB]
    <dd>alice; bob. <a href="http://lerhub.org">LER Hub</a>. TBD. URL: <a href="http://lerhub.org">http://lerhub.org</a>
    <dt id="biblio-obs-are-vcs">[OBS-ARE-VCS]
