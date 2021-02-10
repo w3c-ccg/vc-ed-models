@@ -463,7 +463,7 @@ Which standard would we like to start with?
 
 ### Implementation Options
 
-*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER-XML]]
+*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER]]
 *   Improving on XML-as-string would be a bit of work. I see 2 paths:
     *   Push to support XML as VC format
         *   This would be helpful in the near-term, and would benefit other XML-based standards
