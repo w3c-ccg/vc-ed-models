@@ -215,13 +215,13 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
 
 To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
 * In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
-	  * subject (concept 5)
+    * subject (concept 5)
     * issuer (concept 6)
 * In order to enable alignment with [=target standards=], recommend connective tissue at a conceptual level, along with realizations in each of [=target standards=]. This entails proposing subject relationship(s) to the following concepts:
     * activity (concept 1)
-	  * competency (concept 2)
-	  * recognition type (concept 3)
-	  * involvement (concept 4)
+    * competency (concept 2)
+    * recognition type (concept 3)
+    * involvement (concept 4)
 
 ISSUE: recommend other properties in the assertion?
 
