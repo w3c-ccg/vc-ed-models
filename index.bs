@@ -31,6 +31,13 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "status": "TBD",
         "publisher": "schema.org"
     },
+    "CEDS-CONCEPTUAL": {
+        "authors": [ "Jim Goodell" ],
+        "href": "https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf",
+        "title": "CEDS Conceptual Model",
+        "status": "TBD",
+        "publisher": "CEDS"
+    },
     "CREDREG-ILWRGUIDE": {
         "authors": [ "alice", "bob" ],
         "href": "https://credreg.net/quickstart/ilwrguide",
@@ -184,8 +191,8 @@ Lastly, this will attempt to address design challenges related to standards rely
 * International-aware: do not restrict to US edu data standards
 
 ### Out of Scope
-- Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
-- VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
+* Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
+* VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
 ## Concepts Requiring Definition in an Educational/Occupational Context
 
@@ -198,59 +205,84 @@ Note: To avoid confusion with how these concepts are represented by different st
 * Concept 5 (subject): decribes the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. Subject may be the holder of the credential but not necessarily, especially in cases where guardianship is delegated. 
 * Concept 6 (issuer): describes the person or entity that is issuing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer. The issuer may also be a person. For example: a person such as a colleague may issue a recommendtion about another person in the form of a verifiable credentials.
 
-
 ### Relation between Concepts
 All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
 
-### Approach to Definition
-Each of these concepts can be defined using the following concepts:
-* definition: this is a link to a URI describing the concept and to the target framework of the concept
-* instance: this describes data about the person's individual performance of that concept
+## Aligning these Concepts with TBD Educational Data Standards
 
-In pseudocode, this is structured as:
-<pre>
-credentialSubject:
-  // properties specific to the individual learner, e.g.:
-  - learner's did 
-  - name
+(TBD == the ones called out in the charter...)
 
-  // property representing relationship of subject to "concept" (skill/credential/...)
-  - hasConcept: 
-    // properties specific to concept "definition", e.g
-    - framework / identifier / uri (may be encoded in "type" and "id")
-    - name
-    - description
+To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
+*  In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
+	  * subject (concept 5)
+    * issuer (concept 6)
+	  * TODO: recommend other properties in the assertion?
+* In order to enable alignment with TBD educational data standards, recommend connective tissue at a conceptual level, along with realizations with TBD standards/vocabularies. This entails proposing subject relationship(s) to the following concepts:
+    * activity (concept 1)
+	  * competency (concept 2)
+	  * recognition type (concept 3)
+	  * involvement (concept 4)
 
-    assertion: 
-      // properties specific to concept "assertion" e.g.:
-      - dateperformed
-      - grade
-      - location
-      - evidence/documentation
-      - relation to another assertion
-</pre>
+### Basis on CEDS Conceptual Model
 
+There has already been significant effort alignment [[CEDS-CONCEPTUAL]] with TBD standards, and therefore it is convenient to use the CEDS conceptual model as our basis.
 
+CEDS has 4 key concepts (super classes):
+* Person
+* Organization
+* Resource
+* Relationship
+
+CEDS calls out 2 additional concepts, which are types of relationships:
+* Role
+* Event
+
+### Application to the VC data model 
+
+VC Data Model has properties "issuer" and "credentialSubject".
+
+In our current VC-ED use cases:
+* issuer is either Person or Organization
+* credentialSubject is Person
+
+Note that these are not restrictions of the VC data model, rather based on classification of the VC-ED use cases. 
+
+<img src="images/vc_ed_model.png" width="400" alt="alt_text" title="image_tooltip">
+
+Side Note: The outer VC data model is: "Issuer" (Person/Org) "made assertion about" (Event) "subject" (Person)
+
+* Concept 1 (activity):	Person ~did/performed~ ACTIVITY (Event)
+* Concept 2 (competency):	Person ~demonstrated~ COMPETENCY DEFINITION (Resource)
+* Concept 3 (recognition type): Person ~has/earned~ CREDENTIAL DEFINITION (Resource)
+* Concept 4 (involvement): Person ~has role~ INVOLVEMENT (Role: Relationship)
+
+The remainder of this document will recommend:
+- Issuer type and recommended properties
+- Subject type and recommended properties
+- Verifiable Credential (outermost) recommended properties
+- Property (or conceptual property?) describing Person's relationship to Concepts 1-4 for use in a Verifiable Credential
+- Examples/realizations for TBD data standards
+   - Recommended properties at outermost level?
 
 ## Related Work
 
 * Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper [[OBS-ARE-VCS]]
 * LER wrapper
-  * [[LER-WRAPPER]]
-  *   Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
-  * Schema.org terms/types?
-  * schema:Person is an obvious one for learner
-  * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
+    * [[LER-WRAPPER]]
+    * Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
+    * Schema.org terms/types?
+    * schema:Person is an obvious one for learner
+    * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
     * [[EOCRED]]
 * CEDS
 * CTDL and Credential Engine **(note “credential” terminology issue**)
-  * [[CREDREG]]: RDF-based schema for describing credentials and skills
-    * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
-    * Credential Finder: [[CREDFINDER]]
+    * [[CREDREG]]: RDF-based schema for describing credentials and skills
+        * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
+        * Credential Finder: [[CREDFINDER]]
 * Controlled vocabularies used in Europe published as linked open data:
-  * [[EUROPASS-TABLES]]
-  * [[ESCO]]
-  *   Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
+    * [[EUROPASS-TABLES]]
+    * [[ESCO]]
+    * Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
 
 
 Appendix {#appendix}
@@ -264,12 +296,12 @@ Appendix {#appendix}
   <tr>
    <td>
 
-<img src="images/micromasters_certificate.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/micromasters_certificate.png" width="300" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
 
-<img src="images/upenn_certificate.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/upenn_certificate.png" width="300" alt="alt_text" title="image_tooltip">
 
    </td>
   </tr>
