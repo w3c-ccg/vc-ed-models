@@ -131,7 +131,7 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
     },
     "LER-WRAPPER-XML": {
         "authors": [ "alice", "bob" ],
-        "href": "hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62",
+        "href": "https://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62",
         "title": "LER Wrapper XML Sample -- TODO",
         "status": "TBD",
         "publisher": "TBD"
