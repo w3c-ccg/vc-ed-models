@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version c5172e83, updated Fri Nov 20 15:35:20 2020 -0800" name="generator">
-  <meta content="290cb89c291e21a88b360f6cace3a28be4cb85c2" name="document-revision">
+  <meta content="f95c9367f1be8c6b88ad6e568df1fffbed9cfad3" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -564,7 +564,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#relation-between-concepts"><span class="secno">1.4.1</span> <span class="content">Relation between Concepts</span></a>
        </ol>
       <li>
-       <a href="#aligning-these-concepts-with-tbd-educational-data-standards"><span class="secno">1.5</span> <span class="content">Aligning these Concepts with TBD Educational Data Standards</span></a>
+       <a href="#aligning-these-concepts-with-educational-data-standards"><span class="secno">1.5</span> <span class="content">Aligning these Concepts with Educational Data Standards</span></a>
        <ol class="toc">
         <li><a href="#basis-on-ceds-conceptual-model"><span class="secno">1.5.1</span> <span class="content">Basis on CEDS Conceptual Model</span></a>
         <li><a href="#application-to-the-vc-data-model"><span class="secno">1.5.2</span> <span class="content">Application to the VC data model</span></a>
@@ -677,8 +677,9 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    </ul>
    <h4 class="heading settled" data-level="1.4.1" id="relation-between-concepts"><span class="secno">1.4.1. </span><span class="content">Relation between Concepts</span><a class="self-link" href="#relation-between-concepts"></a></h4>
     All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4. 
-   <h3 class="heading settled" data-level="1.5" id="aligning-these-concepts-with-tbd-educational-data-standards"><span class="secno">1.5. </span><span class="content">Aligning these Concepts with TBD Educational Data Standards</span><a class="self-link" href="#aligning-these-concepts-with-tbd-educational-data-standards"></a></h3>
-   <p>(TBD == the ones called out in the charter...)</p>
+   <h3 class="heading settled" data-level="1.5" id="aligning-these-concepts-with-educational-data-standards"><span class="secno">1.5. </span><span class="content">Aligning these Concepts with Educational Data Standards</span><a class="self-link" href="#aligning-these-concepts-with-educational-data-standards"></a></h3>
+   <p>This document seeks to provide guidance on use of the Verifiable Credential data model with the widely-used educational data standards referred to as <a data-link-type="dfn">target standards</a>.
+ISSUE: The initial proposed set of standards is listed in the task force charter; this will be refined and updated with a subsequent milestone. Update in this document when done. For now, we’ll refer to this set as <a data-link-type="dfn">target standards</a></p>
    <p>To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:</p>
    <ul>
     <li data-md>
@@ -688,11 +689,9 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        <p>subject (concept 5)</p>
       <li data-md>
        <p>issuer (concept 6)</p>
-      <li data-md>
-       <p>TODO: recommend other properties in the assertion?</p>
      </ul>
     <li data-md>
-     <p>In order to enable alignment with TBD educational data standards, recommend connective tissue at a conceptual level, along with realizations with TBD standards/vocabularies. This entails proposing subject relationship(s) to the following concepts:</p>
+     <p>In order to enable alignment with <a data-link-type="dfn">target standards</a>, recommend connective tissue at a conceptual level, along with realizations in each of <a data-link-type="dfn">target standards</a>. This entails proposing subject relationship(s) to the following concepts:</p>
      <ul>
       <li data-md>
        <p>activity (concept 1)</p>
@@ -704,8 +703,9 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        <p>involvement (concept 4)</p>
      </ul>
    </ul>
+   <p class="issue" id="issue-1c1bdeab"><a class="self-link" href="#issue-1c1bdeab"></a> recommend other properties in the assertion?</p>
    <h4 class="heading settled" data-level="1.5.1" id="basis-on-ceds-conceptual-model"><span class="secno">1.5.1. </span><span class="content">Basis on CEDS Conceptual Model</span><a class="self-link" href="#basis-on-ceds-conceptual-model"></a></h4>
-   <p>There has already been significant effort alignment <a data-link-type="biblio" href="#biblio-ceds-conceptual">[CEDS-CONCEPTUAL]</a> with TBD standards, and therefore it is convenient to use the CEDS conceptual model as our basis.</p>
+   <p>There has already been significant effort aligning <a data-link-type="biblio" href="#biblio-ceds-conceptual">[CEDS-CONCEPTUAL]</a> with <a data-link-type="dfn">target standards</a>, and therefore it is convenient to use the CEDS conceptual model as our basis.</p>
    <p>CEDS has 4 key concepts (super classes):</p>
    <ul>
     <li data-md>
@@ -725,41 +725,84 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <p>Event</p>
    </ul>
    <h4 class="heading settled" data-level="1.5.2" id="application-to-the-vc-data-model"><span class="secno">1.5.2. </span><span class="content">Application to the VC data model</span><a class="self-link" href="#application-to-the-vc-data-model"></a></h4>
-   <p>VC Data Model has properties "issuer" and "credentialSubject".</p>
+   <p>VC Data Model has properties </p>
+<pre>issuer</pre>
+    and 
+<pre>credentialSubject</pre>
+   .
+   <p></p>
    <p>In our current VC-ED use cases:</p>
    <ul>
     <li data-md>
-     <p>issuer is either Person or Organization</p>
+<pre>issuer</pre>
+      is either 
+<pre>Person</pre>
+      or 
+<pre>Organization</pre>
     <li data-md>
-     <p>credentialSubject is Person</p>
+<pre>credentialSubject</pre>
+      is 
+<pre>Person</pre>
    </ul>
-   <p>Note that these are not restrictions of the VC data model, rather based on classification of the VC-ED use cases.</p>
+   <p>Note that these are not based on restrictions of the VC data model; they are based on a classification of the submitted VC-ED use cases.</p>
    <p><img alt="alt_text" src="images/vc_ed_model.png" title="image_tooltip" width="400"></p>
-   <p>Side Note: The outer VC data model is: "Issuer" (Person/Org) "made assertion about" (Event) "subject" (Person)</p>
+   <p>Side Note: The outer VC data model is: Issuer (</p>
+<pre>Person</pre>
+   /
+<pre>Organization</pre>
+   ) made assertion about (
+<pre>Event</pre>
+   ) subject (
+<pre>Person</pre>
+   )
+   <p></p>
    <ul>
     <li data-md>
-     <p>Concept 1 (activity):	Person ~did/performed~ ACTIVITY (Event)</p>
+     <p>Concept 1 (activity): </p>
+<pre>Person</pre>
+      participated, did, or performed 
+<pre>activity</pre>
+      (<a data-link-type="dfn">CEDS Event</a>)
+     <p></p>
     <li data-md>
-     <p>Concept 2 (competency):	Person ~demonstrated~ COMPETENCY DEFINITION (Resource)</p>
+     <p>Concept 2 (competency): </p>
+<pre>Person</pre>
+      demonstrated 
+<pre>competency</pre>
+     , or competency definition (<a data-link-type="dfn">CEDS Resource</a>)
+     <p></p>
     <li data-md>
-     <p>Concept 3 (recognition type): Person ~has/earned~ CREDENTIAL DEFINITION (Resource)</p>
+     <p>Concept 3 (recognition type): </p>
+<pre>Person</pre>
+      earned, has 
+<pre>recognition type</pre>
+     , or credential definition (<a data-link-type="dfn">CEDS Resource</a>)
+     <p></p>
     <li data-md>
-     <p>Concept 4 (involvement): Person ~has role~ INVOLVEMENT (Role: Relationship)</p>
+     <p>Concept 4 (involvement): </p>
+<pre>Person</pre>
+      has role 
+<pre>involvement</pre>
+      (<a data-link-type="dfn">CEDS Role</a>: <a data-link-type="dfn">CEDS Relationship</a>)
+     <p></p>
    </ul>
    <p>The remainder of this document will recommend:</p>
    <ul>
     <li data-md>
-     <p>Issuer type and recommended properties</p>
+<pre>Issuer</pre>
+      type and recommended properties 
     <li data-md>
-     <p>Subject type and recommended properties</p>
+<pre>Subject</pre>
+      type and recommended properties 
     <li data-md>
-     <p>Verifiable Credential (outermost) recommended properties</p>
+     <p><a data-link-type="dfn">Verifiable Credential</a> (outermost) recommended properties</p>
     <li data-md>
-     <p>Property (or conceptual property?) describing Person’s relationship to Concepts 1-4 for use in a Verifiable Credential</p>
+     <p>Property (or conceptual property?) describing </p>
+<pre>Person</pre>
+     ’s relationship to concepts 1-4 for use in a <a data-link-type="dfn">Verifiable Credential</a>
+     <p></p>
     <li data-md>
-     <p>Examples/realizations for TBD data standards</p>
-    <li data-md>
-     <p>Recommended properties at outermost level?</p>
+     <p>Examples/realizations for <a data-link-type="dfn">target standards</a></p>
    </ul>
    <h3 class="heading settled" data-level="1.6" id="related-work"><span class="secno">1.6. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
    <ul>
@@ -1266,6 +1309,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
    <div class="issue"> <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue #11 - Check and update biblio</a><a href="#issue-e95f0539"> ↵ </a></div>
+   <div class="issue"> recommend other properties in the assertion?<a href="#issue-1c1bdeab"> ↵ </a></div>
    <div class="issue"> <a href="https://github.com/w3c-ccg/vc-ed-models/issues/10">Issue #10</a><a href="#issue-76f4970e"> ↵ </a></div>
    <div class="issue"> <a href="https://github.com/w3c-ccg/vc-ed-models/issues/5">Issue #5</a><a href="#issue-38dbb234"> ↵ </a></div>
   </div>
