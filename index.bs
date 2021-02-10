@@ -12,7 +12,7 @@ Editor: Kerri Lemoie, OpenWorks Group http://openworksgrp.com/, kerri@openworksg
 Editor: Nate Otto, Concentric Sky https://concentricsky.com/, notto@concentricsky.com, http://ottonomy.net/blog/
 
 Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
-</pre>
+</var>
 
 ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue #11 - Check and update biblio</a>
 <pre class="biblio">
@@ -149,7 +149,7 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "aliasOf": "SOMETHING-ELSE"
     }
 }
-</pre>
+</var>
 
 <!--
 Note:
@@ -241,28 +241,28 @@ CEDS calls out 2 additional concepts, which are types of relationships:
 
 ### Application to the VC data model 
 
-VC Data Model has properties <pre>issuer</pre> and <pre>credentialSubject</pre>.
+VC Data Model has properties <var>issuer</var> and <var>credentialSubject</var>.
 
 In our current VC-ED use cases:
-* <pre>issuer</pre> is either <pre>Person</pre> or <pre>Organization</pre>
-* <pre>credentialSubject</pre> is <pre>Person</pre>
+* <var>issuer</var> is either <var>Person</var> or <var>Organization</var>
+* <var>credentialSubject</var> is <var>Person</var>
 
 Note that these are not based on restrictions of the VC data model; they are based on a classification of the submitted VC-ED use cases. 
 
 <img src="images/vc_ed_model.png" width="400" alt="alt_text" title="image_tooltip">
 
-Side Note: The outer VC data model is: Issuer (<pre>Person</pre>/<pre>Organization</pre>) made assertion about (<pre>Event</pre>) subject (<pre>Person</pre>)
+Side Note: The outer VC data model is: Issuer (<var>Person</var>/<var>Organization</var>) made assertion about (<var>Event</var>) subject (<var>Person</var>)
 
-* Concept 1 (activity):	<pre>Person</pre> participated, did, or performed <pre>activity</pre> ([=CEDS Event=])
-* Concept 2 (competency):	<pre>Person</pre> demonstrated <pre>competency</pre>, or competency definition ([=CEDS Resource=])
-* Concept 3 (recognition type): <pre>Person</pre> earned, has <pre>recognition type</pre>, or credential definition ([=CEDS Resource=])
-* Concept 4 (involvement): <pre>Person</pre> has role <pre>involvement</pre> ([=CEDS Role=]: [=CEDS Relationship=])
+* Concept 1 (activity):	<var>Person</var> participated, did, or performed <var>activity</var> ([=CEDS Event=])
+* Concept 2 (competency):	<var>Person</var> demonstrated <var>competency</var>, or competency definition ([=CEDS Resource=])
+* Concept 3 (recognition type): <var>Person</var> earned, has <var>recognition type</var>, or credential definition ([=CEDS Resource=])
+* Concept 4 (involvement): <var>Person</var> has role <var>involvement</var> ([=CEDS Role=]: [=CEDS Relationship=])
 
 The remainder of this document will recommend:
-- <pre>Issuer</pre> type and recommended properties
-- <pre>Subject</pre> type and recommended properties
+- <var>Issuer</var> type and recommended properties
+- <var>Subject</var> type and recommended properties
 - [=Verifiable Credential=] (outermost) recommended properties
-- Property (or conceptual property?) describing <pre>Person</pre>'s relationship to concepts 1-4 for use in a [=Verifiable Credential=]
+- Property (or conceptual property?) describing <var>Person</var>'s relationship to concepts 1-4 for use in a [=Verifiable Credential=]
 - Examples/realizations for [=target standards=]
 
 ## Related Work
@@ -396,7 +396,7 @@ EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in t
 <pre class=include-code>
 path: samples/openBadgeAsLer.json
 highlight: json
-</pre>
+</var>
 
 ### Approach 2: Open Badge as Verifiable Credentials
 
@@ -410,14 +410,14 @@ Notes:
 <pre class=include-code>
 path: samples/openBadgeAsVc.json
 highlight: json
-</pre>
+</var>
 
 A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)
 
 <pre class=include-code>
 path: samples/openBadgeAsVc2.json
 highlight: json
-</pre>
+</var>
 
 ## Example 2: Diploma
 
@@ -504,7 +504,7 @@ Note:
 <pre class=include-code>
 path: samples/openSkillsAssertion.json
 highlight: json
-</pre>
+</var>
 
 ## Example 6: EMREX
 
@@ -527,7 +527,7 @@ Comments/Questions:
 <pre class=include-code>
 path: samples/credentialEngine.json
 highlight: json
-</pre>
+</var>
 
 ## Example 8: Use of EducationalOccupationalCredential (schema.org)
 
@@ -540,4 +540,4 @@ About this example:
 <pre class=include-code>
 path: samples/educationalOccupationalCredential.json
 highlight: json
-</pre>
+</var>
