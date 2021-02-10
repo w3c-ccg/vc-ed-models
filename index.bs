@@ -208,24 +208,26 @@ Note: To avoid confusion with how these concepts are represented by different st
 ### Relation between Concepts
 All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
 
-## Aligning these Concepts with TBD Educational Data Standards
+## Aligning these Concepts with Educational Data Standards
 
-(TBD == the ones called out in the charter...)
+This document seeks to provide guidance on use of the Verifiable Credential data model with the widely-used educational data standards referred to as [=target standards=].
+ISSUE: The initial proposed set of standards is listed in the task force charter; this will be refined and updated with a subsequent milestone. Update in this document when done. For now, we'll refer to this set as [=target standards=]
 
 To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
-*  In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
-	  * subject (concept 5)
+* In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
+    * subject (concept 5)
     * issuer (concept 6)
-	  * TODO: recommend other properties in the assertion?
-* In order to enable alignment with TBD educational data standards, recommend connective tissue at a conceptual level, along with realizations with TBD standards/vocabularies. This entails proposing subject relationship(s) to the following concepts:
+* In order to enable alignment with [=target standards=], recommend connective tissue at a conceptual level, along with realizations in each of [=target standards=]. This entails proposing subject relationship(s) to the following concepts:
     * activity (concept 1)
-	  * competency (concept 2)
-	  * recognition type (concept 3)
-	  * involvement (concept 4)
+    * competency (concept 2)
+    * recognition type (concept 3)
+    * involvement (concept 4)
+
+ISSUE: recommend other properties in the assertion?
 
 ### Basis on CEDS Conceptual Model
 
-There has already been significant effort alignment [[CEDS-CONCEPTUAL]] with TBD standards, and therefore it is convenient to use the CEDS conceptual model as our basis.
+There has already been significant effort aligning [[CEDS-CONCEPTUAL]] with [=target standards=], and therefore it is convenient to use the CEDS conceptual model as our basis.
 
 CEDS has 4 key concepts (super classes):
 * Person
@@ -239,30 +241,29 @@ CEDS calls out 2 additional concepts, which are types of relationships:
 
 ### Application to the VC data model 
 
-VC Data Model has properties "issuer" and "credentialSubject".
+VC Data Model has properties <pre>issuer</pre> and <pre>credentialSubject</pre>.
 
 In our current VC-ED use cases:
-* issuer is either Person or Organization
-* credentialSubject is Person
+* <pre>issuer</pre> is either <pre>Person</pre> or <pre>Organization</pre>
+* <pre>credentialSubject</pre> is <pre>Person</pre>
 
-Note that these are not restrictions of the VC data model, rather based on classification of the VC-ED use cases. 
+Note that these are not based on restrictions of the VC data model; they are based on a classification of the submitted VC-ED use cases. 
 
 <img src="images/vc_ed_model.png" width="400" alt="alt_text" title="image_tooltip">
 
-Side Note: The outer VC data model is: "Issuer" (Person/Org) "made assertion about" (Event) "subject" (Person)
+Side Note: The outer VC data model is: Issuer (<pre>Person</pre>/<pre>Organization</pre>) made assertion about (<pre>Event</pre>) subject (<pre>Person</pre>)
 
-* Concept 1 (activity):	Person ~did/performed~ ACTIVITY (Event)
-* Concept 2 (competency):	Person ~demonstrated~ COMPETENCY DEFINITION (Resource)
-* Concept 3 (recognition type): Person ~has/earned~ CREDENTIAL DEFINITION (Resource)
-* Concept 4 (involvement): Person ~has role~ INVOLVEMENT (Role: Relationship)
+* Concept 1 (activity):	<pre>Person</pre> participated, did, or performed <pre>activity</pre> ([=CEDS Event=])
+* Concept 2 (competency):	<pre>Person</pre> demonstrated <pre>competency</pre>, or competency definition ([=CEDS Resource=])
+* Concept 3 (recognition type): <pre>Person</pre> earned, has <pre>recognition type</pre>, or credential definition ([=CEDS Resource=])
+* Concept 4 (involvement): <pre>Person</pre> has role <pre>involvement</pre> ([=CEDS Role=]: [=CEDS Relationship=])
 
 The remainder of this document will recommend:
-- Issuer type and recommended properties
-- Subject type and recommended properties
-- Verifiable Credential (outermost) recommended properties
-- Property (or conceptual property?) describing Person's relationship to Concepts 1-4 for use in a Verifiable Credential
-- Examples/realizations for TBD data standards
-   - Recommended properties at outermost level?
+- <pre>Issuer</pre> type and recommended properties
+- <pre>Subject</pre> type and recommended properties
+- [=Verifiable Credential=] (outermost) recommended properties
+- Property (or conceptual property?) describing <pre>Person</pre>'s relationship to concepts 1-4 for use in a [=Verifiable Credential=]
+- Examples/realizations for [=target standards=]
 
 ## Related Work
 
