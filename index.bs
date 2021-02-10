@@ -129,13 +129,6 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "status": "TBD",
         "publisher": "TBD"
     },
-    "LER-WRAPPER-XML": {
-        "authors": [ "alice", "bob" ],
-        "href": "https://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62",
-        "title": "LER Wrapper XML Sample -- TODO",
-        "status": "TBD",
-        "publisher": "TBD"
-    },
     "OBS-ARE-VCS": {
         "authors": [ "alice", "bob" ],
         "href": "https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf",
@@ -149,7 +142,7 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "aliasOf": "SOMETHING-ELSE"
     }
 }
-</var>
+</pre>
 
 <!--
 Note:
