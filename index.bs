@@ -12,7 +12,7 @@ Editor: Kerri Lemoie, OpenWorks Group http://openworksgrp.com/, kerri@openworksg
 Editor: Nate Otto, Concentric Sky https://concentricsky.com/, notto@concentricsky.com, http://ottonomy.net/blog/
 
 Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
-</var>
+</pre>
 
 ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue #11 - Check and update biblio</a>
 <pre class="biblio">
@@ -396,7 +396,7 @@ EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in t
 <pre class=include-code>
 path: samples/openBadgeAsLer.json
 highlight: json
-</var>
+</pre>
 
 ### Approach 2: Open Badge as Verifiable Credentials
 
@@ -410,14 +410,14 @@ Notes:
 <pre class=include-code>
 path: samples/openBadgeAsVc.json
 highlight: json
-</var>
+</pre>
 
 A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)
 
 <pre class=include-code>
 path: samples/openBadgeAsVc2.json
 highlight: json
-</var>
+</pre>
 
 ## Example 2: Diploma
 
@@ -504,7 +504,7 @@ Note:
 <pre class=include-code>
 path: samples/openSkillsAssertion.json
 highlight: json
-</var>
+</pre>
 
 ## Example 6: EMREX
 
@@ -527,7 +527,7 @@ Comments/Questions:
 <pre class=include-code>
 path: samples/credentialEngine.json
 highlight: json
-</var>
+</pre>
 
 ## Example 8: Use of EducationalOccupationalCredential (schema.org)
 
@@ -540,4 +540,4 @@ About this example:
 <pre class=include-code>
 path: samples/educationalOccupationalCredential.json
 highlight: json
-</var>
+</pre>
