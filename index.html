@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version c5172e83, updated Fri Nov 20 15:35:20 2020 -0800" name="generator">
-  <meta content="bfbec24c4781b85105029cf0ec888952c8f1344f" name="document-revision">
+  <meta content="290cb89c291e21a88b360f6cace3a28be4cb85c2" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -517,7 +517,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-02-05">5 February 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-02-10">10 February 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>Issue Tracking:
@@ -562,9 +562,14 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        <a href="#concepts-requiring-definition-in-an-educational-occupational-context"><span class="secno">1.4</span> <span class="content">Concepts Requiring Definition in an Educational/Occupational Context</span></a>
        <ol class="toc">
         <li><a href="#relation-between-concepts"><span class="secno">1.4.1</span> <span class="content">Relation between Concepts</span></a>
-        <li><a href="#approach-to-definition"><span class="secno">1.4.2</span> <span class="content">Approach to Definition</span></a>
        </ol>
-      <li><a href="#related-work"><span class="secno">1.5</span> <span class="content">Related Work</span></a>
+      <li>
+       <a href="#aligning-these-concepts-with-tbd-educational-data-standards"><span class="secno">1.5</span> <span class="content">Aligning these Concepts with TBD Educational Data Standards</span></a>
+       <ol class="toc">
+        <li><a href="#basis-on-ceds-conceptual-model"><span class="secno">1.5.1</span> <span class="content">Basis on CEDS Conceptual Model</span></a>
+        <li><a href="#application-to-the-vc-data-model"><span class="secno">1.5.2</span> <span class="content">Application to the VC data model</span></a>
+       </ol>
+      <li><a href="#related-work"><span class="secno">1.6</span> <span class="content">Related Work</span></a>
      </ol>
     <li>
      <a href="#appendix"><span class="secno">2</span> <span class="content">Appendix</span></a>
@@ -672,52 +677,107 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    </ul>
    <h4 class="heading settled" data-level="1.4.1" id="relation-between-concepts"><span class="secno">1.4.1. </span><span class="content">Relation between Concepts</span><a class="self-link" href="#relation-between-concepts"></a></h4>
     All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4. 
-   <h4 class="heading settled" data-level="1.4.2" id="approach-to-definition"><span class="secno">1.4.2. </span><span class="content">Approach to Definition</span><a class="self-link" href="#approach-to-definition"></a></h4>
-    Each of these concepts can be defined using the following concepts: 
+   <h3 class="heading settled" data-level="1.5" id="aligning-these-concepts-with-tbd-educational-data-standards"><span class="secno">1.5. </span><span class="content">Aligning these Concepts with TBD Educational Data Standards</span><a class="self-link" href="#aligning-these-concepts-with-tbd-educational-data-standards"></a></h3>
+   <p>(TBD == the ones called out in the charter...)</p>
+   <p>To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:</p>
    <ul>
     <li data-md>
-     <p>definition: this is a link to a URI describing the concept and to the target framework of the concept</p>
+     <p>In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:</p>
+     <ul>
+      <li data-md>
+       <p>subject (concept 5)</p>
+      <li data-md>
+       <p>issuer (concept 6)</p>
+      <li data-md>
+       <p>TODO: recommend other properties in the assertion?</p>
+     </ul>
     <li data-md>
-     <p>instance: this describes data about the person’s individual performance of that concept</p>
+     <p>In order to enable alignment with TBD educational data standards, recommend connective tissue at a conceptual level, along with realizations with TBD standards/vocabularies. This entails proposing subject relationship(s) to the following concepts:</p>
+     <ul>
+      <li data-md>
+       <p>activity (concept 1)</p>
+      <li data-md>
+       <p>competency (concept 2)</p>
+      <li data-md>
+       <p>recognition type (concept 3)</p>
+      <li data-md>
+       <p>involvement (concept 4)</p>
+     </ul>
    </ul>
-   <p>In pseudocode, this is structured as:</p>
-<pre>credentialSubject:
-  // properties specific to the individual learner, e.g.:
-  - learner’s did 
-  - name
-
-  // property representing relationship of subject to "concept" (skill/credential/...)
-  - hasConcept: 
-    // properties specific to concept "definition", e.g
-    - framework / identifier / uri (may be encoded in "type" and "id")
-    - name
-    - description
-
-    assertion: 
-      // properties specific to concept "assertion" e.g.:
-      - dateperformed
-      - grade
-      - location
-      - evidence/documentation
-      - relation to another assertion
-</pre>
-   <h3 class="heading settled" data-level="1.5" id="related-work"><span class="secno">1.5. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
+   <h4 class="heading settled" data-level="1.5.1" id="basis-on-ceds-conceptual-model"><span class="secno">1.5.1. </span><span class="content">Basis on CEDS Conceptual Model</span><a class="self-link" href="#basis-on-ceds-conceptual-model"></a></h4>
+   <p>There has already been significant effort alignment <a data-link-type="biblio" href="#biblio-ceds-conceptual">[CEDS-CONCEPTUAL]</a> with TBD standards, and therefore it is convenient to use the CEDS conceptual model as our basis.</p>
+   <p>CEDS has 4 key concepts (super classes):</p>
+   <ul>
+    <li data-md>
+     <p>Person</p>
+    <li data-md>
+     <p>Organization</p>
+    <li data-md>
+     <p>Resource</p>
+    <li data-md>
+     <p>Relationship</p>
+   </ul>
+   <p>CEDS calls out 2 additional concepts, which are types of relationships:</p>
+   <ul>
+    <li data-md>
+     <p>Role</p>
+    <li data-md>
+     <p>Event</p>
+   </ul>
+   <h4 class="heading settled" data-level="1.5.2" id="application-to-the-vc-data-model"><span class="secno">1.5.2. </span><span class="content">Application to the VC data model</span><a class="self-link" href="#application-to-the-vc-data-model"></a></h4>
+   <p>VC Data Model has properties "issuer" and "credentialSubject".</p>
+   <p>In our current VC-ED use cases:</p>
+   <ul>
+    <li data-md>
+     <p>issuer is either Person or Organization</p>
+    <li data-md>
+     <p>credentialSubject is Person</p>
+   </ul>
+   <p>Note that these are not restrictions of the VC data model, rather based on classification of the VC-ED use cases.</p>
+   <p><img alt="alt_text" src="images/vc_ed_model.png" title="image_tooltip" width="400"></p>
+   <p>Side Note: The outer VC data model is: "Issuer" (Person/Org) "made assertion about" (Event) "subject" (Person)</p>
+   <ul>
+    <li data-md>
+     <p>Concept 1 (activity):	Person ~did/performed~ ACTIVITY (Event)</p>
+    <li data-md>
+     <p>Concept 2 (competency):	Person ~demonstrated~ COMPETENCY DEFINITION (Resource)</p>
+    <li data-md>
+     <p>Concept 3 (recognition type): Person ~has/earned~ CREDENTIAL DEFINITION (Resource)</p>
+    <li data-md>
+     <p>Concept 4 (involvement): Person ~has role~ INVOLVEMENT (Role: Relationship)</p>
+   </ul>
+   <p>The remainder of this document will recommend:</p>
+   <ul>
+    <li data-md>
+     <p>Issuer type and recommended properties</p>
+    <li data-md>
+     <p>Subject type and recommended properties</p>
+    <li data-md>
+     <p>Verifiable Credential (outermost) recommended properties</p>
+    <li data-md>
+     <p>Property (or conceptual property?) describing Person’s relationship to Concepts 1-4 for use in a Verifiable Credential</p>
+    <li data-md>
+     <p>Examples/realizations for TBD data standards</p>
+    <li data-md>
+     <p>Recommended properties at outermost level?</p>
+   </ul>
+   <h3 class="heading settled" data-level="1.6" id="related-work"><span class="secno">1.6. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
    <ul>
     <li data-md>
      <p>Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper <a data-link-type="biblio" href="#biblio-obs-are-vcs">[OBS-ARE-VCS]</a></p>
     <li data-md>
      <p>LER wrapper</p>
-    <li data-md>
-     <p><a data-link-type="biblio" href="#biblio-ler-wrapper">[LER-WRAPPER]</a></p>
-    <li data-md>
-     <p>Pilots/examples will evolve on T3 LER Hub - <a data-link-type="biblio" href="#biblio-lerhub">[LERHUB]</a></p>
-    <li data-md>
-     <p>Schema.org terms/types?</p>
-    <li data-md>
-     <p>schema:Person is an obvious one for learner</p>
-    <li data-md>
-     <p>ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.</p>
      <ul>
+      <li data-md>
+       <p><a data-link-type="biblio" href="#biblio-ler-wrapper">[LER-WRAPPER]</a></p>
+      <li data-md>
+       <p>Pilots/examples will evolve on T3 LER Hub - <a data-link-type="biblio" href="#biblio-lerhub">[LERHUB]</a></p>
+      <li data-md>
+       <p>Schema.org terms/types?</p>
+      <li data-md>
+       <p>schema:Person is an obvious one for learner</p>
+      <li data-md>
+       <p>ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.</p>
       <li data-md>
        <p><a data-link-type="biblio" href="#biblio-eocred">[EOCRED]</a></p>
      </ul>
@@ -725,22 +785,26 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <p>CEDS</p>
     <li data-md>
      <p>CTDL and Credential Engine **(note “credential” terminology issue**)</p>
-    <li data-md>
-     <p><a data-link-type="biblio" href="#biblio-credreg">[CREDREG]</a>: RDF-based schema for describing credentials and skills</p>
      <ul>
       <li data-md>
-       <p>Examples of open badge and CLR references to CTDL: <a data-link-type="biblio" href="#biblio-credreg-ilwrguide">[CREDREG-ILWRGUIDE]</a>.</p>
-      <li data-md>
-       <p>Credential Finder: <a data-link-type="biblio" href="#biblio-credfinder">[CREDFINDER]</a></p>
+       <p><a data-link-type="biblio" href="#biblio-credreg">[CREDREG]</a>: RDF-based schema for describing credentials and skills</p>
+       <ul>
+        <li data-md>
+         <p>Examples of open badge and CLR references to CTDL: <a data-link-type="biblio" href="#biblio-credreg-ilwrguide">[CREDREG-ILWRGUIDE]</a>.</p>
+        <li data-md>
+         <p>Credential Finder: <a data-link-type="biblio" href="#biblio-credfinder">[CREDFINDER]</a></p>
+       </ul>
      </ul>
     <li data-md>
      <p>Controlled vocabularies used in Europe published as linked open data:</p>
-    <li data-md>
-     <p><a data-link-type="biblio" href="#biblio-europass-tables">[EUROPASS-TABLES]</a></p>
-    <li data-md>
-     <p><a data-link-type="biblio" href="#biblio-esco">[ESCO]</a></p>
-    <li data-md>
-     <p>Particularly useful is that <a data-link-type="biblio" href="#biblio-isced-f">[ISCED-F]</a> (thematic areas of UNESCO’s international classification of education)</p>
+     <ul>
+      <li data-md>
+       <p><a data-link-type="biblio" href="#biblio-europass-tables">[EUROPASS-TABLES]</a></p>
+      <li data-md>
+       <p><a data-link-type="biblio" href="#biblio-esco">[ESCO]</a></p>
+      <li data-md>
+       <p>Particularly useful is that <a data-link-type="biblio" href="#biblio-isced-f">[ISCED-F]</a> (thematic areas of UNESCO’s international classification of education)</p>
+     </ul>
    </ul>
    <h2 class="heading settled" data-level="2" id="appendix"><span class="secno">2. </span><span class="content">Appendix</span><a class="self-link" href="#appendix"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="example-1-course-program-certificate"><span class="secno">2.1. </span><span class="content">Example 1: Course/Program Certificate</span><a class="self-link" href="#example-1-course-program-certificate"></a></h3>
@@ -749,9 +813,9 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <tbody>
      <tr>
       <td>
-       <p><img alt="alt_text" src="images/micromasters_certificate.png" title="image_tooltip" width></p>
+       <p><img alt="alt_text" src="images/micromasters_certificate.png" title="image_tooltip" width="300"></p>
       <td>
-       <p><img alt="alt_text" src="images/upenn_certificate.png" title="image_tooltip" width></p>
+       <p><img alt="alt_text" src="images/upenn_certificate.png" title="image_tooltip" width="300"></p>
    </table>
    <h4 class="heading settled" data-level="2.1.2" id="extracted-fields"><span class="secno">2.1.2. </span><span class="content">Extracted Fields</span><a class="self-link" href="#extracted-fields"></a></h4>
    <table>
@@ -1162,6 +1226,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   </dl>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
+   <dt id="biblio-ceds-conceptual">[CEDS-CONCEPTUAL]
+   <dd>Jim Goodell. <a href="https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf">CEDS Conceptual Model</a>. TBD. URL: <a href="https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf">https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf</a>
    <dt id="biblio-credfinder">[CREDFINDER]
    <dd>alice; bob. <a href="https://credentialfinder.org/">Credential Finder</a>. TBD. URL: <a href="https://credentialfinder.org/">https://credentialfinder.org/</a>
    <dt id="biblio-credreg">[CREDREG]
