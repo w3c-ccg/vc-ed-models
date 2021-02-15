@@ -8,6 +8,7 @@ URL: https://w3c-ccg.github.io/vc-ed-models/
 
 Editor: Anthony Camilleri, Knowledge Innovation Centre https://knowledgeinnovation.eu/, anthony@knowledgeinnovation.eu, http://www.linkedin.com/in/anthonyfcamilleri
 Editor: Kim Hamilton Duffy, Massachusetts Institute of Technology https://openlearning.mit.edu/, kimdhamilton@gmail.com, https://www.okimsrazor.com/
+Editor: Kerri Lemoie, OpenWorks Group http://openworksgrp.com/, kerri@openworksgrp.com, https://www.linkedin.com/in/kerrilemoie/
 Editor: Nate Otto, Concentric Sky https://concentricsky.com/, notto@concentricsky.com, http://ottonomy.net/blog/
 
 Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
@@ -29,6 +30,13 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "title": "EducationalOccupationalCredential",
         "status": "TBD",
         "publisher": "schema.org"
+    },
+    "CEDS-CONCEPTUAL": {
+        "authors": [ "Jim Goodell" ],
+        "href": "https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf",
+        "title": "CEDS Conceptual Model",
+        "status": "TBD",
+        "publisher": "CEDS"
     },
     "CREDREG-ILWRGUIDE": {
         "authors": [ "alice", "bob" ],
@@ -121,13 +129,6 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
         "status": "TBD",
         "publisher": "TBD"
     },
-    "LER-WRAPPER-XML": {
-        "authors": [ "alice", "bob" ],
-        "href": "hhttps://docs.google.com/document/d/1gBKx47cgxsUnTMLxqg6Poswp4-led3x51unUY42fKUU/edit#heading=h.4rbynbs3ok62",
-        "title": "LER Wrapper XML Sample -- TODO",
-        "status": "TBD",
-        "publisher": "TBD"
-    },
     "OBS-ARE-VCS": {
         "authors": [ "alice", "bob" ],
         "href": "https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf",
@@ -183,70 +184,103 @@ Lastly, this will attempt to address design challenges related to standards rely
 * International-aware: do not restrict to US edu data standards
 
 ### Out of Scope
-- Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
-- VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
+* Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
+* VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
-## Concepts Requiring Definition in an Educational Context
+## Concepts Requiring Definition in an Educational/Occupational Context
 
 Note: To avoid confusion with how these concepts are represented by different standards/schema, we currently use placeholders for each concept. The names in brackets represent the current draft name for the concept.
 
 * Concept 1 (activity): describes an activity a person has undertaken. Examples of this might include performed Beethoven's 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer
-* Concept 2 (skill): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
-* Concept 3 (diploma): describes an outcome of a (formal) assessment process. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate. Concept 3 contains sub-concepts of:
-** Concept 3.1 (Assessment)
-** Concept 3.2 (Grade)
-* Concept 4 (enrolment): describes a person's current enrolment in an educational organisation or participation/membership in an educational activity. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc. 
+* Concept 2 (competency): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
+* Concept 3 (recognition type): describes an outcome, potentially of a formal assessment process, but may also include less formal recognition and self-assertion. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.
+* Concept 4 (involvment): describes a person's current enrollment in an educational organisation or participation/membership in an educational activity. This could also describe a person's employment. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World's Best Coffee Shop, Software Engineer at Tech Company.
+* Concept 5 (subject): decribes the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. Subject may be the holder of the credential but not necessarily, especially in cases where guardianship is delegated. 
+* Concept 6 (issuer): describes the person or entity that is issuing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer. The issuer may also be a person. For example: a person such as a colleague may issue a recommendtion about another person in the form of a verifiable credentials.
 
 ### Relation between Concepts
-* Cross-Linking: All of these concepts can be related to one another. Thus Concept 3 can include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
-* Child-Concepts: All Concepts can have infinite levels of child concepts. Thus for example a Grade Point Average of 4, can be described in more detail with sub-grades of 3 and 5. A skill of Vietnamese can be made up of skills of Writing Vietnamese, Reading Vietnamese, Speaking Vietnamese and Understanding Vietnamese.
+All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
 
-### Approach to Definition
-Each of these concepts can be defined using the following concepts:
-* definition: this is a link to a URI describing the concept and to the target framework of the concept
-* instance: this describes data about the person's individual performance of that concept
+## Aligning these Concepts with Educational Data Standards
 
-In pseudocode, this is structured as:
-<pre>
-credentialSubject:
-  // properties specific to the learner, e.g.:
-  - learner's did 
-  - name
+This document seeks to provide guidance on use of the Verifiable Credential data model with the widely-used educational data standards referred to as [=target standards=].
+ISSUE: The initial proposed set of standards is listed in the task force charter; this will be refined and updated with a subsequent milestone. Update in this document when done. For now, we'll refer to this set as [=target standards=]
 
-  // property representing relationship of subject to "concept" (skill/credential/...)
-  - hasConcept: 
-    // properties specific to concept "definition", e.g
-    - framework / identifier / uri (may be encoded in "type" and "id")
-    - name
-    - description
+To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
+* In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
+    * subject (concept 5)
+    * issuer (concept 6)
+* In order to enable alignment with [=target standards=], recommend connective tissue at a conceptual level, along with realizations in each of [=target standards=]. This entails proposing subject relationship(s) to the following concepts:
+    * activity (concept 1)
+    * competency (concept 2)
+    * recognition type (concept 3)
+    * involvement (concept 4)
 
-    instance: 
-      // properties specific to concept "instance" e.g.:
-      - dateperformed
-      - grade
-</pre>
+ISSUE: recommend other properties in the assertion?
 
+### Basis on CEDS Conceptual Model
 
+There has already been significant effort aligning [[CEDS-CONCEPTUAL]] with [=target standards=], and therefore it is convenient to use the CEDS conceptual model as our basis.
+
+CEDS has 4 key concepts (super classes):
+* Person
+* Organization
+* Resource
+* Relationship
+
+CEDS calls out 2 additional concepts, which are types of relationships:
+* Role
+* Event
+
+### Application to the VC data model 
+
+VC Data Model has properties <var>issuer</var> and <var>credentialSubject</var>.
+
+In our current VC-ED use cases:
+* <var>issuer</var> is either <var>Person</var> or <var>Organization</var>
+* <var>credentialSubject</var> is <var>Person</var>
+
+Note that these are not based on restrictions of the VC data model; they are based on a classification of the submitted VC-ED use cases. 
+
+<img src="images/vc_ed_model.png" width="400" alt="alt_text" title="image_tooltip">
+
+Side Note: The outer VC data model is: Issuer (<var>Person</var>/<var>Organization</var>) made assertion about (<var>Event</var>) subject (<var>Person</var>)
+
+* Concept 1 (activity):	<var>Person</var> participated, did, or performed <var>activity</var> ([=CEDS Event=])
+* Concept 2 (competency):	<var>Person</var> demonstrated <var>competency</var>, or competency definition ([=CEDS Resource=])
+* Concept 3 (recognition type): <var>Person</var> earned, has <var>recognition type</var>, or credential definition ([=CEDS Resource=])
+* Concept 4 (involvement): <var>Person</var> has role <var>involvement</var> ([=CEDS Role=]: [=CEDS Relationship=])
+
+The remainder of this document will recommend:
+- <var>Issuer</var> type and recommended properties
+- <var>Subject</var> type and recommended properties
+- [=Verifiable Credential=] (outermost) recommended properties
+- Property (or conceptual property?) describing <var>Person</var>'s relationship to concepts 1-4 for use in a [=Verifiable Credential=]
+- Examples/realizations for [=target standards=]
 
 ## Related Work
 
 * Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper [[OBS-ARE-VCS]]
 * LER wrapper
-  * [[LER-WRAPPER]]
-  *   Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
-  * Schema.org terms/types?
-  * schema:Person is an obvious one for learner
-  * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
+    * [[LER-WRAPPER]]
+    * Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
+    * Schema.org terms/types?
+    * schema:Person is an obvious one for learner
+    * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
     * [[EOCRED]]
 * CEDS
 * CTDL and Credential Engine **(note “credential” terminology issue**)
-  * [[CREDREG]]: RDF-based schema for describing credentials and skills
-    * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
-    * Credential Finder: [[CREDFINDER]]
+    * [[CREDREG]]: RDF-based schema for describing credentials and skills
+        * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
+        * Credential Finder: [[CREDFINDER]]
 * Controlled vocabularies used in Europe published as linked open data:
-  * [[EUROPASS-TABLES]]
-  * [[ESCO]]
-  *   Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education):
+    * [[EUROPASS-TABLES]]
+    * [[ESCO]]
+    * Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
+
+
+Appendix {#appendix}
+====================
 
 ## Example 1: Course/Program Certificate
 ### Examples from the Wild
@@ -256,12 +290,12 @@ credentialSubject:
   <tr>
    <td>
 
-<img src="images/micromasters_certificate.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/micromasters_certificate.png" width="300" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
 
-<img src="images/upenn_certificate.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/upenn_certificate.png" width="300" alt="alt_text" title="image_tooltip">
 
    </td>
   </tr>
@@ -429,7 +463,7 @@ Which standard would we like to start with?
 
 ### Implementation Options
 
-*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER-XML]]
+*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER]]
 *   Improving on XML-as-string would be a bit of work. I see 2 paths:
     *   Push to support XML as VC format
         *   This would be helpful in the near-term, and would benefit other XML-based standards
