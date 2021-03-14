@@ -258,7 +258,45 @@ The remainder of this document will recommend:
 - Property (or conceptual property?) describing <var>Person</var>'s relationship to concepts 1-4 for use in a [=Verifiable Credential=]
 - Examples/realizations for [=target standards=]
 
-## Related Work
+
+# Issuer Concept
+
+Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential.
+
+Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [[VC-DATA-MODEL]] is <var>id</var>. This document recommends the following additional guidelines for implementers.
+
+- Use dereferencable URIs for discoverability.
+- For the object form of issuer:
+  - Use a <var>type</var> field for disambiguation
+  - Use schema.org types <var>Person</var> or <var>Organization</var> (or extensions) for interoperability
+  - Use <var>name</var> for display (such as in credential wallets)
+
+## Discussion: Open Badges v2
+[[OB-V2]] demonstrates application of the above recommendations for context developers. The Issuer/Profile type defines the following properties. <var>R</var> denotes required by [[OB-V2]], <var>S<var> denotes whether the property is defined on schema.org <var>Person</var> or <var>Organization</var>:
+- <var>R</var> id
+- <var>R</var> type
+- <var>R</var><var>S</var> name
+- <var>R</var><var>S</var> url
+- <var>R</var><var>S</var> email
+- <var>S</var> telephone
+- <var>S</var> description
+- <var>S</var> image
+
+[[OB-V2]]'s Linked Data context defines <var>S</var> properties as schema.org types. Use of these standard definitions improves discoverability for displayers of credentials, such as credential wallets.
+
+Note: [[OB-V2]] Issuer/Profile also defines these 3 (not-required) properties, which in VC data models are typically not defined directly on the Issuer object:
+- publicKey
+- verification
+- revocationList
+
+## Discussion: Multiple Issuers
+
+[[VC-DATA-MODEL]] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementators:
+- If possible, create a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived
+- Future extension: Use "joined issuer" type, which contains a list of issuers: https://github.com/w3c-ccg/vc-ed-models/issues/32#issuecomment-788057907
+
+
+# Related Work
 
 * Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper [[OBS-ARE-VCS]]
 * LER wrapper
