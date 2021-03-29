@@ -225,9 +225,9 @@ Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The val
     - This is equivalent to solving the problem at the DID level (i.e. DID doc with multiple controllers)
 - May define a custom "joined issuer" type, which contains a list of issuers, as described here:: https://github.com/w3c/vc-data-model/issues/741
     - Follow the above thread for general updates, in the case of first class support)
-May be appropriate for ad-hoc or ephemeral arrangements
+	- May be appropriate for ad-hoc or ephemeral arrangements
 
-Relying party would expect a proof array containing multiple signatures
+- Relying party would expect a proof array containing multiple signatures
 
 <pre>
 {
