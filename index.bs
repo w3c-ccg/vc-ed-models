@@ -187,7 +187,7 @@ Lastly, this will attempt to address design challenges related to standards rely
 * Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
 * VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
-## Definitions
+# Definitions
 
 * **Issuer**: the person or entity that is issuing and signing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer or delegate thereof. The issuer may also be a person. 
 * **Subject**: the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. The subject may be the holder/owner of the credential but not necessarily, especially in cases where guardianship is delegated.
@@ -196,15 +196,17 @@ Lastly, this will attempt to address design challenges related to standards rely
 * **Competency**: a measurable or observable set of learning outcomes in terms of knowledge, skills, abilities, necessary to successful performance of a person in a given context
 * **Achievement**: a particular level of attainment according to defined criteria. Such an outcome may arise from a formal assessment process, but may also include less formal recognition and self-assertion. 
 
-### Examples of Concepts
+## Examples of Concepts
 
 * **Activity**:  performed Beethoven’s 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion trainer.
 * **Involvement**: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World’s Best Coffee Shop, Software Engineer at Tech Company
 * **Competency**: *examples to be provided*
 * **Achievement**: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.
 
-### Relation between Concepts
+## Relation between Concepts
 All of these concepts can be related to one another. The method to describe this relations still needs to be defined. All of these concepts can also have parent/child relations within the concept.
+
+# Data Model
 
 ## Issuer
 Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
