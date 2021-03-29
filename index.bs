@@ -187,19 +187,39 @@ Lastly, this will attempt to address design challenges related to standards rely
 * Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
 * VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
 
-## Concepts Requiring Definition in an Educational/Occupational Context
+## Definitions
 
-Note: To avoid confusion with how these concepts are represented by different standards/schema, we currently use placeholders for each concept. The names in brackets represent the current draft name for the concept.
+* __Issuer__: the person or entity that is issuing and signing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer or delegate thereof. The issuer may also be a person. 
+* __Subject__: the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. The subject may be the holder/owner of the credential but not necessarily, especially in cases where guardianship is delegated.
+* __Activity__:  something a person has done. 
+* __Involvement__: a person’s current or past role within an organisation. This could also describe a person’s employment.
+* __Competency__: a measurable or observable set of learning outcomes in terms of knowledge, skills, abilities, necessary to successful performance of a person in a given context
+* __Achievement__: a particular level of attainment according to defined criteria. Such an outcome may arise from a formal assessment process, but may also include less formal recognition and self-assertion. 
 
-* Concept 1 (activity): describes an activity a person has undertaken. Examples of this might include performed Beethoven's 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer
-* Concept 2 (competency): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices
-* Concept 3 (recognition type): describes an outcome, potentially of a formal assessment process, but may also include less formal recognition and self-assertion. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.
-* Concept 4 (involvment): describes a person's current enrollment in an educational organisation or participation/membership in an educational activity. This could also describe a person's employment. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World's Best Coffee Shop, Software Engineer at Tech Company.
-* Concept 5 (subject): decribes the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. Subject may be the holder of the credential but not necessarily, especially in cases where guardianship is delegated. 
-* Concept 6 (issuer): describes the person or entity that is issuing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer. The issuer may also be a person. For example: a person such as a colleague may issue a recommendtion about another person in the form of a verifiable credentials.
+### Examples of Concepts
+
+* __Activity__:  performed Beethoven’s 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion trainer.
+* __Involvement__: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World’s Best Coffee Shop, Software Engineer at Tech Company
+* __Competency__: _examples to be provided_
+* __Achievement__: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.
 
 ### Relation between Concepts
-All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4.
+All of these concepts can be related to one another. The method to describe this relations still needs to be defined. All of these concepts can also have parent/child relations within the concept.
+
+## Issuer
+Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
+
+Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [[VC-DATA-MODEL]] is [id]. This document provides the following additional guidelines for implementers.
+
+* RECOMMEND: Use dereferenceable URIs for discoverability.
+* For the object form of issuer:
+	* REQUIRED: use [id], as required by [[VC-DATA-MODEL]]
+	* MAY: Use a [type] field for disambiguation
+	* MAY: Use schema.org types [Person] or [Organization] (or extensions) for interoperability
+	* REQUIRED: Use [name] for display (such as in credential wallets)
+
+### Joint Issuers
+_Text to be added from Meeting of 15th March_
 
 ## Aligning these Concepts with Educational Data Standards
 
@@ -208,13 +228,13 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
 
 To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
 * In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
-    * subject (concept 5)
-    * issuer (concept 6)
+    * subject
+    * issuer
 * In order to enable alignment with [=target standards=], recommend connective tissue at a conceptual level, along with realizations in each of [=target standards=]. This entails proposing subject relationship(s) to the following concepts:
-    * activity (concept 1)
-    * competency (concept 2)
-    * recognition type (concept 3)
-    * involvement (concept 4)
+    * activity
+    * competency
+    * achievement
+    * involvement
 
 ISSUE: recommend other properties in the assertion?
 
