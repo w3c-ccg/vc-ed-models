@@ -253,13 +253,6 @@ Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The val
 }
 </pre>
 
-
-Question/TODO:
-- One set of keys or multiple
-- If both, serial (both sign same payload) or hierarchical (one signs over other’s signature)
-- reference: TODO: reference https://docs.google.com/presentation/d/14SQpmG8O1FHXk2a4iauo9aOxM_9zq9e9TEboQNJpjU0/edit#slide=id.gc6f80d1ff_0_0
-
-
 ## Aligning these Concepts with Educational Data Standards
 
 This document seeks to provide guidance on use of the Verifiable Credential data model with the widely-used educational data standards referred to as [=target standards=].
