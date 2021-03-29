@@ -219,7 +219,41 @@ Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The val
 	* REQUIRED: Use [name] for display (such as in credential wallets)
 
 ### Joint Issuers
-*Text to be added from Meeting of 15th March*
+
+[[VC-DATA-MODEL]] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
+- Ceate a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived
+    - This is equivalent to solving the problem at the DID level (i.e. DID doc with multiple controllers)
+- May define a custom "joined issuer" type, which contains a list of issuers, as described here:: https://github.com/w3c/vc-data-model/issues/741
+    - Follow the above thread for general updates, in the case of first class support)
+May be appropriate for ad-hoc or ephemeral arrangements
+
+Relying party would expect a proof array containing multiple signatures
+
+<pre>
+{
+  "issuer": {
+    "id": "... url to a 'joint partnership' page, or a urn id that's a hash of the participants...",
+    "type": "SomeJointDegreeCredential",  // defined by the community
+    "participant": [
+      {
+        "name": "University of A",
+        "id": "did:example:123456789"
+      },
+      {
+        "id": "did:web:royalcollegeofb.edu",
+        "name": "Royal College of B"
+      }
+    ]
+  }
+}
+</pre>
+
+
+Question/TODO:
+- One set of keys or multiple
+- If both, serial (both sign same payload) or hierarchical (one signs over other’s signature)
+- reference: TODO: reference https://docs.google.com/presentation/d/14SQpmG8O1FHXk2a4iauo9aOxM_9zq9e9TEboQNJpjU0/edit#slide=id.gc6f80d1ff_0_0
+
 
 ## Aligning these Concepts with Educational Data Standards
 
@@ -279,75 +313,8 @@ The remainder of this document will recommend:
 - Examples/realizations for [=target standards=]
 
 
-# Issuer Concept
-
-Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential.
-
-Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [[VC-DATA-MODEL]] is <var>id</var>. This document provides the following additional guidelines for implementers.
 
 
-- RECOMMEND: Use dereferenceable URIs for discoverability.
-- For the object form of issuer:
-  - REQUIRED: use <var>id</var>, as required by [[VC-DATA-MODEL]]
-  - REQUIRED: Use <var>name</var> for display (such as in credential wallets)
-  - MAY: Use a <var>type</var> field for disambiguation
-  - MAY: Use schema.org types <var>Person</var> or <var>Organization</var> (or extensions) for interoperability
-
-
-
-## Discussion: Open Badges v2
-[[OB-V2]] demonstrates application of the above recommendations for context developers. The Issuer/Profile type defines the following properties. <var>R</var> denotes required by [[OB-V2]], <var>S<var> denotes whether the property is defined on schema.org <var>Person</var> or <var>Organization</var>:
-- <var>R</var> id
-- <var>R</var> type
-- <var>R</var><var>S</var> name
-- <var>R</var><var>S</var> url
-- <var>R</var><var>S</var> email
-- <var>S</var> telephone
-- <var>S</var> description
-- <var>S</var> image
-
-[[OB-V2]]'s Linked Data context defines <var>S</var> properties as schema.org types. Use of these standard definitions improves discoverability for displayers of credentials, such as credential wallets.
-
-Note: [[OB-V2]] Issuer/Profile also defines these 3 (not-required) properties, which in VC data models are typically not defined directly on the Issuer object:
-- publicKey
-- verification
-- revocationList
-
-## Discussion: Multiple Issuers
-
-[[VC-DATA-MODEL]] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
-- Ceate a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived
-    - This is equivalent to solving the problem at the DID level (i.e. DID doc with multiple controllers)
-- May define a custom "joined issuer" type, which contains a list of issuers, as described here:: https://github.com/w3c/vc-data-model/issues/741
-    - Follow the above thread for general updates, in the case of first class support)
-May be appropriate for ad-hoc or ephemeral arrangements
-
-Relying party would expect a proof array containing multiple signatures
-
-<pre>
-{
-  "issuer": {
-    "id": "... url to a 'joint partnership' page, or a urn id that's a hash of the participants...",
-    "type": "SomeJointDegreeCredential",  // defined by the community
-    "participant": [
-      {
-        "name": "University of A",
-        "id": "did:example:123456789"
-      },
-      {
-        "id": "did:web:royalcollegeofb.edu",
-        "name": "Royal College of B"
-      }
-    ]
-  }
-}
-</pre>
-
-
-Question/TODO:
-- One set of keys or multiple
-- If both, serial (both sign same payload) or hierarchical (one signs over other’s signature)
-- reference: TODO: reference https://docs.google.com/presentation/d/14SQpmG8O1FHXk2a4iauo9aOxM_9zq9e9TEboQNJpjU0/edit#slide=id.gc6f80d1ff_0_0
 
 
 # Related Work
