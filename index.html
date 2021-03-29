@@ -6,8 +6,9 @@
   <meta content="w3c/CG-DRAFT" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="Bikeshed version c5172e83, updated Fri Nov 20 15:35:20 2020 -0800" name="generator">
-  <meta content="f5b44a023f8edf0a91f833ae39da360079031ce0" name="document-revision">
+  <meta content="Bikeshed version b94c7e755, updated Fri Feb 19 16:28:59 2021 -0800" name="generator">
+  <link href="https://w3c-ccg.github.io/vc-ed-models/" rel="canonical">
+  <meta content="76126f1675ef7209b95e4694e36c741f71cab9af" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -517,9 +518,11 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-02-15">15 February 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-03-29">29 March 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
+     <dt>This version:
+     <dd><a class="u-url" href="https://w3c-ccg.github.io/vc-ed-models/">https://w3c-ccg.github.io/vc-ed-models/</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/w3c-ccg/vc-ed-models/issues/">GitHub</a>
      <dd><a href="#issues-index">Inline In Spec</a>
@@ -528,7 +531,6 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://www.okimsrazor.com/">Kim Hamilton Duffy</a> (<a class="p-org org" href="https://openlearning.mit.edu/">Massachusetts Institute of Technology</a>) <a class="u-email email" href="mailto:kimdhamilton@gmail.com">kimdhamilton@gmail.com</a>
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://www.linkedin.com/in/kerrilemoie/">Kerri Lemoie</a> (<a class="p-org org" href="http://openworksgrp.com/">OpenWorks Group</a>) <a class="u-email email" href="mailto:kerri@openworksgrp.com">kerri@openworksgrp.com</a>
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="http://ottonomy.net/blog/">Nate Otto</a> (<a class="p-org org" href="https://concentricsky.com/">Concentric Sky</a>) <a class="u-email email" href="mailto:notto@concentricsky.com">notto@concentricsky.com</a>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn"></span>
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -559,17 +561,23 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#out-of-scope"><span class="secno">1.3.2</span> <span class="content">Out of Scope</span></a>
        </ol>
       <li>
-       <a href="#concepts-requiring-definition-in-an-educational-occupational-context"><span class="secno">1.4</span> <span class="content">Concepts Requiring Definition in an Educational/Occupational Context</span></a>
+       <a href="#definitions"><span class="secno">1.4</span> <span class="content">Definitions</span></a>
        <ol class="toc">
-        <li><a href="#relation-between-concepts"><span class="secno">1.4.1</span> <span class="content">Relation between Concepts</span></a>
+        <li><a href="#examples-of-concepts"><span class="secno">1.4.1</span> <span class="content">Examples of Concepts</span></a>
+        <li><a href="#relation-between-concepts"><span class="secno">1.4.2</span> <span class="content">Relation between Concepts</span></a>
        </ol>
       <li>
-       <a href="#aligning-these-concepts-with-educational-data-standards"><span class="secno">1.5</span> <span class="content">Aligning these Concepts with Educational Data Standards</span></a>
+       <a href="#issuer"><span class="secno">1.5</span> <span class="content">Issuer</span></a>
        <ol class="toc">
-        <li><a href="#basis-on-ceds-conceptual-model"><span class="secno">1.5.1</span> <span class="content">Basis on CEDS Conceptual Model</span></a>
-        <li><a href="#application-to-the-vc-data-model"><span class="secno">1.5.2</span> <span class="content">Application to the VC data model</span></a>
+        <li><a href="#joint-issuers"><span class="secno">1.5.1</span> <span class="content">Joint Issuers</span></a>
        </ol>
-      <li><a href="#related-work"><span class="secno">1.6</span> <span class="content">Related Work</span></a>
+      <li>
+       <a href="#aligning-these-concepts-with-educational-data-standards"><span class="secno">1.6</span> <span class="content">Aligning these Concepts with Educational Data Standards</span></a>
+       <ol class="toc">
+        <li><a href="#basis-on-ceds-conceptual-model"><span class="secno">1.6.1</span> <span class="content">Basis on CEDS Conceptual Model</span></a>
+        <li><a href="#application-to-the-vc-data-model"><span class="secno">1.6.2</span> <span class="content">Application to the VC data model</span></a>
+       </ol>
+      <li><a href="#related-work"><span class="secno">1.7</span> <span class="content">Related Work</span></a>
      </ol>
     <li>
      <a href="#appendix"><span class="secno">2</span> <span class="content">Appendix</span></a>
@@ -659,25 +667,56 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work</p>
    </ul>
-   <h3 class="heading settled" data-level="1.4" id="concepts-requiring-definition-in-an-educational-occupational-context"><span class="secno">1.4. </span><span class="content">Concepts Requiring Definition in an Educational/Occupational Context</span><a class="self-link" href="#concepts-requiring-definition-in-an-educational-occupational-context"></a></h3>
-   <p class="note" role="note"><span>Note:</span> To avoid confusion with how these concepts are represented by different standards/schema, we currently use placeholders for each concept. The names in brackets represent the current draft name for the concept.</p>
+   <h3 class="heading settled" data-level="1.4" id="definitions"><span class="secno">1.4. </span><span class="content">Definitions</span><a class="self-link" href="#definitions"></a></h3>
    <ul>
     <li data-md>
-     <p>Concept 1 (activity): describes an activity a person has undertaken. Examples of this might include performed Beethoven’s 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion tamer</p>
+     <p>__Issuer__: the person or entity that is issuing and signing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer or delegate thereof. The issuer may also be a person.</p>
     <li data-md>
-     <p>Concept 2 (competency): describes a learning outcome and/or skill a person has as a result of participating in a learning activity. Examples of this might include piano playing, advanced woodworking, work in accordance with established sustainability practices</p>
+     <p>__Subject__: the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. The subject may be the holder/owner of the credential but not necessarily, especially in cases where guardianship is delegated.</p>
     <li data-md>
-     <p>Concept 3 (recognition type): describes an outcome, potentially of a formal assessment process, but may also include less formal recognition and self-assertion. Examples of this include: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.</p>
+     <p>__Activity__:  something a person has done.</p>
     <li data-md>
-     <p>Concept 4 (involvment): describes a person’s current enrollment in an educational organisation or participation/membership in an educational activity. This could also describe a person’s employment. The concept includes a description of the ROLE and the ACTIVITY/ORGANISATION. Examples include: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World’s Best Coffee Shop, Software Engineer at Tech Company.</p>
+     <p>__Involvement__: a person’s current or past role within an organisation. This could also describe a person’s employment.</p>
     <li data-md>
-     <p>Concept 5 (subject): decribes the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. Subject may be the holder of the credential but not necessarily, especially in cases where guardianship is delegated.</p>
+     <p>__Competency__: a measurable or observable set of learning outcomes in terms of knowledge, skills, abilities, necessary to successful performance of a person in a given context</p>
     <li data-md>
-     <p>Concept 6 (issuer): describes the person or entity that is issuing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer. The issuer may also be a person. For example: a person such as a colleague may issue a recommendtion about another person in the form of a verifiable credentials.</p>
+     <p>__Achievement__: a particular level of attainment according to defined criteria. Such an outcome may arise from a formal assessment process, but may also include less formal recognition and self-assertion.</p>
    </ul>
-   <h4 class="heading settled" data-level="1.4.1" id="relation-between-concepts"><span class="secno">1.4.1. </span><span class="content">Relation between Concepts</span><a class="self-link" href="#relation-between-concepts"></a></h4>
-    All of these concepts can be related to one another. Thus Concept 3 can recognize Concept 5 by Concept 6 to include the acquisition of Concept 2, as a result of completing Concept 1, while being Concept 4. 
-   <h3 class="heading settled" data-level="1.5" id="aligning-these-concepts-with-educational-data-standards"><span class="secno">1.5. </span><span class="content">Aligning these Concepts with Educational Data Standards</span><a class="self-link" href="#aligning-these-concepts-with-educational-data-standards"></a></h3>
+   <h4 class="heading settled" data-level="1.4.1" id="examples-of-concepts"><span class="secno">1.4.1. </span><span class="content">Examples of Concepts</span><a class="self-link" href="#examples-of-concepts"></a></h4>
+   <ul>
+    <li data-md>
+     <p>__Activity__:  performed Beethoven’s 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion trainer.</p>
+    <li data-md>
+     <p>__Involvement__: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World’s Best Coffee Shop, Software Engineer at Tech Company</p>
+    <li data-md>
+     <p>__Competency__: _examples to be provided_</p>
+    <li data-md>
+     <p>__Achievement__: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.</p>
+   </ul>
+   <h4 class="heading settled" data-level="1.4.2" id="relation-between-concepts"><span class="secno">1.4.2. </span><span class="content">Relation between Concepts</span><a class="self-link" href="#relation-between-concepts"></a></h4>
+    All of these concepts can be related to one another. The method to describe this relations still needs to be defined. All of these concepts can also have parent/child relations within the concept. 
+   <h3 class="heading settled" data-level="1.5" id="issuer"><span class="secno">1.5. </span><span class="content">Issuer</span><a class="self-link" href="#issuer"></a></h3>
+    Issuer is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model">[VC-DATA-MODEL]</a> with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn’t necessarily have relationship to learning experience that led to the credential 
+   <p>Issuer structure basic requirements are specified in <a data-link-type="biblio" href="#biblio-vc-data-model">[VC-DATA-MODEL]</a>: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from <a data-link-type="biblio" href="#biblio-vc-data-model">[VC-DATA-MODEL]</a> is [id]. This document provides the following additional guidelines for implementers.</p>
+   <ul>
+    <li data-md>
+     <p>RECOMMEND: Use dereferenceable URIs for discoverability.</p>
+    <li data-md>
+     <p>For the object form of issuer:</p>
+     <ul>
+      <li data-md>
+       <p>REQUIRED: use [id], as required by <a data-link-type="biblio" href="#biblio-vc-data-model">[VC-DATA-MODEL]</a></p>
+      <li data-md>
+       <p>MAY: Use a [type] field for disambiguation</p>
+      <li data-md>
+       <p>MAY: Use schema.org types [Person] or [Organization] (or extensions) for interoperability</p>
+      <li data-md>
+       <p>REQUIRED: Use [name] for display (such as in credential wallets)</p>
+     </ul>
+   </ul>
+   <h4 class="heading settled" data-level="1.5.1" id="joint-issuers"><span class="secno">1.5.1. </span><span class="content">Joint Issuers</span><a class="self-link" href="#joint-issuers"></a></h4>
+    _Text to be added from Meeting of 15th March_ 
+   <h3 class="heading settled" data-level="1.6" id="aligning-these-concepts-with-educational-data-standards"><span class="secno">1.6. </span><span class="content">Aligning these Concepts with Educational Data Standards</span><a class="self-link" href="#aligning-these-concepts-with-educational-data-standards"></a></h3>
    <p>This document seeks to provide guidance on use of the Verifiable Credential data model with the widely-used educational data standards referred to as <a data-link-type="dfn">target standards</a>.
 ISSUE: The initial proposed set of standards is listed in the task force charter; this will be refined and updated with a subsequent milestone. Update in this document when done. For now, we’ll refer to this set as <a data-link-type="dfn">target standards</a></p>
    <p>To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:</p>
@@ -686,25 +725,25 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
      <p>In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:</p>
      <ul>
       <li data-md>
-       <p>subject (concept 5)</p>
+       <p>subject</p>
       <li data-md>
-       <p>issuer (concept 6)</p>
+       <p>issuer</p>
      </ul>
     <li data-md>
      <p>In order to enable alignment with <a data-link-type="dfn">target standards</a>, recommend connective tissue at a conceptual level, along with realizations in each of <a data-link-type="dfn">target standards</a>. This entails proposing subject relationship(s) to the following concepts:</p>
      <ul>
       <li data-md>
-       <p>activity (concept 1)</p>
+       <p>activity</p>
       <li data-md>
-       <p>competency (concept 2)</p>
+       <p>competency</p>
       <li data-md>
-       <p>recognition type (concept 3)</p>
+       <p>achievement</p>
       <li data-md>
-       <p>involvement (concept 4)</p>
+       <p>involvement</p>
      </ul>
    </ul>
    <p class="issue" id="issue-1c1bdeab"><a class="self-link" href="#issue-1c1bdeab"></a> recommend other properties in the assertion?</p>
-   <h4 class="heading settled" data-level="1.5.1" id="basis-on-ceds-conceptual-model"><span class="secno">1.5.1. </span><span class="content">Basis on CEDS Conceptual Model</span><a class="self-link" href="#basis-on-ceds-conceptual-model"></a></h4>
+   <h4 class="heading settled" data-level="1.6.1" id="basis-on-ceds-conceptual-model"><span class="secno">1.6.1. </span><span class="content">Basis on CEDS Conceptual Model</span><a class="self-link" href="#basis-on-ceds-conceptual-model"></a></h4>
    <p>There has already been significant effort aligning <a data-link-type="biblio" href="#biblio-ceds-conceptual">[CEDS-CONCEPTUAL]</a> with <a data-link-type="dfn">target standards</a>, and therefore it is convenient to use the CEDS conceptual model as our basis.</p>
    <p>CEDS has 4 key concepts (super classes):</p>
    <ul>
@@ -724,7 +763,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
     <li data-md>
      <p>Event</p>
    </ul>
-   <h4 class="heading settled" data-level="1.5.2" id="application-to-the-vc-data-model"><span class="secno">1.5.2. </span><span class="content">Application to the VC data model</span><a class="self-link" href="#application-to-the-vc-data-model"></a></h4>
+   <h4 class="heading settled" data-level="1.6.2" id="application-to-the-vc-data-model"><span class="secno">1.6.2. </span><span class="content">Application to the VC data model</span><a class="self-link" href="#application-to-the-vc-data-model"></a></h4>
    <p>VC Data Model has properties <var>issuer</var> and <var>credentialSubject</var>.</p>
    <p>In our current VC-ED use cases:</p>
    <ul>
@@ -759,7 +798,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
     <li data-md>
      <p>Examples/realizations for <a data-link-type="dfn">target standards</a></p>
    </ul>
-   <h3 class="heading settled" data-level="1.6" id="related-work"><span class="secno">1.6. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
+   <h3 class="heading settled" data-level="1.7" id="related-work"><span class="secno">1.7. </span><span class="content">Related Work</span><a class="self-link" href="#related-work"></a></h3>
    <ul>
     <li data-md>
      <p>Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper <a data-link-type="biblio" href="#biblio-obs-are-vcs">[OBS-ARE-VCS]</a></p>
@@ -1258,6 +1297,8 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
    <dd>alice; bob. <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">Open Badges are Verifiable Credentials</a>. TBD. URL: <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf</a>
    <dt id="biblio-pesc-jsonld">[PESC-JSONLD]
    <dd>alice; bob. <a href="https://www.pesc.org/json-ld-task-force.html">PESC JSON-LD Task Force</a>. TBD. URL: <a href="https://www.pesc.org/json-ld-task-force.html">https://www.pesc.org/json-ld-task-force.html</a>
+   <dt id="biblio-vc-data-model">[VC-DATA-MODEL]
+   <dd>Manu Sporny; et al. <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model 1.0</a>. 19 November 2019. REC. URL: <a href="https://www.w3.org/TR/vc-data-model/">https://www.w3.org/TR/vc-data-model/</a>
   </dl>
   <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
