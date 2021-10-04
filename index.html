@@ -6,9 +6,9 @@
   <meta content="w3c/CG-DRAFT" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2016/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="Bikeshed version b94c7e755, updated Fri Feb 19 16:28:59 2021 -0800" name="generator">
+  <meta content="Bikeshed version a210b7d86, updated Thu Sep 16 13:45:19 2021 -0700" name="generator">
   <link href="https://w3c-ccg.github.io/vc-ed-models/" rel="canonical">
-  <meta content="fd2e6d610500a4dd34b87b559870652206dc1e4e" name="document-revision">
+  <meta content="8ddacfd4992836e392b182e73726d6bba1ac4c19" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -115,9 +115,9 @@ pre .property::before, pre .property::after {
     --ins-bg: transparent;
 
     --a-normal-text: #034575;
-    --a-normal-underline: #707070;
+    --a-normal-underline: #bbb;
     --a-visited-text: var(--a-normal-text);
-    --a-visited-underline: #bbb;
+    --a-visited-underline: #707070;
     --a-hover-bg: rgba(75%, 75%, 75%, .25);
     --a-active-text: #c00;
     --a-active-underline: #c00;
@@ -518,7 +518,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-03-29">29 March 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2021-10-04">4 October 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -534,7 +534,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     </dl>
    </div>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2021 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2021 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -937,7 +937,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
    <h4 class="heading settled" data-level="5.1.3" id="approaches"><span class="secno">5.1.3. </span><span class="content">Approaches</span><a class="self-link" href="#approaches"></a></h4>
    <h5 class="heading settled" data-level="5.1.3.1" id="approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"><span class="secno">5.1.3.1. </span><span class="content">Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions</span><a class="self-link" href="#approach-1-ilr-ler-wrapper-with-open-badges-json-ld-serialization--pdf-and-linked-competency-definitions"></a></h5>
    <p>EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in the payload. Using the OpenBadges serialization for the JSON-LD and with links to a credential defined in credentialengineregistry.org and competencies from the casenetwork.imsglobal.org.</p>
-<pre class="include-code highlight" path="samples/openBadgeAsLer.json"><c- p>{</c->
+<pre class="include-code highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
     <c- u>"http://www.legreq.com/t3/learner-record/v1"</c-><c- p>,</c->
@@ -992,7 +992,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
     <li data-md>
      <p>The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.</p>
    </ul>
-<pre class="include-code highlight" path="samples/openBadgeAsVc.json"><c- p>{</c->
+<pre class="include-code highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
     <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c-><c- p>,</c->
@@ -1024,7 +1024,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
 <c- p>}</c->
 </pre>
    <p>A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)</p>
-<pre class="include-code highlight" path="samples/openBadgeAsVc2.json"><c- p>{</c->
+<pre class="include-code highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
 	<c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
 	<c- u>"https://w3id.org/openbadges/v2"</c->
@@ -1152,9 +1152,9 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
     <li data-md>
      <p>The “ceasn:” prefix/namespace comes from here: <a data-link-type="biblio" href="#biblio-ctdlasn">[CTDLASN]</a></p>
     <li data-md>
-     <p>ceasn:Competency is defined here: <a href="https://credreg.net/ctdlasn/term#Competency">CTDL ASN §Competency</a></p>
+     <p>ceasn:Competency is defined here: <a href="https://credreg.net/ctdlasn/term#Competency">CTDL ASN § Competency</a></p>
    </ul>
-<pre class="include-code highlight" path="samples/openSkillsAssertion.json"><c- p>{</c->
+<pre class="include-code highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
     <c- u>"https://credreg.net/ctdlasn/schema/context/json"</c-><c- p>,</c->
@@ -1191,7 +1191,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
      <p>This will have the same problem as in Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.</p>
    </ul>
    <h3 class="heading settled" data-level="5.7" id="example-7-using-a-credential-definition-that-exists-in-credential-engine"><span class="secno">5.7. </span><span class="content">Example 7: Using a credential definition that exists in Credential Engine</span><a class="self-link" href="#example-7-using-a-credential-definition-that-exists-in-credential-engine"></a></h3>
-<pre class="include-code highlight" path="samples/credentialEngine.json"><c- p>{</c->
+<pre class="include-code highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
     <c- u>"https://credreg.net/ctdlasn/schema/context/json"</c-><c- p>,</c->
@@ -1226,7 +1226,7 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
     <li data-md>
      <p>This takes advantage of other schema.org types, including mapping credentialSubject to Person</p>
    </ul>
-<pre class="include-code highlight" path="samples/educationalOccupationalCredential.json"><c- p>{</c->
+<pre class="include-code highlight"><c- p>{</c->
   <c- f>"@context"</c-><c- p>:</c-> <c- p>[</c->
     <c- u>"https://www.w3.org/2018/credentials/v1"</c-><c- p>,</c->
     <c- u>"https://w3c-ccg.github.io/vc-ed/contexts/v1/context.json"</c->
@@ -1299,46 +1299,46 @@ ISSUE: The initial proposed set of standards is listed in the task force charter
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
    <dt id="biblio-rfc2119">[RFC2119]
-   <dd>S. Bradner. <a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
+   <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
   </dl>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
    <dt id="biblio-ceds-conceptual">[CEDS-CONCEPTUAL]
-   <dd>Jim Goodell. <a href="https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf">CEDS Conceptual Model</a>. TBD. URL: <a href="https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf">https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf</a>
+   <dd>Jim Goodell. <a href="https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf"><cite>CEDS Conceptual Model</cite></a>. TBD. URL: <a href="https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf">https://github.com/CEDStandards/CEDS-IDS/blob/master/doc/CEDS-Conceptual-Model.pdf</a>
    <dt id="biblio-credfinder">[CREDFINDER]
-   <dd>alice; bob. <a href="https://credentialfinder.org/">Credential Finder</a>. TBD. URL: <a href="https://credentialfinder.org/">https://credentialfinder.org/</a>
+   <dd>alice; bob. <a href="https://credentialfinder.org/"><cite>Credential Finder</cite></a>. TBD. URL: <a href="https://credentialfinder.org/">https://credentialfinder.org/</a>
    <dt id="biblio-credreg">[CREDREG]
-   <dd>alice; bob. <a href="https://credreg.net/">Credential Engine Registry</a>. TBD. URL: <a href="https://credreg.net/">https://credreg.net/</a>
+   <dd>alice; bob. <a href="https://credreg.net/"><cite>Credential Engine Registry</cite></a>. TBD. URL: <a href="https://credreg.net/">https://credreg.net/</a>
    <dt id="biblio-credreg-ilwrguide">[CREDREG-ILWRGUIDE]
-   <dd>alice; bob. <a href="https://credreg.net/quickstart/ilwrguide">Interoperable Learner Worker Record Guide</a>. TBD. URL: <a href="https://credreg.net/quickstart/ilwrguide">https://credreg.net/quickstart/ilwrguide</a>
+   <dd>alice; bob. <a href="https://credreg.net/quickstart/ilwrguide"><cite>Interoperable Learner Worker Record Guide</cite></a>. TBD. URL: <a href="https://credreg.net/quickstart/ilwrguide">https://credreg.net/quickstart/ilwrguide</a>
    <dt id="biblio-ctdlasn">[CTDLASN]
-   <dd>alice; bob. <a href="https://credreg.net/ctdlasn/term">CTDL ASN</a>. TBD. URL: <a href="https://credreg.net/ctdlasn/term">https://credreg.net/ctdlasn/term</a>
+   <dd>alice; bob. <a href="https://credreg.net/ctdlasn/term"><cite>CTDL ASN</cite></a>. TBD. URL: <a href="https://credreg.net/ctdlasn/term">https://credreg.net/ctdlasn/term</a>
    <dt id="biblio-ebsi">[EBSI]
-   <dd>alice; bob. <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI">EBSI</a>. TBD. URL: <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI">https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI</a>
+   <dd>alice; bob. <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI"><cite>EBSI</cite></a>. TBD. URL: <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI">https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI</a>
    <dt id="biblio-edci-cred-jsonld-sample">[EDCI-CRED-JSONLD-SAMPLE]
-   <dd>alice; bob. <a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555">EDCI Credential JSON-LD Sample</a>. TBD. URL: <a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555">https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555</a>
+   <dd>alice; bob. <a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555"><cite>EDCI Credential JSON-LD Sample</cite></a>. TBD. URL: <a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555">https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505555</a>
    <dt id="biblio-edci-cred-xml-sample">[EDCI-CRED-XML-SAMPLE]
-   <dd>alice; bob. <a href="https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml">EDCI Credential XML Sample</a>. TBD. URL: <a href="https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml">https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml</a>
+   <dd>alice; bob. <a href="https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml"><cite>EDCI Credential XML Sample</cite></a>. TBD. URL: <a href="https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml">https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml</a>
    <dt id="biblio-emrex-guide">[EMREX-GUIDE]
-   <dd>alice; bob. <a href="https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf">Technical Guide to EMREX</a>. TBD. URL: <a href="https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf">https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf</a>
+   <dd>alice; bob. <a href="https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf"><cite>Technical Guide to EMREX</cite></a>. TBD. URL: <a href="https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf">https://emrex.eu/wp-content/uploads/2020/01/Technical-Guide-to-EMREX.pdf</a>
    <dt id="biblio-eocred">[EOCRED]
-   <dd>alice; bob. <a href="https://schema.org/EducationalOccupationalCredential">EducationalOccupationalCredential</a>. TBD. URL: <a href="https://schema.org/EducationalOccupationalCredential">https://schema.org/EducationalOccupationalCredential</a>
+   <dd>alice; bob. <a href="https://schema.org/EducationalOccupationalCredential"><cite>EducationalOccupationalCredential</cite></a>. TBD. URL: <a href="https://schema.org/EducationalOccupationalCredential">https://schema.org/EducationalOccupationalCredential</a>
    <dt id="biblio-esco">[ESCO]
-   <dd>alice; bob. <a href="https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco">ESCO</a>. TBD. URL: <a href="https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco">https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco</a>
+   <dd>alice; bob. <a href="https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco"><cite>ESCO</cite></a>. TBD. URL: <a href="https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco">https://op.europa.eu/en/web/eu-vocabularies/esco](https://op.europa.eu/en/web/eu-vocabularies/esco</a>
    <dt id="biblio-europass-tables">[EUROPASS-TABLES]
-   <dd>alice; bob. <a href="https://op.europa.eu/en/web/eu-vocabularies/europasstables">Europass Tables</a>. TBD. URL: <a href="https://op.europa.eu/en/web/eu-vocabularies/europasstables">https://op.europa.eu/en/web/eu-vocabularies/europasstables</a>
+   <dd>alice; bob. <a href="https://op.europa.eu/en/web/eu-vocabularies/europasstables"><cite>Europass Tables</cite></a>. TBD. URL: <a href="https://op.europa.eu/en/web/eu-vocabularies/europasstables">https://op.europa.eu/en/web/eu-vocabularies/europasstables</a>
    <dt id="biblio-isced-f">[ISCED-F]
-   <dd>alice; bob. <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">ISCED-F</a>. TBD. URL: <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification</a>
+   <dd>alice; bob. <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification"><cite>ISCED-F</cite></a>. TBD. URL: <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification">https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/international-education-classification</a>
    <dt id="biblio-ler-wrapper">[LER-WRAPPER]
-   <dd>Jim Goodell. <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">LER Wrapper Spec</a>. TBD. URL: <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss</a>
+   <dd>Jim Goodell. <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss"><cite>LER Wrapper Spec</cite></a>. TBD. URL: <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss</a>
    <dt id="biblio-lerhub">[LERHUB]
-   <dd>alice; bob. <a href="http://lerhub.org">LER Hub</a>. TBD. URL: <a href="http://lerhub.org">http://lerhub.org</a>
+   <dd>alice; bob. <a href="http://lerhub.org"><cite>LER Hub</cite></a>. TBD. URL: <a href="http://lerhub.org">http://lerhub.org</a>
    <dt id="biblio-obs-are-vcs">[OBS-ARE-VCS]
-   <dd>alice; bob. <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">Open Badges are Verifiable Credentials</a>. TBD. URL: <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf</a>
+   <dd>alice; bob. <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf"><cite>Open Badges are Verifiable Credentials</cite></a>. TBD. URL: <a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf</a>
    <dt id="biblio-pesc-jsonld">[PESC-JSONLD]
-   <dd>alice; bob. <a href="https://www.pesc.org/json-ld-task-force.html">PESC JSON-LD Task Force</a>. TBD. URL: <a href="https://www.pesc.org/json-ld-task-force.html">https://www.pesc.org/json-ld-task-force.html</a>
+   <dd>alice; bob. <a href="https://www.pesc.org/json-ld-task-force.html"><cite>PESC JSON-LD Task Force</cite></a>. TBD. URL: <a href="https://www.pesc.org/json-ld-task-force.html">https://www.pesc.org/json-ld-task-force.html</a>
    <dt id="biblio-vc-data-model">[VC-DATA-MODEL]
-   <dd>Manu Sporny; et al. <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials Data Model 1.0</a>. 19 November 2019. REC. URL: <a href="https://www.w3.org/TR/vc-data-model/">https://www.w3.org/TR/vc-data-model/</a>
+   <dd>Manu Sporny; et al. <a href="https://www.w3.org/TR/vc-data-model/"><cite>Verifiable Credentials Data Model 1.0</cite></a>. 19 November 2019. REC. URL: <a href="https://www.w3.org/TR/vc-data-model/">https://www.w3.org/TR/vc-data-model/</a>
   </dl>
   <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
