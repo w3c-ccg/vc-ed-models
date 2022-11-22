@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context.json"
+  ],
+  "id": "urn:uuid:a63a60be-f4af-491c-87fc-2c8fd3007a58",
+  "type": [
+    "VerifiableCredential",
+    "OpenBadgeCredential"
+  ],
+  "name": "Name of this Open Badge Instance",
+  "issuer": {
+    "type": ["Profile"],
+    "id": "did:key:z6MktiSzqF9kqwdU8VkdBKx56EYzXfpgnNPUAGznpicNiWfn",
+    "name": "Issuing Institution"
+  },
+  "issuanceDate": "2022-11-14T00:00:00Z",
+  "credentialSubject": {
+    "type": ["AchievementSubject"],
+    "id": "did:key:123",
+    "achievement": {
+      "id": "urn:uuid:bd6d9316-f7ae-4073-a1e5-2f7f5bd22922",
+      "type": ["Achievement"],
+      "achievementType": "BachelorDegree",
+      "name": "Bachelor Degree",
+      "description": "This credential represents a bachelor degree",
+      "criteria": {
+        "type": "Criteria",
+        "narrative": "Fulfill requirements set by issuing institution"
+      }
+    }
+  }
+}
