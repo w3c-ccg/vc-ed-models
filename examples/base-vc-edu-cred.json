@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3c-ccg.github.io/vc-ed-models/contexts/v05/context.json"
+  ],
+  "type": [
+    "VerifiableCredential",
+    "VerifiableEducationCredential"
+  ],
+  "issuer": {
+    "id": "did:key:z6MkrHKzgsahxBLyNAbLQyB1pcWNYC9GmywiWPgkrvntAZcj",
+    "name": "Education Insitution"
+  },
+  "issuanceDate": "2022-05-01T00:00:00Z",
+  "credentialSubject": {
+    "id": "did:key:123456778rdf43ewer46d",
+    "achievement": {
+      "name": "Name of the achievement",
+      "description": "Description of the achievement"
+    }
+  }
+}

@@ -6,15 +6,17 @@ Status: w3c/CG-DRAFT
 Group: w3c-ccg
 URL: https://w3c-ccg.github.io/vc-ed-models/
 
-Editor: Anthony Camilleri, Knowledge Innovation Centre https://knowledgeinnovation.eu/, anthony@knowledgeinnovation.eu, http://www.linkedin.com/in/anthonyfcamilleri
-Editor: Kim Hamilton Duffy, Massachusetts Institute of Technology https://openlearning.mit.edu/, kimdhamilton@gmail.com, https://www.okimsrazor.com/
-Editor: Kerri Lemoie, OpenWorks Group http://openworksgrp.com/, kerri@openworksgrp.com, https://www.linkedin.com/in/kerrilemoie/
-Editor: Nate Otto, Concentric Sky https://concentricsky.com/, notto@concentricsky.com, http://ottonomy.net/blog/
+
+Editor: Kerri Lemoie, MIT Digital Credential Consortium
+Editor: Kim Hamilton Duffy, Centre
+Editor: Dmitri Zagidulin,  MIT Digital Credential Consortium
+Editor: Jacksón Smith, Learning Economy Foundation
+
 
 Abstract: Draft recommendations for use of Verifiable Credentials in Educational Use Cases
 </pre>
 
-ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue #11 - Check and update biblio</a>
+
 <pre class="biblio">
 {
     "LER-WRAPPER": {
@@ -117,7 +119,7 @@ ISSUE: <a href="Issue: https://github.com/w3c-ccg/vc-ed-models/issues/11">Issue 
     },
     "EDCI-CRED-XML-SAMPLE": {
         "authors": [ "alice", "bob" ],
-        "href": "https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci*credential.xml",
+        "href": "https://github.com/european-commission-europass/Europass-Learning-Model/blob/master/edci_credential.xml",
         "title": "EDCI Credential XML Sample",
         "status": "TBD",
         "publisher": "TBD"
@@ -155,23 +157,29 @@ Introduction {#intro}
 
 ## Goals
 
-- Issue a set of representative educational credentials as a Verifiable Credentials, in a forward-looking manner (details below)
-- If possible, generalize guidance for a range of Verifiable Credential pilots in other sectors
+- Document a simple foundational recommendation for which to research and pursue digital credentials solutions for use cases related to education, workface, and achievements in alignment with W3C Verifiable Credentials to inform standards bodies and those working in the digital credentials ecosystem
+- Use this foundation to advance and communicate the benefits of VCs   
+- Provide examples that demonstrate alignment of use of VCs and potential exploration 
+- Generalize implementation guidance for the VC-EDU community and the communities it straddles (healthcare etc.)
 
-## Problem Statement
+
+## Problem Statement & Brief History
 
 Many Verifiable Credentials pilots in the education space are having to invent their own schemas, despite the wealth of previous art in the educational data standards communities. That is for multiple reasons:
 - The focus of the VC community has been very much on the “envelope” and not the contents
 - Educational data standards are not easily approachable in a general way to outsiders: where does one start depending on use case? locale?
 - Educational data standards have rich domain-specific vocabularies, taxonomies, and ontologies, but may have additional assumptions that data has been exchanged between trusted authorities (directly from issuer/clearing house to relying party), and therefore are not clearly adaptable to minimized/selective disclosure schemes.
 
-The [[LER-WRAPPER]] effort has bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enables technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping at the content level via enriched linked data.
+Open Badges made it possible for an achievement to be recognized in a data format that could be shared and verified online or digitally signed by issuers. Over time, a desire to describe these achievements with more human and machine meaning increased. Over the same period of time, web standards at the W3C, Verifiable Credentials (VCs) and Decentralized Identifiers (DIDs), established models for online claims, like digital credentials in education, to be cryptographically authenticated while giving holders of the credentials more persistent access to their credentials and more privacy options. 
+
+This created a need for 1) standards like Open Badges to align with the W3C standards so that these credentials could operate like other verifiable claims on the web, and 2) technology vendors and technologists to understand how to create, communicate, and interpret achievement claims to serve the needs of all of the parties involved.
+
+The [[LER-WRAPPER]] effort bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enabled technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping via enriched linked data.
 
 This effort attempts to bridge the VC ecosystem to the robust work already done in the educational data standards space, to enable reuse of the great work done by experts in the space. Our main goal is discoverability of educational data standards frameworks, and informing implementors of how to use these in VCs.
 
 Our work will help inform VC-EDU pilots, but will be forwarded as recommendations to relevant educational data standards bodies, representatives of which are active in this group. Educational data standards bodies rely on validation through real world use, which the umbrella of the W3C-CCG can provide.
 
-Lastly, this will attempt to address design challenges related to standards relying on the XML serialization format, which is not currently a supported serialization format in the VC data model, but is still needed for legal compliance for example in eIDAS legal signatures.
 
 ## Requirements & Scope
 
@@ -179,37 +187,32 @@ Lastly, this will attempt to address design challenges related to standards rely
 
 * We are targeting the Verifiable Credential data model
 * This assumes use of linked data (e.g. RDF/JSON-LD)
-* Specifically, we assume critical data fields (e.g. see Example 1) must use structured, machine readable content, but additional presentations may be included (e.g. machine-readable plus PDF for human readable/backcompat)
+* Specifically, we assume critical data fields must use structured, machine readable content, but additional presentations may be included (e.g. machine-readable plus PDF for human readable/backcompat)
 * Support display integrity for scenarios where a human is in the loop performing additional verification.
-* International-aware: do not restrict to US edu data standards
+* International-aware
 
 ### Out of Scope
 * Deeper/structural changes such as degree audits, learning pathways, or actual standardization prior to implementation.
-* VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), IMS Global (for Open Badges recommendations), etc. We will coordinate with the proper SDOs to do that work
-
-Definitions {#definitions}
-=====================
-
-
-* **Issuer**: the person or entity that is issuing and signing the credential. In the education/occupational space, the issuer could be an institution, organization, or employer or delegate thereof. The issuer may also be a person. 
-* **Subject**: the person or entity that is the subject of the credential. In the education/occupational space, this person is likely a student and/or employee. This role is also called the receiver. The subject may be the holder/owner of the credential but not necessarily, especially in cases where guardianship is delegated.
-* **Activity**:  something a person has done. 
-* **Involvement**: a person’s current or past role within an organisation. This could also describe a person’s employment.
-* **Competency**: a measurable or observable set of learning outcomes in terms of knowledge, skills, abilities, necessary to successful performance of a person in a given context
-* **Achievement**: a particular level of attainment according to defined criteria. Such an outcome may arise from a formal assessment process, but may also include less formal recognition and self-assertion. 
-
-## Examples of Concepts
-
-* **Activity**:  performed Beethoven’s 6th symphony, completed a MOOC, attended a conference or webinar, spent six years working as a lion trainer.
-* **Involvement**: student of University of Wine Country, Apprentice Lawyer with the California bar association, Teacher at Grade 5 Elementary School, Mentor for rocket building within ACME inc., Administrative Assistant at ACME Inc., Barista at World’s Best Coffee Shop, Software Engineer at Tech Company
-* **Competency**: *examples to be provided*
-* **Achievement**: Bachelor in Sociology, Microsoft Certification, Member of the Bar Certificate, recommendations from teachers, employers, and peers, asserting one has learned a programming language.
-
-## Relation between Concepts
-All of these concepts can be related to one another. The method to describe this relations still needs to be defined. All of these concepts can also have parent/child relations within the concept.
+* VC-EDU can only release draft recommendations, but the standardization work needs to happen in the proper SDO; e.g. IEEE CM4LTS (for ILR recommendations), 1EdTech(for Open Badges & CLR recommendations), etc. We will coordinate with the proper SDOs to do that work
 
 Data Model {#model}
 =====================
+
+## Contexts
+
+Contexts used in the same sense as in [VC-DATA-MODEL]: “where the value of the @context property MUST be an ordered set where the first item is a URI with the value https://www.w3.org/2018/credentials/v1”. For the VC-EDU model, the second URI should be https://w3c-ccg.github.io/vc-ed-models/context.json. It is required that JSON-ld be used for education credential to accommodate potential multiple contexts. 
+
+## ID
+
+ID is used in the same sense as in [VC-DATA-MODEL]. It MAY be used to represent a unique identifier for the VC. If included, it MUST be a URI and if it is a URL, it should be dereferencable containing machine-readable information about the id, not the VC itself in consideration of privacy concerns.
+
+
+## Type
+
+Types are used in the same sense as in [VC-DATA-MODEL]. Types map to the @contexts and for the VC-EDU model include both “VerifiableCredential” and “VerifiableEducationCredential”. Other education models, such as Open Badges, specify the types to be used.
+
+## Issuer
+
 
 ## Issuer
 Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
@@ -218,376 +221,118 @@ Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The val
 
 * RECOMMEND: Use dereferenceable URIs for discoverability.
 * For the object form of issuer:
-	* REQUIRED: use [id], as required by [[VC-DATA-MODEL]]
-	* MAY: Use a [type] field for disambiguation
-	* MAY: Use schema.org types [Person] or [Organization] (or extensions) for interoperability
-	* REQUIRED: Use [name] for display (such as in credential wallets)
+    * REQUIRED: use [id], as required by [[VC-DATA-MODEL]]
+    * MAY: Use a [type] field for disambiguation
+    * MAY: Use schema.org types [Person] or [Organization] (or extensions) for interoperability
+    * RECOMMEND: Use [name] for display (such as in credential wallets)
+    * REQUIRED: If additional properties are included to describe the issuer, they should be sourced from a linked-data standard that is referenced in the context file.
 
 ### Joint Issuers
 
 [[VC-DATA-MODEL]] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
 - Ceate a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived
     - This is equivalent to solving the problem at the DID level (i.e. DID doc with multiple controllers)
-- May define a custom "joined issuer" type, which contains a list of issuers, as described here:: https://github.com/w3c/vc-data-model/issues/741
-    - Follow the above thread for general updates, in the case of first class support)
-	- May be appropriate for ad-hoc or ephemeral arrangements
 
-- Relying party would expect a proof array containing multiple signatures
 
-<pre>
-{
-  "issuer": {
-    "id": "... url to a 'joint partnership' page, or a urn id that's a hash of the participants...",
-    "type": "SomeJointDegreeCredential",  // defined by the community
-    "participant": [
-      {
-        "name": "University of A",
-        "id": "did:example:123456789"
-      },
-      {
-        "id": "did:web:royalcollegeofb.edu",
-        "name": "Royal College of B"
-      }
-    ]
-  }
-}
+## Issuance Date
+
+IssuanceDate is used in the same sense as in [VC-DATA-MODEL]. 
+
+## Credential Subject
+
+CredentialSubject is used in the same sense as in [VC-DATA-MODEL]: is “defined as a set of objects that contain one or more properties that are each related to a subject of the verifiable credential.” This document provides the following guidelines for implementers:
+
+In the object of the [credentialSubject]:
+* REQUIRED: use [id], as required by [VC-DATA-MODEL]; many implementations use Decentralized Identifiers.
+* REQUIRED: use [achievement] (alias to schema.org type [hasCredential]; achievement is an object containing:
+    * REQUIRED: [name]
+    * REQUIRED: [description]
+
+
+## Proof
+
+Proof should follow the requirements and recommendations made by the [VC-DATA-MODEL]. 
+
+
+## Expiration 
+
+ExpirationDate is used in the same sense as in [VC-DATA-MODEL].  
+
+
+## Evidence
+
+Evidence is used in the same sense as in [VC-DATA-MODEL].  For Open Badges, evidence is. This issue being discussed as part of Open Badges 3.0 
+
+
+## Credential Status
+
+Credential Status is used in the same sense as in [VC-DATA-MODEL]. 
+
+
+Examples {#examples}
+=====================
+
+
+## Basic Verifiable Education Credential
+
+<pre class=include-code>
+path: examples/base-vc-edu-cred.json
+highlight: json
 </pre>
 
-## Aligning these Concepts with Educational Data Standards
 
-This document seeks to provide guidance on use of the Verifiable Credential data model with the widely-used educational data standards referred to as [=target standards=].
-ISSUE: The initial proposed set of standards is listed in the task force charter; this will be refined and updated with a subsequent milestone. Update in this document when done. For now, we'll refer to this set as [=target standards=]
+## Base Verifiable Education Credential
 
-To restate and refine the goals of this document utilizing the concepts listed above, this document seeks to:
-* In order to promote interoperability (among wallets, etc), recommend standard types and/or properties for relevant concepts in outer layers of VC, including:
-    * subject
-    * issuer
-* In order to enable alignment with [=target standards=], recommend connective tissue at a conceptual level, along with realizations in each of [=target standards=]. This entails proposing subject relationship(s) to the following concepts:
-    * activity
-    * competency
-    * achievement
-    * involvement
+<pre class=include-code>
+path: examples/base-vc-edu-cred.json
+highlight: json
+</pre>
 
-ISSUE: recommend other properties in the assertion?
+## Base Verifiable Education Credential with CTDL Properties
 
-### Basis on CEDS Conceptual Model
+<pre class=include-code>
+path: examples/base-vc-edu-cred-ctdl.json
+highlight: json
+</pre>
 
-There has already been significant effort aligning [[CEDS-CONCEPTUAL]] with [=target standards=], and therefore it is convenient to use the CEDS conceptual model as our basis.
+## Diploma Issued as an Open Badge
 
-CEDS has 4 key concepts (super classes):
-* Person
-* Organization
-* Resource
-* Relationship
+<pre class=include-code>
+path: examples/diploma-open-badge.json
+highlight: json
+</pre>
 
-CEDS calls out 2 additional concepts, which are types of relationships:
-* Role
-* Event
-
-### Application to the VC data model 
-
-VC Data Model has properties <var>issuer</var> and <var>credentialSubject</var>.
-
-In our current VC-ED use cases:
-* <var>issuer</var> is either <var>Person</var> or <var>Organization</var>
-* <var>credentialSubject</var> is <var>Person</var>
-
-Note that these are not based on restrictions of the VC data model; they are based on a classification of the submitted VC-ED use cases. 
-
-<img src="images/vc*ed*model.png" width="400" alt="alt*text" title="image*tooltip">
-
-Side Note: The outer VC data model is: Issuer (<var>Person</var>/<var>Organization</var>) made assertion about (<var>Event</var>) subject (<var>Person</var>)
-
-* Concept 1 (activity):	<var>Person</var> participated, did, or performed <var>activity</var> ([=CEDS Event=])
-* Concept 2 (competency):	<var>Person</var> demonstrated <var>competency</var>, or competency definition ([=CEDS Resource=])
-* Concept 3 (recognition type): <var>Person</var> earned, has <var>recognition type</var>, or credential definition ([=CEDS Resource=])
-* Concept 4 (involvement): <var>Person</var> has role <var>involvement</var> ([=CEDS Role=]: [=CEDS Relationship=])
-
-The remainder of this document will recommend:
-- <var>Issuer</var> type and recommended properties
-- <var>Subject</var> type and recommended properties
-- [=Verifiable Credential=] (outermost) recommended properties
-- Property (or conceptual property?) describing <var>Person</var>'s relationship to concepts 1-4 for use in a [=Verifiable Credential=]
-- Examples/realizations for [=target standards=]
-
-
-
-
-
-
-# Related Work
-
-* Open Badge as VC. Example, updated from Nate and Kim’s RWOT6 paper [[OBS-ARE-VCS]]
-* LER wrapper
-    * [[LER-WRAPPER]]
-    * Pilots/examples will evolve on T3 LER Hub - [[LERHUB]]
-    * Schema.org terms/types?
-    * schema:Person is an obvious one for learner
-    * ob:Profile is a generic profile class based on schema.org terms that can represent either learners or organizations.
-    * [[EOCRED]]
-* CEDS
-* CTDL and Credential Engine **(note “credential” terminology issue**)
-    * [[CREDREG]]: RDF-based schema for describing credentials and skills
-        * Examples of open badge and CLR references to CTDL: [[CREDREG-ILWRGUIDE]].
-        * Credential Finder: [[CREDFINDER]]
-* Controlled vocabularies used in Europe published as linked open data:
-    * [[EUROPASS-TABLES]]
-    * [[ESCO]]
-    * Particularly useful is that [[ISCED-F]] (thematic areas of UNESCO's international classification of education)
 
 
 Appendix {#appendix}
-====================
+=====================
 
-## Example 1: Course/Program Certificate
-### Examples from the Wild
+## About CTDL/Credential Engine
 
+* https://credreg.net/ provides documentation for a family of RDF-based schemas for describing credentials and competencies
+* https://schema.org/EducationalOccupationalCredential was created to complement the CTDL
+* CTDL serializations
+    * CTDL JSON LD serializations: https://credreg.net/ctdl/schema
+    * CTDL ASN JSON LD serializations: https://credreg.net/ctdlasn/schema. 
+* Examples of open badge and CLR references to CTDL: https://credreg.net/quickstart/ilwrguide.  
+* Credential Finder: https://credentialfinder.org/
+    * Examples of credentials and competency frameworks (published using CTDL) are available via the Credential Finder
+    * The information seen in the Finder is from the CTDL and CTDL ASN encoded JSON LD in the Registry.  
+    * From any detail page in the Finder, at bottom, right corner click on the JSON LD icon(s) to see the raw metadata. In the examples below, use the URIs to the data.  
+    * The URIs can be to: credentials, organizations, learning opportunities, assessments, competency frameworks and competencies. Soon you can add pathways, transfer value and accredit action to the list.   
+* Credential classes: https://credreg.net/page/typeslist 
+* CTDL is a living language and can support multiple profiles and languages for internationalization https://credreg.net/page/typeslist
+* CTID definition: https://credreg.net/ctdl/terms#ctid
+* CTDL ASN (Competency frameworks) https://credreg.net/ctdlasn/terms. Use the main menu to see the CTDL ASN Handbook, serializations, mapping tool.
+* CTDL Samples: https://credreg.net/ctdl/samples
 
-<table>
-  <tr>
-   <td>
+## About Open Badges & CLR /1EdTech
 
-<img src="images/micromasters*certificate.png" width="300" alt="alt*text" title="image*tooltip">
+Our main goal is discoverability of educational data standards frameworks, and informing implementers of how to use these in VCs. For example, in 2021, the VC-EDU Task Force agreed to propose to 1EdTech (formerly IMS Global) to align Open Badges to the VC Data model. This resulted in a new charter for Open Badges 3.0 and Comprehensive Learner Record (CLR) 2.0.
 
-   </td>
-   <td>
-
-<img src="images/upenn*certificate.png" width="300" alt="alt*text" title="image*tooltip">
-
-   </td>
-  </tr>
-</table>
-
-
-### Extracted Fields
-
-<table>
-  <tr>
-   <td><strong>Field</strong>
-   </td>
-   <td><strong>Ex 1 Values</strong>
-   </td>
-   <td><strong>Ex 2 Values</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Accomplishment Type
-   </td>
-   <td>MicroMasters Certificate
-   </td>
-   <td>Verified Certificate
-   </td>
-  </tr>
-  <tr>
-   <td>Learner Name
-   </td>
-   <td>Matthew Tracker
-   </td>
-   <td>Jane Learner
-   </td>
-  </tr>
-  <tr>
-   <td>Achievement
-   </td>
-   <td>Supply Chain Management
-   </td>
-   <td>My First Coursera Course
-   </td>
-  </tr>
-  <tr>
-   <td>Issued Date
-   </td>
-   <td>April 2016
-   </td>
-   <td>May 14, 2013
-   </td>
-  </tr>
-  <tr>
-   <td>Certificate ID
-   </td>
-   <td>230842h...0827
-   </td>
-   <td>&lt;verification link?>
-   </td>
-  </tr>
-  <tr>
-   <td>??? Issuer
-   </td>
-   <td>EdX
-   </td>
-   <td>Coursera
-   </td>
-  </tr>
-  <tr>
-   <td>Course Provider
-   </td>
-   <td>MITx
-   </td>
-   <td>U Penn
-   </td>
-  </tr>
-  <tr>
-   <td>Other
-   </td>
-   <td>&lt;signatories>???
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
-### Approaches
+* [Open Badges 3.0 Candidate Final](https://1edtech.github.io/openbadges-specification/ob_v3p0.html)
 
 
-#### Approach 1: ILR/LER Wrapper with Open Badges JSON-LD serialization + PDF and linked competency definitions
-
-EXAMPLE showing 1 record expressed in 2 different formats (JSON-LD and PDF) in the payload. Using the OpenBadges serialization for the JSON-LD and with links to a credential defined in credentialengineregistry.org and competencies from the casenetwork.imsglobal.org.
-
-<pre class=include-code>
-path: samples/openBadgeAsLer.json
-highlight: json
-</pre>
-
-### Approach 2: Open Badge as Verifiable Credentials
-
-ISSUE: <a href="https://github.com/w3c-ccg/vc-ed-models/issues/10">Issue #10</a>
-
-Notes:
-
-* The issuer asserts that a learner (identified with a DID) "holds" or "hasCredential" a particular defined achievement (here, an Open Badges BadgeClass)
-* The defined achievement that is asserted is described inline, though most BadgeClasses are also available to be retrieved in their latest updated form at their identifying "id" IRI when that IRI uses the http/https scheme.
-
-<pre class=include-code>
-path: samples/openBadgeAsVc.json
-highlight: json
-</pre>
-
-A second expression of similar JSON that uses only existing credentials and openbadges contexts (Not a final approach)
-
-<pre class=include-code>
-path: samples/openBadgeAsVc2.json
-highlight: json
-</pre>
-
-## Example 2: Diploma
-
-Comments/Questions:
-
-*   Diplomas may be expressed with the same approaches as shown in Example 1, because Open Badges is already used to issue diplomas.
-*   Are there any other target formats we should include? E.g. via Europass efforts?
-*   Any additional alignment frameworks we should include?
 
 
-## Example 3: Transcript
 
-### Options
-
-Which standard would we like to start with?
-
-<table>
-  <tr>
-   <td><strong>Standard</strong>
-   </td>
-   <td><strong>GEO</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>PESC+XML High School
-   </td>
-   <td>Adoption in US/Canada; interest abroad
-   </td>
-  </tr>
-  <tr>
-   <td>PESC+XML College Transcript standard
-   </td>
-   <td>Adoption in US/Canada; interest abroad
-   </td>
-  </tr>
-  <tr>
-   <td>EDI based standard governed by ANSI in fairly wide use handled by a system called SPEEDE
-   </td>
-   <td>??
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/emrex-eu/elmo-schemas/releases">ELMO</a>
-   </td>
-   <td>Europe
-   </td>
-  </tr>
-</table>
-
-
-### Implementation Options
-
-*   LER Wrapper is an option; note that it includes XML as a string: [[LER-WRAPPER]]
-*   Improving on XML-as-string would be a bit of work. I see 2 paths:
-    *   Push to support XML as VC format
-        *   This would be helpful in the near-term, and would benefit other XML-based standards
-    *   Map PESC to JSON-LD
-        *   Work has started in a PESC JSON-LD Task Force: [[PESC-JSONLD]]
-        *   The VC-EDU community can help push this forward
-
-## Example 4: EDCI
-
-Related links/examples:
-
-*   XML example: [[EDCI-CRED-XML-SAMPLE]]
-*   JSON/LD (LER) example: See example E6 EUROPASS in the [[LER-WRAPPER]
-*   [[EBSI]]
-
-Comments/Questions:
-
-*   This will have the same problem as in Example 3: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.
-*   A Europass EDCI in JSON-LD example: [[EDCI-CRED-JSONLD-SAMPLE]] (related to Level 6 EQF)
-
-## Example 5: Open Skills Assertion of ceasn:Competency
-
-In this example, an issuer who is not necessarily the same as the definer of the competency asserts achievement of a competency or learning goal directly. This could enable direct match-up against a requirement on a job profile or learning pathway. Self-assertion of competency is also supported. There is no "BadgeClass"/"DefinedAchievement" intermediary class that must be defined in order to set out a specific learning opportunity, criteria, or authorized assessing body in order to make this claim.
-
-Issue: <a href="https://github.com/w3c-ccg/vc-ed-models/issues/5">Issue #5</a>
-
-Note:
-*   The “ceasn:” prefix/namespace comes from here: [[CTDLASN]]
-*   ceasn:Competency is defined here: [[CTDLASN#Competency]]
-
-<pre class=include-code>
-path: samples/openSkillsAssertion.json
-highlight: json
-</pre>
-
-## Example 6: EMREX
-
-EMREX is a network for exchanging assessments/results of education at any level.
-
-The owner of the result (student or former student) gets access to trusted sources of these data (diploma registries, student information systems,...) and can share data with a third party. This third party could be an employer as part of a recruitment process, a university when applying for admission or others.
-
-The technical set up of EMREX is described here:
-
-[[EMREX-GUIDE]]
-
-EMREX is using a XML-format called ELMO, which is based on standard data models for Learning opportunities. The basis for the data exchange is structured data representing the results the result owner wants to share, but ELMO can also hold additional documents like a signed pdf of a Diploma.
-
-Comments/Questions:
-
-*   This will have the same problem as in Example 3 and 4: they are currently using XML (as required for legally binding signatures), but the VC data model only describes JSON/JSON-LD formats.
-
-## Example 7: Using a credential definition that exists in Credential Engine
-
-<pre class=include-code>
-path: samples/credentialEngine.json
-highlight: json
-</pre>
-
-## Example 8: Use of EducationalOccupationalCredential (schema.org)
-
-About this example:
-
-*   Uses [[EOCRED]]
-*   This uses the schema.org term hasCredential as the claim type.
-*   This takes advantage of other schema.org types, including mapping credentialSubject to Person
-
-<pre class=include-code>
-path: samples/educationalOccupationalCredential.json
-highlight: json
-</pre>
