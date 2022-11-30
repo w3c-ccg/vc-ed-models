@@ -222,13 +222,13 @@ Types are used in the same sense as in [VC-DATA-MODEL]. Types map to the @contex
 
 
 ## Issuer
-Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
+Issuer is used in the same sense as in [VC-DATA-MODEL] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
 
-Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [[VC-DATA-MODEL]] is [id]. This document provides the following additional guidelines for implementers.
+Issuer structure basic requirements are specified in [VC-DATA-MODEL]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [VC-DATA-MODEL] is [id]. This document provides the following additional guidelines for implementers.
 
 * RECOMMEND: Use dereferenceable URIs for discoverability.
 * For the object form of issuer:
-    * REQUIRED: use [id], as required by [[VC-DATA-MODEL]]
+    * REQUIRED: use [id], as required by [VC-DATA-MODEL]
     * MAY: Use a [type] field for disambiguation
     * MAY: Use schema.org types [Person] or [Organization] (or extensions) for interoperability
     * RECOMMEND: Use [name] for display (such as in credential wallets)
@@ -236,7 +236,7 @@ Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The val
 
 ### Joint Issuers
 
-[[VC-DATA-MODEL]] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
+[VC-DATA-MODEL] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
 - Ceate a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived
     - This is equivalent to solving the problem at the DID level (i.e. DID doc with multiple controllers)
 
