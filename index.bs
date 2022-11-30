@@ -19,6 +19,13 @@ Abstract: Draft recommendations for use of Verifiable Credentials in Educational
 
 <pre class="biblio">
 {
+    "VC-DATA-MODEL": {
+         "authors": [ "Manu Sporny", "Dave Longley", "David Chadwick" ],
+        "href": "https://www.w3.org/TR/vc-data-model",
+        "title": "Verifiable Credentials Data Model v1.1",
+        "status": "W3C Recommendation",
+        "publisher": "W3C"
+    },
     "LER-WRAPPER": {
         "authors": [ "Jim Goodell" ],
         "href": "https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss",
