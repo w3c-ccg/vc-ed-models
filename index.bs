@@ -207,28 +207,28 @@ Data Model {#model}
 
 ## Contexts
 
-Contexts used in the same sense as in \[VC-DATA-MODEL]: “where the value of the @context property MUST be an ordered set where the first item is a URI with the value https://www.w3.org/2018/credentials/v1”. For the VC-EDU model, the second URI should be https://w3c-ccg.github.io/vc-ed-models/context.json. It is required that JSON-ld be used for education credential to accommodate potential multiple contexts. 
+Contexts used in the same sense as in [[VC-DATA-MODEL]]: “where the value of the @context property MUST be an ordered set where the first item is a URI with the value https://www.w3.org/2018/credentials/v1”. For the VC-EDU model, the second URI should be https://w3c-ccg.github.io/vc-ed-models/context.json. It is required that JSON-ld be used for education credential to accommodate potential multiple contexts. 
 
 ## ID
 
-ID is used in the same sense as in \[VC-DATA-MODEL]. It MAY be used to represent a unique identifier for the VC. If included, it MUST be a URI and if it is a URL, it should be dereferencable containing machine-readable information about the id, not the VC itself in consideration of privacy concerns.
+ID is used in the same sense as in [[VC-DATA-MODEL]]. It MAY be used to represent a unique identifier for the VC. If included, it MUST be a URI and if it is a URL, it should be dereferencable containing machine-readable information about the id, not the VC itself in consideration of privacy concerns.
 
 
 ## Type
 
-Types are used in the same sense as in \[VC-DATA-MODEL]. Types map to the @contexts and for the VC-EDU model include both “VerifiableCredential” and “VerifiableEducationCredential”. Other education models, such as Open Badges, specify the types to be used.
+Types are used in the same sense as in [[VC-DATA-MODEL]]. Types map to the @contexts and for the VC-EDU model include both “VerifiableCredential” and “VerifiableEducationCredential”. Other education models, such as Open Badges, specify the types to be used.
 
 ## Issuer
 
 
 ## Issuer
-Issuer is used in the same sense as in \[VC-DATA-MODEL] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
+Issuer is used in the same sense as in [[VC-DATA-MODEL]] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn't necessarily have relationship to learning experience that led to the credential
 
-Issuer structure basic requirements are specified in \[VC-DATA-MODEL]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from \[VC-DATA-MODEL] is [id]. This document provides the following additional guidelines for implementers.
+Issuer structure basic requirements are specified in [[VC-DATA-MODEL]]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [[VC-DATA-MODEL]] is [id]. This document provides the following additional guidelines for implementers.
 
 * RECOMMEND: Use dereferenceable URIs for discoverability.
 * For the object form of issuer:
-    * REQUIRED: use [id], as required by \[VC-DATA-MODEL]
+    * REQUIRED: use [id], as required by [[VC-DATA-MODEL]]
     * MAY: Use a [type] field for disambiguation
     * MAY: Use schema.org types [Person] or [Organization] (or extensions) for interoperability
     * RECOMMEND: Use [name] for display (such as in credential wallets)
@@ -236,21 +236,21 @@ Issuer structure basic requirements are specified in \[VC-DATA-MODEL]: "The valu
 
 ### Joint Issuers
 
-\[VC-DATA-MODEL] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
+[[VC-DATA-MODEL]] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:
 - Ceate a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived
     - This is equivalent to solving the problem at the DID level (i.e. DID doc with multiple controllers)
 
 
 ## Issuance Date
 
-IssuanceDate is used in the same sense as in \[VC-DATA-MODEL]. 
+IssuanceDate is used in the same sense as in [[VC-DATA-MODEL]]. 
 
 ## Credential Subject
 
-CredentialSubject is used in the same sense as in \[VC-DATA-MODEL]: is “defined as a set of objects that contain one or more properties that are each related to a subject of the verifiable credential.” This document provides the following guidelines for implementers:
+CredentialSubject is used in the same sense as in [[VC-DATA-MODEL]]: is “defined as a set of objects that contain one or more properties that are each related to a subject of the verifiable credential.” This document provides the following guidelines for implementers:
 
 In the object of the [credentialSubject]:
-* REQUIRED: use [id], as required by \[VC-DATA-MODEL]; many implementations use Decentralized Identifiers.
+* REQUIRED: use [id], as required by [[VC-DATA-MODEL]]; many implementations use Decentralized Identifiers.
 * REQUIRED: use [achievement] (alias to schema.org type [hasCredential]; achievement is an object containing:
     * REQUIRED: [name]
     * REQUIRED: [description]
@@ -258,22 +258,22 @@ In the object of the [credentialSubject]:
 
 ## Proof
 
-Proof should follow the requirements and recommendations made by the \[VC-DATA-MODEL]. 
+Proof should follow the requirements and recommendations made by the [[VC-DATA-MODEL]]. 
 
 
 ## Expiration 
 
-ExpirationDate is used in the same sense as in \[VC-DATA-MODEL].  
+ExpirationDate is used in the same sense as in [[VC-DATA-MODEL]].  
 
 
 ## Evidence
 
-Evidence is used in the same sense as in \[VC-DATA-MODEL].  For Open Badges, evidence is. This issue being discussed as part of Open Badges 3.0 
+Evidence is used in the same sense as in [[VC-DATA-MODEL]].  For Open Badges, evidence is. This issue being discussed as part of Open Badges 3.0 
 
 
 ## Credential Status
 
-Credential Status is used in the same sense as in \[VC-DATA-MODEL]. 
+Credential Status is used in the same sense as in [[VC-DATA-MODEL]]. 
 
 
 Examples {#examples}
