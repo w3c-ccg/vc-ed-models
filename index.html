@@ -6,9 +6,9 @@
   <meta content="w3c/CG-DRAFT" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/cg-draft" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="Bikeshed version 63e66730b, updated Tue Oct 25 12:35:05 2022 -0700" name="generator">
+  <meta content="Bikeshed version 42a48c451, updated Tue Feb 14 14:52:15 2023 -0800" name="generator">
   <link href="https://w3c-ccg.github.io/vc-ed-models/" rel="canonical">
-  <meta content="94abe31cd75ce4d043ad611d62d830fca7a242ac" name="document-revision">
+  <meta content="16102e57bda23c61a50c167d97bba50b8c50ae69" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -536,7 +536,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Modeling Educational Verifiable Credentials</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#CG-DRAFT">Draft Community Group Report</a>, <time class="dt-updated" datetime="2022-12-01">1 December 2022</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#CG-DRAFT">Draft Community Group Report</a>, <time class="dt-updated" datetime="2023-02-15">15 February 2023</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -554,7 +554,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2022 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -653,7 +653,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    </ul>
    <p>Open Badges made it possible for an achievement to be recognized in a data format that could be shared and verified online or digitally signed by issuers. Over time, a desire to describe these achievements with more human and machine meaning increased. Over the same period of time, web standards at the W3C, Verifiable Credentials (VCs) and Decentralized Identifiers (DIDs), established models for online claims, like digital credentials in education, to be cryptographically authenticated while giving holders of the credentials more persistent access to their credentials and more privacy options.</p>
    <p>This created a need for 1) standards like Open Badges to align with the W3C standards so that these credentials could operate like other verifiable claims on the web, and 2) technology vendors and technologists to understand how to create, communicate, and interpret achievement claims to serve the needs of all of the parties involved.</p>
-   <p>The <a data-link-type="biblio" href="#biblio-ler-wrapper">[LER-WRAPPER]</a> effort bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enabled technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping via enriched linked data.</p>
+   <p>The <a data-link-type="biblio" href="#biblio-ler-wrapper" title="LER Wrapper Spec">[LER-WRAPPER]</a> effort bootstrapped the alignment of existing educational data standards via the LER/VC wrapper. This enabled technology providers to build interoperable tooling at the wrapper/envelope level, staying agnostic to the contents, while enabling discoverability of metadata. This effort attempts to extend upon those efforts, enabling interoperability/mapping via enriched linked data.</p>
    <p>This effort attempts to bridge the VC ecosystem to the robust work already done in the educational data standards space, to enable reuse of the great work done by experts in the space. Our main goal is discoverability of educational data standards frameworks, and informing implementors of how to use these in VCs.</p>
    <p>Our work will help inform VC-EDU pilots, but will be forwarded as recommendations to relevant educational data standards bodies, representatives of which are active in this group. Educational data standards bodies rely on validation through real world use, which the umbrella of the W3C-CCG can provide.</p>
    <h3 class="heading settled" data-level="1.3" id="requirements--scope"><span class="secno">1.3. </span><span class="content">Requirements &amp; Scope</span><a class="self-link" href="#requirements--scope"></a></h3>
@@ -679,15 +679,15 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    </ul>
    <h2 class="heading settled" data-level="2" id="model"><span class="secno">2. </span><span class="content">Data Model</span><a class="self-link" href="#model"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="contexts"><span class="secno">2.1. </span><span class="content">Contexts</span><a class="self-link" href="#contexts"></a></h3>
-   <p>Contexts used in the same sense as in [VC-DATA-MODEL]: “where the value of the @context property MUST be an ordered set where the first item is a URI with the value https://www.w3.org/2018/credentials/v1”. For the VC-EDU model, the second URI should be https://w3c-ccg.github.io/vc-ed-models/context.json. It is required that JSON-ld be used for education credential to accommodate potential multiple contexts.</p>
+   <p>Contexts used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>: “where the value of the @context property MUST be an ordered set where the first item is a URI with the value https://www.w3.org/2018/credentials/v1”. For the VC-EDU model, the second URI should be https://w3c-ccg.github.io/vc-ed-models/context.json. It is required that JSON-ld be used for education credential to accommodate potential multiple contexts.</p>
    <h3 class="heading settled" data-level="2.2" id="id"><span class="secno">2.2. </span><span class="content">ID</span><a class="self-link" href="#id"></a></h3>
-   <p>ID is used in the same sense as in [VC-DATA-MODEL]. It MAY be used to represent a unique identifier for the VC. If included, it MUST be a URI and if it is a URL, it should be dereferencable containing machine-readable information about the id, not the VC itself in consideration of privacy concerns.</p>
+   <p>ID is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>. It MAY be used to represent a unique identifier for the VC. If included, it MUST be a URI and if it is a URL, it should be dereferencable containing machine-readable information about the id, not the VC itself in consideration of privacy concerns.</p>
    <h3 class="heading settled" data-level="2.3" id="type"><span class="secno">2.3. </span><span class="content">Type</span><a class="self-link" href="#type"></a></h3>
-   <p>Types are used in the same sense as in [VC-DATA-MODEL]. Types map to the @contexts and for the VC-EDU model include both “VerifiableCredential” and “VerifiableEducationCredential”. Other education models, such as Open Badges, specify the types to be used.</p>
+   <p>Types are used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>. Types map to the @contexts and for the VC-EDU model include both “VerifiableCredential” and “VerifiableEducationCredential”. Other education models, such as Open Badges, specify the types to be used.</p>
    <h3 class="heading settled" data-level="2.4" id="issuer"><span class="secno">2.4. </span><span class="content">Issuer</span><a class="self-link" href="#issuer"></a></h3>
    <h3 class="heading settled" data-level="2.5" id="issuer①"><span class="secno">2.5. </span><span class="content">Issuer</span><a class="self-link" href="#issuer①"></a></h3>
-    Issuer is used in the same sense as in [VC-DATA-MODEL] with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn’t necessarily have relationship to learning experience that led to the credential 
-   <p>Issuer structure basic requirements are specified in [VC-DATA-MODEL]: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from [VC-DATA-MODEL] is [id]. This document provides the following additional guidelines for implementers.</p>
+    Issuer is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a> with no additional semantics; the issuer is simply an entity that makes a claim about the subject. The issuer doesn’t necessarily have relationship to learning experience that led to the credential 
+   <p>Issuer structure basic requirements are specified in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>: "The value of the issuer property MUST be either a URI or an object containing an id property." The only required property from <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a> is [id]. This document provides the following additional guidelines for implementers.</p>
    <ul>
     <li data-md>
      <p>RECOMMEND: Use dereferenceable URIs for discoverability.</p>
@@ -695,7 +695,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <p>For the object form of issuer:</p>
      <ul>
       <li data-md>
-       <p>REQUIRED: use [id], as required by [VC-DATA-MODEL]</p>
+       <p>REQUIRED: use [id], as required by <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a></p>
       <li data-md>
        <p>MAY: Use a [type] field for disambiguation</p>
       <li data-md>
@@ -707,7 +707,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      </ul>
    </ul>
    <h4 class="heading settled" data-level="2.5.1" id="joint-issuers"><span class="secno">2.5.1. </span><span class="content">Joint Issuers</span><a class="self-link" href="#joint-issuers"></a></h4>
-   <p>[VC-DATA-MODEL] syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:</p>
+   <p><a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a> syntax currently allows for one issuer, which is overly restrictive for some use cases. Two options are possible for implementers:</p>
    <ul>
     <li data-md>
      <p>Ceate a merged entity comprising multiple issuers. This may be appropriate if the merged entity is long-lived</p>
@@ -717,13 +717,13 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      </ul>
    </ul>
    <h3 class="heading settled" data-level="2.6" id="issuance-date"><span class="secno">2.6. </span><span class="content">Issuance Date</span><a class="self-link" href="#issuance-date"></a></h3>
-   <p>IssuanceDate is used in the same sense as in [VC-DATA-MODEL].</p>
+   <p>IssuanceDate is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>.</p>
    <h3 class="heading settled" data-level="2.7" id="credential-subject"><span class="secno">2.7. </span><span class="content">Credential Subject</span><a class="self-link" href="#credential-subject"></a></h3>
-   <p>CredentialSubject is used in the same sense as in [VC-DATA-MODEL]: is “defined as a set of objects that contain one or more properties that are each related to a subject of the verifiable credential.” This document provides the following guidelines for implementers:</p>
+   <p>CredentialSubject is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>: is “defined as a set of objects that contain one or more properties that are each related to a subject of the verifiable credential.” This document provides the following guidelines for implementers:</p>
    <p>In the object of the [credentialSubject]:</p>
    <ul>
     <li data-md>
-     <p>REQUIRED: use [id], as required by [VC-DATA-MODEL]; many implementations use Decentralized Identifiers.</p>
+     <p>REQUIRED: use [id], as required by <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>; many implementations use Decentralized Identifiers.</p>
     <li data-md>
      <p>REQUIRED: use [achievement] (alias to schema.org type [hasCredential]; achievement is an object containing:</p>
      <ul>
@@ -734,13 +734,13 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      </ul>
    </ul>
    <h3 class="heading settled" data-level="2.8" id="proof"><span class="secno">2.8. </span><span class="content">Proof</span><a class="self-link" href="#proof"></a></h3>
-   <p>Proof should follow the requirements and recommendations made by the [VC-DATA-MODEL].</p>
+   <p>Proof should follow the requirements and recommendations made by the <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>.</p>
    <h3 class="heading settled" data-level="2.9" id="expiration"><span class="secno">2.9. </span><span class="content">Expiration</span><a class="self-link" href="#expiration"></a></h3>
-   <p>ExpirationDate is used in the same sense as in [VC-DATA-MODEL].</p>
+   <p>ExpirationDate is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>.</p>
    <h3 class="heading settled" data-level="2.10" id="evidence"><span class="secno">2.10. </span><span class="content">Evidence</span><a class="self-link" href="#evidence"></a></h3>
-   <p>Evidence is used in the same sense as in [VC-DATA-MODEL].  For Open Badges, evidence is. This issue being discussed as part of Open Badges 3.0</p>
+   <p>Evidence is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>.  For Open Badges, evidence is. This issue being discussed as part of Open Badges 3.0</p>
    <h3 class="heading settled" data-level="2.11" id="credential-status"><span class="secno">2.11. </span><span class="content">Credential Status</span><a class="self-link" href="#credential-status"></a></h3>
-   <p>Credential Status is used in the same sense as in [VC-DATA-MODEL].</p>
+   <p>Credential Status is used in the same sense as in <a data-link-type="biblio" href="#biblio-vc-data-model" title="Verifiable Credentials Data Model v1.1">[VC-DATA-MODEL]</a>.</p>
    <h2 class="heading settled" data-level="3" id="examples"><span class="secno">3. </span><span class="content">Examples</span><a class="self-link" href="#examples"></a></h2>
    <h3 class="heading settled" data-level="3.1" id="basic-verifiable-education-credential"><span class="secno">3.1. </span><span class="content">Basic Verifiable Education Credential</span><a class="self-link" href="#basic-verifiable-education-credential"></a></h3>
 <pre class="include-code highlight"><c- p>{</c->
@@ -906,7 +906,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     However, for readability,
     these words do not appear in all uppercase letters in this specification. </p>
    <p>All of the text of this specification is normative
-    except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119">[RFC2119]</a> </p>
+    except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a> </p>
    <p>Examples in this specification are introduced with the words “for example”
     or are set apart from the normative text
     with <code>class="example"</code>,
@@ -946,4 +946,6 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <dl>
    <dt id="biblio-ler-wrapper">[LER-WRAPPER]
    <dd>Jim Goodell. <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss"><cite>LER Wrapper Spec</cite></a>. TBD. URL: <a href="https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss">https://cdn.filestackcontent.com/preview/FeqEJI3S5KelmLv8XJss</a>
+   <dt id="biblio-vc-data-model">[VC-DATA-MODEL]
+   <dd>Manu Sporny; Dave Longley; David Chadwick. <a href="https://www.w3.org/TR/vc-data-model"><cite>Verifiable Credentials Data Model v1.1</cite></a>. W3C Recommendation. URL: <a href="https://www.w3.org/TR/vc-data-model">https://www.w3.org/TR/vc-data-model</a>
   </dl>
